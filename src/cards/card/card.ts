@@ -441,10 +441,10 @@ export class Card {
             scale *= finalScale;
         }
 
-        let x = 714;
+        let x = 724;
         let y = 26;
         if (this.oversized) {
-            x = CARD_MAX_WIDTH - 40;
+            x = CARD_MAX_WIDTH - 30;
             y = 25;
         }
 

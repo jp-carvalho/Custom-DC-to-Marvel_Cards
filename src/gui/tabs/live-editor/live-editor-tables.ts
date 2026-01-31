@@ -117,7 +117,7 @@ addTitlesTo(defaultsHeadings);
 export const defaultsRows: IRowValues[] = [
     {
         name: "__defaults__",
-        logoURL: "https://i.imgur.com/J6SuXcE.png",
+        logoURL: "https://i.imgur.com/UFuNhQp.png",
         set: "Teen Titans",
         setTextColor: "#ffec34",
         setBackgroundColor: "#ed1c24",
