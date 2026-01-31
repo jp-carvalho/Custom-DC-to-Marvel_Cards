@@ -1,0 +1,63 @@
+{
+  "name": "custom-deck-builder",
+  "author": {
+    "name": "Jacob Fischer"
+  },
+  "homepage": "https://github.com/JacobFischer/Custom-Deck-Builder",
+  "version": "1.0.0",
+  "description": "Custom Deck Builder",
+  "private": true,
+  "dependencies": {
+    "@types/file-saver": "^0.0.1",
+    "@types/fontfaceobserver": "^0.0.5",
+    "@types/handlebars": "^4.0.33",
+    "@types/jszip": "^0.0.33",
+    "@types/node": "^7.0.31",
+    "@types/pixi.js": "^4.5.0",
+    "@types/storejs": "^1.3.1",
+    "@types/uuid": "^3.4.0",
+    "@types/webpack-env": "^1.13.0",
+    "ag-grid": "^18.1.2",
+    "babel-preset-es2015-native-modules": "^6.6.0",
+    "file-loader": "^0.11.2",
+    "file-saver": "^1.3.3",
+    "fontfaceobserver": "^2.0.13",
+    "handlebars": "^4.0.10",
+    "handlebars-loader": "^1.5.0",
+    "jszip": "^3.1.3",
+    "markdown-loader": "^2.0.1",
+    "node-sass": "^4.14.1",
+    "normalize.css": "^7.0.0",
+    "pixi.js": "^4.5.3",
+    "raw-loader": "^0.5.1",
+    "sass": "^1.97.3",
+    "store": "^2.0.12",
+    "ts-loader": "^2.3.2",
+    "typescript": "^2.4.2",
+    "uuid": "^3.1.0"
+  },
+  "directories": {},
+  "scripts": {
+    "dev": "webpack-dev-server --progress --colors --host 0.0.0.0 --port 8080 --content-base built/",
+    "build": "webpack --progress --colors",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "fix": "tslint -c tslint.json 'src/**/*.ts' --fix --force"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "csv-parse": "^2.5.0",
+    "eslint": "^9.39.2",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^2.30.1",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.23.1",
+    "tslint": "^5.6.0",
+    "tslint-eslint-rules": "^4.1.1",
+    "webpack": "^2.7.0",
+    "webpack-dev-server": "^2.11.5"
+  }
+}

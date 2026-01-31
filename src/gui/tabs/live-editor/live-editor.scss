@@ -1,0 +1,239 @@
+@import "src/styles/colors.scss";
+@import "src/styles/utils.scss";
+
+.live-editor {
+    & .custom-cards {
+        margin-top: 1em;
+    }
+
+    & .custom-cards-bottom {
+        float: left;
+        width: 100%;
+        text-align: center;
+        margin-top: 0.5em;
+    }
+
+    & .canvases-scale {
+        margin-top: 0.375em;
+        float: left;
+
+        & .canvases-scale-percent {
+            margin-left: 0.5em;
+            color: $primary-dark;
+            text-align: left;
+            width: 3.5em;
+            display: inline-block;
+        }
+    }
+
+    & .add-row-button {
+        font-weight: bold;
+        cursor: pointer;
+        float: right;
+        margin-right: 0.625em;
+    }
+
+    & .reset-to-defaults {
+        background-color: $secondary;
+        color: $black;
+
+        &:before {
+            display: inline-block;
+            content: '↻';
+            margin-right: 0.375em;
+        }
+
+        &:hover {
+            background-color: $secondary-light;
+            &:before {
+                @include vendor-prefix(transform, rotate(360deg));
+            }
+        }
+    }
+
+    & table {
+        width: 100%;
+
+        & input, & select, & textarea {
+            font-size: 1em;
+            width: 100%;
+            padding: 0.25em;
+
+            &[type=number] {
+                width: 4em;
+                text-align: right;
+            }
+
+            &[type=color] {
+                padding: 0;
+                background: transparent;
+                border: 0;
+                cursor: pointer;
+
+                @include browser('Chrome') {
+                    height: 2em;
+                }
+            }
+        }
+
+        & input[type=checkbox] {
+            display: none;
+
+            & + label:before {
+                font-weight: bold;
+                content: '\00a0'; // non breaking space to preserve height
+                cursor: pointer;
+                min-width: 1.5em;
+                padding: 0.25em 0.125em;
+                display: inline-block;
+                @extend .input-like;
+            }
+
+            &:checked + label:before {
+                content: '\2713'; // checkmark
+            }
+        }
+
+        & .column-logoScale, & .column-copyright {
+            & input {
+                width: 3.75em;
+            }
+        }
+
+        & input[type=color] {
+            width: 5em;
+        }
+
+        & textarea {
+            height: 3.5em;
+            resize: none;
+        }
+
+        & .column-copyright {
+            & input {
+                width: 4.5em;
+            }
+        }
+
+        & .column-type, & .column-subtype {
+            & select, & input {
+                width: 6em;
+            }
+        }
+
+        & .column-variant {
+            & select {
+                width: 8em;
+            }
+        }
+
+        & .column-legal {
+            & textarea {
+                width: 20em;
+            }
+        }
+
+        & .column-set, & .column-name, & .column-imageURL, & .column-logoURL {
+            & input {
+                width: 8.75em;
+            }
+        }
+
+        & .column-cost, & .column-victoryPoints {
+            & input {
+                width: 2.5em;
+            }
+        }
+
+        & .column-text {
+            width: 30em;
+
+            & textarea {
+                width: calc(100% - 1em);
+            }
+        }
+
+        & .column-delete > button {
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        & tr {
+            & td {
+                text-align: center;
+                padding: 0;
+                opacity: 0;
+
+                & > div { //we assume it's hidden by default
+                    max-height: 0;
+                    margin: 0;
+                }
+
+                &.error input {
+                    border-color: $error;
+                    background-color: lighten($error, 35%);
+                }
+            }
+
+            // this div is a wrapper so we can animate max-height changes
+            &.shown > td {
+                opacity: 1;
+
+                & > div {
+                    margin: 0.5em;
+                    max-height: 4.5em;
+                    overflow: hidden;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+
+    & .too-many-cards {
+        clear: both;
+        text-align: center;
+        padding-top: 1em;
+        max-height: 3em;
+
+        & .warning-block {
+            display: inline-block;
+            text-align: center;
+            background: $secondary-darkest;
+            color: $white;
+            padding: 0.5em;
+            border-radius: 0.75em;
+
+            & a {
+                color: $secondary-lightest;
+
+                &:hover, &:focus {
+                    color: $primary-lightest;
+                }
+            }
+        }
+
+        &.collapsed {
+            max-height: 0em;
+            opacity: 0;
+        }
+    }
+
+    & .canvases {
+        text-align: center;
+
+        & canvas {
+            margin: 0.75em;
+            display: inline-block;
+            opacity: 0;
+            max-height: 0;
+            max-width: 0;
+            overflow: hidden;
+
+            &.shown {
+                opacity: 1;
+                max-height: 1200px;
+                max-width: 900px;
+            }
+        }
+    }
+}

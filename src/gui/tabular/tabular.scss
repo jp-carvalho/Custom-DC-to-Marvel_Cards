@@ -1,0 +1,24 @@
+.tabular {
+    & .tabluar-tabs li {
+        cursor: pointer;
+    }
+
+    & .tabular-contents {
+        position: relative;
+
+        & .tab-contents {
+            display: block;
+            overflow: hidden;
+            opacity: 0;
+            max-height: 999999px;
+
+            &.current {
+                opacity: 1;
+            }
+
+            &.hidden {
+                display: none;
+            }
+        }
+    }
+}

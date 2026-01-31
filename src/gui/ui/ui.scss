@@ -1,0 +1,249 @@
+@import "src/styles/colors.scss";
+@import "src/styles/utils.scss";
+@import "src/styles/range.scss";
+
+@mixin font-defaults() {
+    font-family: TradeGothic, Verdana, Geneva, sans-serif;
+    font-size: 1em;
+    letter-spacing: -0.025em;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    background: url(../../../resources/images/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.card-name {
+    font-size: 2.5em;
+    font-family: CompactaBT, Impact, Charcoal, sans-serif;
+    letter-spacing: -0.025em;
+    margin: 0;
+    color: $secondary;
+    text-shadow: 2px 2px #000000;
+    text-transform: uppercase;
+    transform: skewX(-15deg) scaleY(0.75);
+    -webkit-transform: skewX(-15deg) scaleY(0.75);
+    -ms-transform: skewX(-15deg) scaleY(0.75);
+    -moz-transform: skewX(-15deg) scaleY(0.75);
+    -o-transform: skewX(-15deg) scaleY(0.75);
+}
+
+.expandable {
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+
+    &.measuring {
+        @include transition(none);
+        height: auto;
+        position: absolute;
+    }
+
+    &.expanded {
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+        pointer-events: all;
+    }
+}
+
+.custom-deck-builder {
+    color: $white;
+    width: calc(1280px - 2em);
+    margin: 2em auto 1em auto;
+    @include font-defaults();
+
+    a, a:visited {
+        color: $primary;
+        text-decoration: underline;
+
+        &:hover, &:focus {
+            color: $secondary-dark;
+        }
+    }
+
+    & h1, & h2, & h3, & h4, & h5, & h6 {
+        @extend .card-name
+    }
+
+    & .page-title h1 {
+        & > span {
+            font-size: 5rem;
+            text-shadow: 5px 5px #000000;
+            display: block;
+            text-align: center;
+        }
+
+        & .subtitle {
+            color: $secondary-lightest;
+            font-size: 3.75rem;
+        }
+    }
+
+    & h2, & h3, & h4, & h5, & h6 {
+        color: $primary-light;
+        margin-left: 0.075em;
+    }
+
+    & input, & textarea, & select, & option, & button {
+        @include font-defaults();
+        @extend .input-like
+    }
+
+    & button {
+        background-color: $primary-dark;
+        border: none;
+        box-shadow: 3px 3px $black;
+        color: $white;
+        padding: 0.375em 0.5em;
+        cursor: pointer;
+        margin-bottom: 3px;
+
+        &:hover, &:focus {
+            background-color: $primary-light;
+        }
+
+        &:disabled {
+            background-color: $dark-gray;
+            cursor: default;
+        }
+    }
+
+    & abbr[title] {
+        text-decoration: none;
+        cursor: help;
+    }
+
+    // tabs
+
+    & .tabular {
+        & nav {
+            display: block;
+            background: url(../../../resources/images/bar-background.jpg) no-repeat center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            color: $white;
+            border-radius: 1em 1em 0 0;
+            border-bottom: 0.375rem solid $primary;
+
+            & ul {
+                padding: 1em 0;
+                margin: 0;
+                list-style-type: none;
+
+                & li {
+                    cursor: pointer;
+                    font-size: 3.5em;
+                    text-shadow: 4px 4px #000000;
+                    display: inline-block;
+                    margin: 0 0.5em;
+                    @extend .card-name;
+
+                    &:not(.current) {
+                        color: $secondary-darkest;
+                    }
+
+                    &:hover, &:focus {
+                        color: $secondary-lightest;
+                    }
+                }
+            }
+        }
+
+        & .tabular-contents {
+            background: $white;
+            color: $black;
+            padding: 1em;
+        }
+    }
+
+    & dl {
+        & dt {
+            font-weight: bold;
+            color: $primary-dark;
+
+            & + dd {
+                margin-left: 1em;
+                color: $primary-darkest;
+
+                & + dt {
+                    margin-top: 1em;
+                }
+            }
+        }
+    }
+
+    & table {
+        border: none;
+        border-collapse: collapse;
+        border-spacing: 0;
+
+        & tr:nth-child(even) > td {
+            background-color: $light-gray;
+        }
+
+        & td {
+            padding: 0.5em;
+        }
+    }
+
+    & tr:first-child > th {
+        background-color: $secondary-lightest;
+        border-bottom: 0.25em solid $secondary;
+        padding: 0.5em 0.5em 0.25em 0.5em;
+
+        &:first-child {
+            border-radius: 0.625em 0 0 0;
+        }
+
+        &:last-child {
+            border-radius: 0 0.625em 0 0;
+        }
+    }
+
+    & tr:last-child > td {
+        &:first-child {
+            border-radius: 0 0 0 0.625em;
+        }
+
+        &:last-child {
+            border-radius: 0 0 0.625em 0;
+        }
+    }
+
+    & table, & tr, & th, & td {
+        border: none;
+    }
+
+
+    // footer
+
+    & footer {
+        text-align: center;
+        font-size: 1.25em;
+        padding: 1em 0;
+        border-top: 0.375rem solid $primary;
+        border-radius: 0 0 1em 1em;
+
+        background: url(../../../resources/images/bar-background-2.jpg) no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        & a, & a:visited {
+            color: $secondary;
+        }
+    }
+}
