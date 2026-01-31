@@ -421,7 +421,7 @@ export class Card {
         const logoSprite = newSprite(this.logoURL, this.container);
         let bounds = logoSprite.getBounds();
 
-        let scale = 0.8;
+        let scale = 1;
         if (bounds.width > maxLogoWidth) {
             scale = Math.min(scale, maxLogoWidth / bounds.width);
         }
@@ -432,11 +432,8 @@ export class Card {
         if (this.logoScale) {
             let finalScale = this.logoScale;
             
-            // Variantes que devem manter o tamanho original/cheio (1.0)
-            const isGenericOversized = !this.variant && this.oversized;
-
-            if (isGenericOversized) {
-                finalScale *= 1.25;
+            if (!this.oversized) {
+                finalScale *= 0.8;
             }
             scale *= finalScale;
         }

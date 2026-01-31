@@ -123,7 +123,7 @@ export const defaultsRows: IRowValues[] = [
         setBackgroundColor: "#ed1c24",
         copyright: "2015 CZE",
         legal: "TEEN TITANS and all related character and elements are trademarks and © DC Comics\n(s15)",
-        logoScale: 0.8,
+        logoScale: 1.0,
     },
     /*{
         name: '__oversized_defaults__',
