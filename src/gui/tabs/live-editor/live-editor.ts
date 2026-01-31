@@ -401,9 +401,9 @@ export class LiveEditorTab extends Tab {
         let desiredOptions = [""];
 
         if (type === "Hero" || type === "Herói") {
-            desiredOptions = ["", "Super Hero", "Infinity War", "Crisis", "Hero lvl 1", "Hero lvl 2", "Hero lvl 3", "Hero lvl 4"];
+            desiredOptions = ["", "Super Hero", "Infinity War", "Crisis", "Speedster", "Hero lvl 1", "Hero lvl 2", "Hero lvl 3", "Hero lvl 4"];
         } else if (type === "Villain" || type === "Vilão") {
-            desiredOptions = ["", "Super-Villain", "Infinity War", "Crisis", "Impossible", "Villain lvl 1", "Villain lvl 2", "Villain lvl 3"];
+            desiredOptions = ["", "Super-Villain", "Infinity War", "Crisis", "Speedster", "Impossible", "Villain lvl 1", "Villain lvl 2", "Villain lvl 3"];
         }
 
         // Rebuild options

@@ -382,6 +382,12 @@ export class Card {
             } else if (this.type === "Vilão" || this.type === "Vilao") {
                 spriteName = "sup-vilão-guerra-infinita";
             }
+        } else if (this.variant === "Speedster") {
+            if (this.type === "Hero" || this.type === "Herói" || this.type === "Heroi") {
+                spriteName = "Speedster hero";
+            } else if (this.type === "Villain" || this.type === "Vilão" || this.type === "Vilao") {
+                spriteName = "Speedster villain";
+            }
         } else {
             backgroundType = this.type;
             if (this.variant === "Super Hero" || this.variant === "Super-Villain" || this.oversized) {
