@@ -169,7 +169,8 @@ export class Card {
         }
 
         const isHeroOrVillain = this.type === "Hero" || this.type === "Villain" ||
-                                this.type === "Vilão" || this.type === "Herói" || this.type === "Heroi";
+                                this.type === "Vilão" || this.type === "Herói" ||
+                                this.type === "Heroi" || this.type === "Vilao";
         if (this.oversized && !isHeroOrVillain) {
             this.oversized = false;
         }
@@ -382,11 +383,25 @@ export class Card {
             } else if (this.type === "Vilão" || this.type === "Vilao") {
                 spriteName = "sup-vilão-guerra-infinita";
             }
-        } else if (this.variant === "Speedster") {
+        } else if (this.variant === "Speedster" && !this.oversized) {
             if (this.type === "Hero" || this.type === "Herói" || this.type === "Heroi") {
                 spriteName = "Speedster hero";
             } else if (this.type === "Villain" || this.type === "Vilão" || this.type === "Vilao") {
                 spriteName = "Speedster villain";
+            }
+        } else if (this.variant === "Symbiote") {
+            if (this.type === "Hero") {
+                spriteName = "Symbiote hero";
+            } else if (this.type === "Herói" || this.type === "Heroi") {
+                spriteName = "Symbiote heroi";
+            } else if (this.type === "Villain") {
+                spriteName = "Symbiote villain";
+            } else if (this.type === "Vilão" || this.type === "Vilao") {
+                spriteName = "Symbiote vilão";
+            } else if (this.type === "Equipment") {
+                spriteName = "Symbiote equipment";
+            } else if (this.type === "Equipamento") {
+                spriteName = "Symbiote equipamento";
             }
         } else {
             backgroundType = this.type;
