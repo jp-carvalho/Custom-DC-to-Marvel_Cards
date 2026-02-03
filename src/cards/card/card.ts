@@ -53,6 +53,15 @@ export class Card {
         "Uma vez por turno",
         "Reward",
         "Recompensa",
+        "Once during each of your turns",
+        "Uma vez durante cada um dos seus turnos",
+        "Range",
+        "Alcance",
+        "Contínuo",
+        "Defesa",
+        "Surge",
+        "Stack Ongoing",
+        "Pilha Contínua",
     ];
 
     /** The current width in pixels of the rendered card */
@@ -256,6 +265,8 @@ export class Card {
         formattedText = surroundText(formattedText, /\(([^)]+)\)/g, "[i]", "[/i]");
         formattedText = surroundText(formattedText, /First\ Appearance\s*[—–-]\s*Attack/gi, "[b]", "[/b]");
         formattedText = surroundText(formattedText, /Primeira\ Aparição\s*[—–-]\s*Ataque/gi, "[b]", "[/b]");
+
+        formattedText = formattedText.replace(/(Range:|Alcance:)(\s*)(\d+)/gi, "$1$2[b]$3[/b]");
 
         formattedText = formattedText.replace(/(Stack\ Ongoing)|(Ongoing)/g, (match, p1, p2) => {
             return p1 ? "[b]Stack Ongoing[/b]" : "[b]Ongoing[/b]";
@@ -671,7 +682,7 @@ export class Card {
         let y = 731;
         if (this.oversized) {
             y = 974;
-            maxWidth = 900;
+            maxWidth = 910;
             maxHeight = 155;
         }
         else {

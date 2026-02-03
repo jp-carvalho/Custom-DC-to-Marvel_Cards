@@ -37,6 +37,7 @@ export const setsData = [
     { original: "Teen Titans", en: "Team-Up", pt: "Parceria Marvel", text: "#FFFFFF", bg: "#E23636" },
     { original: "Dark Nights Metal", en: "King In Black", pt: "Rei das trevas", text: "#FF0000", bg: "#000000" },
     { original: "Rebirth", en: "Secret Wars", pt: "Guerras Secretas", text: "#00E5FF", bg: "#1A1A1A" },
+    { original: "Rebirth2", en: "Secret Wars 2", pt: "Guerras Secretas 2", text: "#03717e", bg: "#3a3939" },
     { original: "Injustice", en: "Civil War II", pt: "Guerra Civil II", text: "#212121", bg: "#FFB400" },
     { original: "Crossover1", en: "Crossover 1", pt: "Incursão 1", text: "#F0E68C", bg: "#354A21" },
     { original: "Crossover2", en: "Crossover 2", pt: "Incursão 2", text: "#E6E6E6", bg: "#4B0082" },
@@ -58,13 +59,14 @@ export const setsData = [
     { original: "Arkam Asylum", en: "Ravencroft", pt: "Ravencroft", text: "#00FF7F", bg: "#001A00" },
     { original: "Teen Titans Go", en: "Team-Up Go", pt: "Parceria GO", text: "#F0F0F0", bg: "#FF007F" },
     { original: "Justice League dark", en: "Midnight Suns", pt: "Filhos da Meis-Noite", text: "#FFD700", bg: "#191970" },
-    { original: "AA Shadows", en: "The Vault", pt: "A Abóbada", text: "#000000", bg: "#A9A9A9" },
+    { original: "AA Shadows", en: "The Vault", pt: "O Cofre", text: "#000000", bg: "#A9A9A9" },
     { original: "Multiverse", en: "Marvels", pt: "Marvels", text: "#F5F5DC", bg: "#5D4037" },
     { original: "Rivals 1", en: "Rivals 1", pt: "Confronto 1", text: "#ffec34", bg: "#ed1c24" },
     { original: "Rivals 2", en: "Rivals 2", pt: "Confronto 2", text: "#37a987", bg: "#126818" },
     { original: "Rivals 3", en: "Rivals 3", pt: "Confronto 3", text: "#FFFAFA", bg: "#D22B2B" },
     { original: "Rivals 4", en: "Rivals 4", pt: "Confronto 4", text: "#B0E0E6", bg: "#00008B" },
     { original: "Rivals 5", en: "Rivals 5", pt: "Confronto 5", text: "#7CFC00", bg: "#002200" },
+    { original: "Peacemaker", en: "Shooters", pt: "Atiradores", text: "#FFFFFF", bg: "#708090" },
 ];
 
 const customSets = store.get("custom-sets") || [];
