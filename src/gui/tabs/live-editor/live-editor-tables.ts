@@ -58,7 +58,7 @@ export const setsData = [
     { original: "Confrontations", en: "Civil War", pt: "Guerra Civil", text: "#626060", bg: "#303030" },
     { original: "Arkam Asylum", en: "Ravencroft", pt: "Ravencroft", text: "#00FF7F", bg: "#001A00" },
     { original: "Teen Titans Go", en: "Team-Up Go", pt: "Parceria GO", text: "#F0F0F0", bg: "#FF007F" },
-    { original: "Justice League dark", en: "Midnight Suns", pt: "Filhos da Meis-Noite", text: "#FFD700", bg: "#191970" },
+    { original: "Justice League dark", en: "Midnight Suns", pt: "Filhos da Meia-Noite", text: "#FFD700", bg: "#191970" },
     { original: "AA Shadows", en: "The Vault", pt: "O Cofre", text: "#000000", bg: "#A9A9A9" },
     { original: "Multiverse", en: "Marvels", pt: "Marvels", text: "#F5F5DC", bg: "#5D4037" },
     { original: "Rivals 1", en: "Rivals 1", pt: "Confronto 1", text: "#ffec34", bg: "#ed1c24" },
@@ -160,7 +160,7 @@ export const cardsHeadings: IColumnData[] = [
     },
     {
         name: "Variant",
-        allowedValues: ["", "Super Hero", "Super-Villain", "Impossible", "Hero lvl 1", "Hero lvl 2", "Hero lvl 3", "Hero lvl 4", "Villain lvl 1", "Villain lvl 2", "Villain lvl 3", "Infinity War", "Crisis", "Speedster", "Symbiote", "Bribe 1", "Bribe 2", "Bribe 3", "Bribe 4", "Bribe 5"],
+        allowedValues: ["", "Super Hero", "Super-Villain", "Impossible", "Hero lvl 1", "Hero lvl 2", "Hero lvl 3", "Hero lvl 4", "Villain lvl 1", "Villain lvl 2", "Villain lvl 3", "Infinity War", "Crisis", "Speedster", "Symbiote", "Unity", "Bribe 1", "Bribe 2", "Bribe 3", "Bribe 4", "Bribe 5"],
     },
     {
         name: "Oversized",

@@ -35,7 +35,9 @@ export class Card {
     /** Keywords that are automatically bolded for all card text */
     public static readonly autoBoldKeywords = [
         "+Power",
+        "Power",
         "+Poder",
+        "Poder",
         ":",
         "Attacked",
         "Attack",
@@ -62,6 +64,14 @@ export class Card {
         "Surge",
         "Stack Ongoing",
         "Pilha Contínua",
+        "Once per Turn",
+        "Uma vez por Turno",
+        "Block",
+        "Bloqueio",
+        "Discard 2 different cards",
+        "Descarte 2 cartas diferentes",
+        "Vulnerability ",
+        "Vulnerabilidade ",
     ];
 
     /** The current width in pixels of the rendered card */
@@ -262,7 +272,12 @@ export class Card {
         formattedText = surroundText(formattedText, /\+([\d\sX]*?)\ Power/g, "[b]", "[/b]");
         formattedText = surroundText(formattedText, /\+([\d\sX]*?)\ de\ Poder/g, "[b]", "[/b]");
         formattedText = surroundText(formattedText, /(\d)\ Power/g, "[b]", "[/b]");
+        formattedText = formattedText.replace(/Meter Burn \((\d+)\)/gi, "[b]Meter Burn __LP__$1__RP__[/b]");
+        formattedText = formattedText.replace(/Queima da barra \((\d+)\)/gi, "[b]Queima da barra __LP__$1__RP__[/b]");
         formattedText = surroundText(formattedText, /\(([^)]+)\)/g, "[i]", "[/i]");
+        formattedText = formattedText.replace(/__LP__/g, "(");
+        formattedText = formattedText.replace(/__RP__/g, ")");
+
         formattedText = surroundText(formattedText, /First\ Appearance\s*[—–-]\s*Attack/gi, "[b]", "[/b]");
         formattedText = surroundText(formattedText, /Primeira\ Aparição\s*[—–-]\s*Ataque/gi, "[b]", "[/b]");
 
@@ -414,6 +429,12 @@ export class Card {
             } else if (this.type === "Equipamento") {
                 spriteName = "Symbiote equipamento";
             }
+        } else if (this.variant === "Unity") {
+            if (this.type === "Hero" || this.type === "Herói" || this.type === "Heroi") {
+                spriteName = "Unity hero";
+            } else if (this.type === "Villain" || this.type === "Vilão" || this.type === "Vilao") {
+                spriteName = "unity villain";
+            }
         } else if (this.variant.indexOf("Bribe") === 0 && !this.oversized) {
             const lvl = this.variant.split(" ")[1];
             if (this.type === "Hero") {
@@ -505,16 +526,41 @@ export class Card {
             y = 55;
         }
 
-        const cardName = new PIXI.Text(
-            this.name.toUpperCase(),
-            this.getStyle("name"),
-        );
+        const nameContainer = new PIXI.Container();
+        const fullText = this.name.toUpperCase();
+        const parts = fullText.split(/(\*[^*]+\*)/g);
 
-        cardName.position.set(x, y);
-        cardName.scale.y *= 0.75;
-        cardName.scale.x *= 0.96;
-        cardName.skew.x = -0.265;
-        this.container.addChild(cardName);
+        let currentX = 0;
+
+        for (const part of parts) {
+            if (part === "") { continue; }
+
+            let textPart = part;
+            const style = this.getStyle("name");
+            let yOffset = 0;
+
+            if (part.startsWith("*") && part.endsWith("*")) {
+                textPart = part.substring(1, part.length - 1);
+                const originalSize = Number(style.fontSize);
+                style.fontSize = originalSize * 0.65;
+                style.dropShadowDistance = Number(style.dropShadowDistance) * 0.65;
+                style.letterSpacing = Number(style.letterSpacing) * 0.65;
+                yOffset = (originalSize - Number(style.fontSize)) * 0.8;
+            }
+
+            const textObj = new PIXI.Text(textPart, style);
+            textObj.x = currentX;
+            textObj.y = yOffset;
+
+            nameContainer.addChild(textObj);
+            currentX += textObj.width;
+        }
+
+        nameContainer.position.set(x, y);
+        nameContainer.scale.y *= 0.75;
+        nameContainer.scale.x *= 0.96;
+        nameContainer.skew.x = -0.265;
+        this.container.addChild(nameContainer);
     }
 
     /**
@@ -549,15 +595,20 @@ export class Card {
         }
 
         let x = 710;
-        let y = 700;
+        let y = 705;
         if (this.oversized) {
             x = 900 - 39;
             y = 950;
         }
 
+        const style = this.getStyle("subtype");
+        style.fill = "#000000";
+        style.stroke = "#ffffff";
+        style.strokeThickness = 8;
+
         const subtypeText = new PIXI.Text(
             this.subtype.toUpperCase(),
-            this.getStyle("subtype"),
+            style,
         );
 
         subtypeText.scale.y *= 0.75;
@@ -689,7 +740,7 @@ export class Card {
         const collisions = [];
         let maxWidth = 750;
         let maxHeight = 195;
-        const x = 39;
+        let x = 39;
         let y = 731;
         if (this.oversized) {
             y = 974;
@@ -698,6 +749,12 @@ export class Card {
         }
         else {
             collisions.push(vpCircle);
+        }
+
+        let textWidth = maxWidth - x * 2;
+        if (this.subtype && (this.subtype.toLowerCase() === "unity" || this.subtype.toLowerCase() === "união")) {
+            x = 100;
+            textWidth = maxWidth - x - 39;
         }
 
         if (this.variant && this.variant.indexOf("lvl") !== -1 && !this.oversized) {
@@ -715,7 +772,7 @@ export class Card {
 
         const textContainer = autoSizeAndWrapStyledText(
             formattedText,
-            maxWidth - x * 2,
+            textWidth,
             maxHeight, style,
             1,
             collisions,
