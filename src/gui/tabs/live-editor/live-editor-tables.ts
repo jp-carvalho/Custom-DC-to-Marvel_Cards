@@ -160,7 +160,7 @@ export const cardsHeadings: IColumnData[] = [
     },
     {
         name: "Variant",
-        allowedValues: ["", "Super Hero", "Super-Villain", "Impossible", "Hero lvl 1", "Hero lvl 2", "Hero lvl 3", "Hero lvl 4", "Villain lvl 1", "Villain lvl 2", "Villain lvl 3", "Infinity War", "Crisis", "Speedster", "Symbiote"],
+        allowedValues: ["", "Super Hero", "Super-Villain", "Impossible", "Hero lvl 1", "Hero lvl 2", "Hero lvl 3", "Hero lvl 4", "Villain lvl 1", "Villain lvl 2", "Villain lvl 3", "Infinity War", "Crisis", "Speedster", "Symbiote", "Bribe 1", "Bribe 2", "Bribe 3", "Bribe 4", "Bribe 5"],
     },
     {
         name: "Oversized",

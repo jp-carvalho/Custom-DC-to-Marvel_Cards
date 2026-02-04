@@ -414,6 +414,17 @@ export class Card {
             } else if (this.type === "Equipamento") {
                 spriteName = "Symbiote equipamento";
             }
+        } else if (this.variant.indexOf("Bribe") === 0 && !this.oversized) {
+            const lvl = this.variant.split(" ")[1];
+            if (this.type === "Hero") {
+                spriteName = `hero bribe ${lvl}`;
+            } else if (this.type === "Herói" || this.type === "Heroi") {
+                spriteName = `herói suborno ${lvl}`;
+            } else if (this.type === "Villain") {
+                spriteName = `villain bribe ${lvl}`;
+            } else if (this.type === "Vilão" || this.type === "Vilao") {
+                spriteName = `vilão suborno ${lvl}`;
+            }
         } else {
             backgroundType = this.type;
             if (this.variant === "Super Hero" || this.variant === "Super-Villain" || this.oversized) {
