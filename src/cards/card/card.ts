@@ -72,6 +72,14 @@ export class Card {
         "Descarte 2 cartas diferentes",
         "Vulnerability ",
         "Vulnerabilidade ",
+        "Discard two cards",
+        "Descarte duas cartas",
+        "Teamwork",
+        "Trabalho em Equipe",
+        "Punch",
+        "Soco",
+        "Ambush",
+        "Surpresa",
     ];
 
     /** The current width in pixels of the rendered card */
@@ -290,12 +298,18 @@ export class Card {
             return p1 ? "[b]Pilha Contínua[/b]" : "[b]Contínua[/b]";
         });
 
+        formattedText = formattedText.replace(/Super Power/g, "__SUPER_POWER__");
+        formattedText = formattedText.replace(/Super Poder/g, "__SUPER_PODER__");
+
         const boldKeywords = Card.autoBoldKeywords
             .concat(this.alsoBold);
 
         for (const toBold of boldKeywords) {
             formattedText = replaceAll(formattedText, toBold, `[b]${toBold}[/b]`);
         }
+
+        formattedText = formattedText.replace(/__SUPER_POWER__/g, "Super Power");
+        formattedText = formattedText.replace(/__SUPER_PODER__/g, "Super Poder");
 
         return formattedText;
     }
@@ -560,6 +574,19 @@ export class Card {
         nameContainer.scale.y *= 0.75;
         nameContainer.scale.x *= 0.96;
         nameContainer.skew.x = -0.265;
+
+        let maxWidth = (this.oversized ? 900 : 750) - x - 20;
+        if (this.logoURL) {
+            const logoLeft = this.oversized ? 860 : 720;
+            maxWidth = logoLeft - x;
+        }
+
+        if (nameContainer.width > maxWidth) {
+            const scale = maxWidth / nameContainer.width;
+            nameContainer.scale.x *= scale;
+            nameContainer.scale.y *= scale;
+        }
+
         this.container.addChild(nameContainer);
     }
 

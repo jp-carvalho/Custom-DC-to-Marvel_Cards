@@ -67,6 +67,7 @@ export const setsData = [
     { original: "Rivals 4", en: "Rivals 4", pt: "Confronto 4", text: "#B0E0E6", bg: "#00008B" },
     { original: "Rivals 5", en: "Rivals 5", pt: "Confronto 5", text: "#7CFC00", bg: "#002200" },
     { original: "Peacemaker", en: "Shooters", pt: "Atiradores", text: "#FFFFFF", bg: "#708090" },
+    { original: "Crossover Crisis 1", en: "CIW 1", pt: "IGI 1", text: "#FFFFFF", bg: "#2E8B57" },
 ];
 
 const customSets = store.get("custom-sets") || [];
