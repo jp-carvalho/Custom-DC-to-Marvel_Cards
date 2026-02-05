@@ -60,6 +60,7 @@ export class Card {
         "Range",
         "Alcance",
         "Contínuo",
+        "Contínuas",
         "Defesa",
         "Surge",
         "Stack Ongoing",
@@ -80,6 +81,16 @@ export class Card {
         "Soco",
         "Ambush",
         "Surpresa",
+        "UNAVOIDABLE",
+        "INDEFENSÁVEL",
+        "Once during your turn",
+        "Uma vez durante o seu turno",
+        "Bribe",
+        "Suborno",
+        "End of Your Turn",
+        "Fim do Seu Turno",
+        "SYMBIOTE",
+        "SIMBIONTE",
     ];
 
     /** The current width in pixels of the rendered card */
@@ -294,7 +305,7 @@ export class Card {
         formattedText = formattedText.replace(/(Stack\ Ongoing)|(Ongoing)/g, (match, p1, p2) => {
             return p1 ? "[b]Stack Ongoing[/b]" : "[b]Ongoing[/b]";
         });
-        formattedText = formattedText.replace(/(Pilha\ Contínua)|(Contínua)/g, (match, p1, p2) => {
+        formattedText = formattedText.replace(/(Pilha\ Contínua)|(Contínua)(?!s)/g, (match, p1, p2) => {
             return p1 ? "[b]Pilha Contínua[/b]" : "[b]Contínua[/b]";
         });
 
