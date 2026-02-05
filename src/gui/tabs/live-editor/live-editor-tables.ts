@@ -58,6 +58,7 @@ export const setsData = [
     { original: "Confrontations", en: "Civil War", pt: "Guerra Civil", text: "#626060", bg: "#303030" },
     { original: "Arkam Asylum", en: "Ravencroft", pt: "Ravencroft", text: "#00FF7F", bg: "#001A00" },
     { original: "Teen Titans Go", en: "Team-Up 90's", pt: "Parceria Marvel 90's", text: "#F0F0F0", bg: "#FF007F" },
+    { original: "Teen Titans Go 2", en: "Team-Up 90's 2", pt: "P. Marvel 90's 2", text: "#F0F0F0", bg: "#eb107d" },
     { original: "Justice League dark", en: "Midnight Suns", pt: "Filhos da Meia-Noite", text: "#FFD700", bg: "#191970" },
     { original: "AA Shadows", en: "The Vault", pt: "O Cofre", text: "#000000", bg: "#A9A9A9" },
     { original: "Multiverse", en: "Marvels", pt: "Marvels", text: "#F5F5DC", bg: "#5D4037" },
