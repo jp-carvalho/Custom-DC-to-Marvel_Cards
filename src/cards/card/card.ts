@@ -309,8 +309,18 @@ export class Card {
             return p1 ? "[b]Pilha Contínua[/b]" : "[b]Contínua[/b]";
         });
 
+        formattedText = formattedText.replace(/(WHEN YOU GAIN THIS:\s*GAIN A WEAKNESS\.?)/gi, "[b]$1[/b]");
+        formattedText = formattedText.replace(/(AO GANHAR ISTO:\s*GANHE UMA FRAQUEZA\.?)/gi, "[b]$1[/b]");
+
         formattedText = formattedText.replace(/Super Power/g, "__SUPER_POWER__");
         formattedText = formattedText.replace(/Super Poder/g, "__SUPER_PODER__");
+
+        // Temporarily protect the phrases to prevent double-bolding of keywords within them.
+        const protectedPhrases: string[] = [];
+        formattedText = formattedText.replace(/(WHEN YOU GAIN THIS:\s*GAIN A WEAKNESS\.?)|(AO GANHAR ISTO:\s*GANHE UMA FRAQUEZA\.?)/gi, (match) => {
+            protectedPhrases.push(match);
+            return `__PROTECTED_PHRASE_${protectedPhrases.length - 1}__`;
+        });
 
         const boldKeywords = Card.autoBoldKeywords
             .concat(this.alsoBold);
@@ -321,6 +331,11 @@ export class Card {
 
         formattedText = formattedText.replace(/__SUPER_POWER__/g, "Super Power");
         formattedText = formattedText.replace(/__SUPER_PODER__/g, "Super Poder");
+
+        // Restore the protected phrases, now fully bolded.
+        for (let i = 0; i < protectedPhrases.length; i++) {
+            formattedText = formattedText.replace(`__PROTECTED_PHRASE_${i}__`, `[b]${protectedPhrases[i]}[/b]`);
+        }
 
         return formattedText;
     }
@@ -818,9 +833,86 @@ export class Card {
             this.oversized,
         );
 
-        textContainer.position.set(x, y);
+        const textGroup = new PIXI.Container();
+        // O grupo de texto será posicionado em (0, y) porque o fundo precisa começar em x=0.
+        textGroup.position.set(0, y);
 
-        this.container.addChild(textContainer);
+        // Logic to highlight specific phrases
+        const highlightPhrases = [
+            "WHEN YOU GAIN THIS: GAIN A WEAKNESS.",
+            "AO GANHAR ISTO: GANHE UMA FRAQUEZA.",
+        ];
+
+        // Flatten text nodes to find position
+        const textNodes: {text: string, y: number, height: number}[] = [];
+        const extractTextNodes = (container: PIXI.Container, currentY: number) => {
+            if (!container.children) { return; }
+            for (const child of container.children) {
+                if (child instanceof PIXI.Text || (child as any).text) {
+                    textNodes.push({
+                        text: (child as any).text,
+                        y: currentY + child.y,
+                        height: (child as any).height,
+                    });
+                } else if (child instanceof PIXI.Container) {
+                    extractTextNodes(child, currentY + child.y);
+                }
+            }
+        };
+        extractTextNodes(textContainer, 0);
+
+        const cleanCharToNode: typeof textNodes = [];
+        let cleanFullText = "";
+
+        for (const node of textNodes) {
+            const str = node.text;
+            for (let i = 0; i < str.length; i++) {
+                const char = str[i];
+                if (char !== " " && char !== "\n" && char !== "\t") {
+                    cleanFullText += char;
+                    cleanCharToNode.push(node);
+                }
+            }
+        }
+
+        const upperCleanText = cleanFullText.toUpperCase();
+        let minY = Infinity;
+        let maxY = -Infinity;
+        let found = false;
+
+        for (const phrase of highlightPhrases) {
+            const cleanPhrase = phrase.replace(/\s/g, "");
+            const idx = upperCleanText.indexOf(cleanPhrase);
+
+            if (idx !== -1) {
+                found = true;
+                const endIdx = idx + cleanPhrase.length;
+                for (let i = idx; i < endIdx; i++) {
+                    if (i < cleanCharToNode.length) {
+                        const node = cleanCharToNode[i];
+                        if (node.y < minY) { minY = node.y; }
+                        if (node.y + node.height > maxY) { maxY = node.y + node.height; }
+                    }
+                }
+            }
+        }
+
+        if (found && minY !== Infinity) {
+            const yellowBg = new PIXI.Graphics();
+            yellowBg.beginFill(0xe1b327); // Amarelo
+
+            yellowBg.drawRect(0, minY - 12, this.pxWidth, maxY - minY + 12);
+            yellowBg.endFill();
+            textGroup.addChild(yellowBg);
+        }
+
+        // textContainer deve ser posicionado dentro do textGroup.
+        // Sua posição relativa à carta é (x, y).
+        // Como textGroup está em (0, y), a posição do textContainer dentro do textGroup deve ser (x, 0).
+        textContainer.position.set(x, 0);
+        textGroup.addChild(textContainer);
+
+        this.container.addChild(textGroup);
     }
 
     /**
