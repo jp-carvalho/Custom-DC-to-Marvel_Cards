@@ -172,6 +172,18 @@ const styles: {
         },
     },
 
+    VillainNemesis: {
+        name: {
+            fill: "#ed2122",
+        },
+    },
+
+    VilãoNêmesis: {
+        name: {
+            fill: "#ed2122",
+        },
+    },
+
     Location: {
         name: {
             fill: "#ea078c",

@@ -20,6 +20,8 @@ const cardTypeTranslations: {[key: string]: string} = {
     "Inicial": "Inicial",
     "Super Poder": "Superpoder",
     "Fraqueza": "Fraqueza",
+    "Villain Nemesis": "Nemesis",
+    "Vilão Nêmesis": "Nêmesis",
 };
 
 /** The maximum width (in pixels) that a card can be (oversized) */
@@ -91,6 +93,8 @@ export class Card {
         "Fim do Seu Turno",
         "SYMBIOTE",
         "SIMBIONTE",
+        "Discard a",
+        "Descarte um",
     ];
 
     /** The current width in pixels of the rendered card */
@@ -105,7 +109,7 @@ export class Card {
     /** The type of the card, used for background generation */
     public type: "Equipment" | "Hero" | "Location" | "Starter" | "Equipamento" |
                  "Super Power" | "Villain" | "Weakness" | "Herói" | "Localização" | "Inicial" | "Superpoder" | "Vilão" | "Fraqueza" |
-                 "Weakness" = "Starter";
+                 "Weakness" | "Villain Nemesis" | "Vilão Nêmesis" = "Starter";
 
     /** If this card is a variant with black background text */
     public variant: string = "";
@@ -208,7 +212,8 @@ export class Card {
 
         const isHeroOrVillain = this.type === "Hero" || this.type === "Villain" ||
                                 this.type === "Vilão" || this.type === "Herói" ||
-                                this.type === "Heroi" || this.type === "Vilao";
+                                this.type === "Heroi" || this.type === "Vilao" ||
+                                this.type === "Villain Nemesis" || this.type === "Vilão Nêmesis";
         if (this.oversized && !isHeroOrVillain) {
             this.oversized = false;
         }
@@ -288,17 +293,11 @@ export class Card {
     private formatText(): string {
         let formattedText = this.text;
 
-        formattedText = surroundText(formattedText, /\+([\d\sX]*?)\ Power/g, "[b]", "[/b]");
-        formattedText = surroundText(formattedText, /\+([\d\sX]*?)\ de\ Poder/g, "[b]", "[/b]");
-        formattedText = surroundText(formattedText, /(\d)\ Power/g, "[b]", "[/b]");
         formattedText = formattedText.replace(/Meter Burn \((\d+)\)/gi, "[b]Meter Burn __LP__$1__RP__[/b]");
         formattedText = formattedText.replace(/Queima da barra \((\d+)\)/gi, "[b]Queima da barra __LP__$1__RP__[/b]");
         formattedText = surroundText(formattedText, /\(([^)]+)\)/g, "[i]", "[/i]");
         formattedText = formattedText.replace(/__LP__/g, "(");
         formattedText = formattedText.replace(/__RP__/g, ")");
-
-        formattedText = surroundText(formattedText, /First\ Appearance\s*[—–-]\s*Attack/gi, "[b]", "[/b]");
-        formattedText = surroundText(formattedText, /Primeira\ Aparição\s*[—–-]\s*Ataque/gi, "[b]", "[/b]");
 
         formattedText = formattedText.replace(/(Range:|Alcance:)(\s*)(\d+)/gi, "$1$2[b]$3[/b]");
 
@@ -309,24 +308,49 @@ export class Card {
             return p1 ? "[b]Pilha Contínua[/b]" : "[b]Contínua[/b]";
         });
 
-        formattedText = formattedText.replace(/(WHEN YOU GAIN THIS:\s*GAIN A WEAKNESS\.?)/gi, "[b]$1[/b]");
-        formattedText = formattedText.replace(/(AO GANHAR ISTO:\s*GANHE UMA FRAQUEZA\.?)/gi, "[b]$1[/b]");
-
         formattedText = formattedText.replace(/Super Power/g, "__SUPER_POWER__");
         formattedText = formattedText.replace(/Super Poder/g, "__SUPER_PODER__");
 
+        // Manual bolding with {}
+        const manualBolds: string[] = [];
+        formattedText = formattedText.replace(/\{([^{}]+)\}/g, (match, content) => {
+            manualBolds.push(content);
+            return `__MANUAL_BOLD_${manualBolds.length - 1}__`;
+        });
+
         // Temporarily protect the phrases to prevent double-bolding of keywords within them.
         const protectedPhrases: string[] = [];
-        formattedText = formattedText.replace(/(WHEN YOU GAIN THIS:\s*GAIN A WEAKNESS\.?)|(AO GANHAR ISTO:\s*GANHE UMA FRAQUEZA\.?)/gi, (match) => {
-            protectedPhrases.push(match);
-            return `__PROTECTED_PHRASE_${protectedPhrases.length - 1}__`;
-        });
+        const phrasesToProtect = [
+            /(WHEN YOU GAIN THIS:\s*GAIN A WEAKNESS\.?)/gi,
+            /(AO GANHAR ISTO:\s*GANHE UMA FRAQUEZA\.?)/gi,
+            /(Galactus Herald:\s*\d+)/gi,
+            /(Arauto de Galactus:\s*\d+)/gi,
+            /First\ Appearance\s*[—–-]\s*Attack/gi,
+            /Primeira\ Aparição\s*[—–-]\s*Ataque/gi,
+            /\+([\d\sX]*?)\ Power/gi,
+            /\+([\d\sX]*?)\ de\ Poder/gi,
+            /(\d+)\s*\+\s*Power/gi,
+            /(\d+)\s*\+\s*de\ Poder/gi,
+            /(\d)\ Power/gi,
+        ];
+
+        for (const regex of phrasesToProtect) {
+            formattedText = formattedText.replace(regex, (match) => {
+                protectedPhrases.push(match);
+                return `__PROTECTED_PHRASE_${protectedPhrases.length - 1}__`;
+            });
+        }
 
         const boldKeywords = Card.autoBoldKeywords
             .concat(this.alsoBold);
 
         for (const toBold of boldKeywords) {
             formattedText = replaceAll(formattedText, toBold, `[b]${toBold}[/b]`);
+        }
+
+        // Restore manual bolds
+        for (let i = 0; i < manualBolds.length; i++) {
+            formattedText = formattedText.replace(`__MANUAL_BOLD_${i}__`, `[b]${manualBolds[i]}[/b]`);
         }
 
         formattedText = formattedText.replace(/__SUPER_POWER__/g, "Super Power");
@@ -409,8 +433,8 @@ export class Card {
         let backgroundType: string;
         let spriteName: string;
 
-        if (this.variant === "Impossible" && (this.type === "Villain" || this.type === "Vilão") && !this.oversized) {
-            if (this.type === "Villain") {
+        if (this.variant === "Impossible" && (this.type === "Villain" || this.type === "Vilão" || this.type === "Villain Nemesis" || this.type === "Vilão Nêmesis") && !this.oversized) {
+            if (this.type === "Villain" || this.type === "Villain Nemesis") {
                 spriteName = "super-villain imp";
             } else { // Vilão
                 spriteName = "super-vilão imp";
@@ -422,9 +446,9 @@ export class Card {
             } else { // Herói
                 spriteName = `super-heroi lvl${lvl}`;
             }
-        } else if (this.variant.indexOf("Villain lvl") === 0 && (this.type === "Villain" || this.type === "Vilão") && !this.oversized) {
+        } else if (this.variant.indexOf("Villain lvl") === 0 && (this.type === "Villain" || this.type === "Vilão" || this.type === "Villain Nemesis" || this.type === "Vilão Nêmesis") && !this.oversized) {
             const lvl = this.variant.split(" ")[2];
-            if (this.type === "Villain") {
+            if (this.type === "Villain" || this.type === "Villain Nemesis") {
                 spriteName = `super-villain lvl${lvl}`;
             } else { // Vilão
                 spriteName = `super-vilão lvl${lvl}`;
@@ -434,9 +458,9 @@ export class Card {
                 spriteName = "crisis super-hero";
             } else if (this.type === "Herói" || this.type === "Heroi") {
                 spriteName = "crisis super-heroi";
-            } else if (this.type === "Villain") {
+            } else if (this.type === "Villain" || this.type === "Villain Nemesis") {
                 spriteName = "Crisis super-villain";
-            } else if (this.type === "Vilão" || this.type === "Vilao") {
+            } else if (this.type === "Vilão" || this.type === "Vilao" || this.type === "Vilão Nêmesis") {
                 spriteName = "Crisis super-vilão";
             }
         } else if (this.variant === "Infinity War") {
@@ -444,15 +468,15 @@ export class Card {
                 spriteName = "sup-hero-infinity-war";
             } else if (this.type === "Herói" || this.type === "Heroi") {
                 spriteName = "sup-heroi-guerra-infinita";
-            } else if (this.type === "Villain") {
+            } else if (this.type === "Villain" || this.type === "Villain Nemesis") {
                 spriteName = "sup-villain-infinity-war";
-            } else if (this.type === "Vilão" || this.type === "Vilao") {
+            } else if (this.type === "Vilão" || this.type === "Vilao" || this.type === "Vilão Nêmesis") {
                 spriteName = "sup-vilão-guerra-infinita";
             }
         } else if (this.variant === "Speedster" && !this.oversized) {
             if (this.type === "Hero" || this.type === "Herói" || this.type === "Heroi") {
                 spriteName = "Speedster hero";
-            } else if (this.type === "Villain" || this.type === "Vilão" || this.type === "Vilao") {
+            } else if (this.type === "Villain" || this.type === "Vilão" || this.type === "Vilao" || this.type === "Villain Nemesis" || this.type === "Vilão Nêmesis") {
                 spriteName = "Speedster villain";
             }
         } else if (this.variant === "Symbiote") {
@@ -460,9 +484,9 @@ export class Card {
                 spriteName = "Symbiote hero";
             } else if (this.type === "Herói" || this.type === "Heroi") {
                 spriteName = "Symbiote heroi";
-            } else if (this.type === "Villain") {
+            } else if (this.type === "Villain" || this.type === "Villain Nemesis") {
                 spriteName = "Symbiote villain";
-            } else if (this.type === "Vilão" || this.type === "Vilao") {
+            } else if (this.type === "Vilão" || this.type === "Vilao" || this.type === "Vilão Nêmesis") {
                 spriteName = "Symbiote vilão";
             } else if (this.type === "Equipment") {
                 spriteName = "Symbiote equipment";
@@ -472,7 +496,7 @@ export class Card {
         } else if (this.variant === "Unity") {
             if (this.type === "Hero" || this.type === "Herói" || this.type === "Heroi") {
                 spriteName = "Unity hero";
-            } else if (this.type === "Villain" || this.type === "Vilão" || this.type === "Vilao") {
+            } else if (this.type === "Villain" || this.type === "Vilão" || this.type === "Vilao" || this.type === "Villain Nemesis" || this.type === "Vilão Nêmesis") {
                 spriteName = "unity villain";
             }
         } else if (this.variant.indexOf("Bribe") === 0 && !this.oversized) {
@@ -481,16 +505,22 @@ export class Card {
                 spriteName = `hero bribe ${lvl}`;
             } else if (this.type === "Herói" || this.type === "Heroi") {
                 spriteName = `herói suborno ${lvl}`;
-            } else if (this.type === "Villain") {
+            } else if (this.type === "Villain" || this.type === "Villain Nemesis") {
                 spriteName = `villain bribe ${lvl}`;
-            } else if (this.type === "Vilão" || this.type === "Vilao") {
+            } else if (this.type === "Vilão" || this.type === "Vilao" || this.type === "Vilão Nêmesis") {
                 spriteName = `vilão suborno ${lvl}`;
             }
         } else {
             backgroundType = this.type;
+            if (this.type === "Villain Nemesis") backgroundType = "Villain";
+            if (this.type === "Vilão Nêmesis") backgroundType = "Vilão";
+
             if (this.variant === "Super Hero" || this.variant === "Super-Villain" || this.oversized) {
-                if (this.type === "Hero" || this.type === "Villain" || this.type === "Herói" || this.type === "Vilão" || this.type === "Heroi") {
-                    backgroundType = `Super-${this.type}`;
+                if (this.type === "Hero" || this.type === "Villain" || this.type === "Herói" || this.type === "Vilão" || this.type === "Heroi" || this.type === "Villain Nemesis" || this.type === "Vilão Nêmesis") {
+                    let effectiveType = this.type;
+                    if (effectiveType === "Villain Nemesis") effectiveType = "Villain";
+                    if (effectiveType === "Vilão Nêmesis") effectiveType = "Vilão";
+                    backgroundType = `Super-${effectiveType}`;
                 }
             }
             if (this.oversized) {

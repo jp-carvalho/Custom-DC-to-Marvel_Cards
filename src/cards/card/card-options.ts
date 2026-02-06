@@ -20,7 +20,7 @@ export const CardOptionsList: ICardOption[] = [
         name: "Type",
         type: "text",
         description: `The card type. Must be "Equipment", "Hero", "Location", `
-                   + `"Starter", "Super Power", "Villain", or "Weakness". `
+                   + `"Starter", "Super Power", "Villain", "Villain Nemesis", or "Weakness". `
                    + `Alternatively "Super Hero" or "Super Villain" are `
                    + `shorthand for their oversized versions`,
     },
