@@ -41,8 +41,6 @@ export class Card {
         "+Poder",
         "Poder",
         ":",
-        "Attacked",
-        "Attack",
         "Defense",
         "Weakness",
         "Atacado",
@@ -77,6 +75,8 @@ export class Card {
         "Vulnerabilidade ",
         "Discard two cards",
         "Descarte duas cartas",
+        "Discard 2 cards",
+        "Descarte 2 cartas",
         "Teamwork",
         "Trabalho em Equipe",
         "Punch",
@@ -86,6 +86,8 @@ export class Card {
         "UNAVOIDABLE",
         "INDEFENSÁVEL",
         "Once during your turn",
+        "Once this turn",
+        "Uma vez neste turno",
         "Uma vez durante o seu turno",
         "Bribe",
         "Suborno",
@@ -95,6 +97,7 @@ export class Card {
         "SIMBIONTE",
         "Discard a",
         "Descarte um",
+        "Once per your turns",
     ];
 
     /** The current width in pixels of the rendered card */
@@ -332,6 +335,14 @@ export class Card {
             /(\d+)\s*\+\s*Power/gi,
             /(\d+)\s*\+\s*de\ Poder/gi,
             /(\d)\ Power/gi,
+            /Pay\s*[1-9]\s*VPs/gi,
+            /Pague\s*[1-9]\s*PVs/gi,
+            /(Discard a non-Weakness card)/gi,
+            /(Descarte uma carta de não-Fraqueza)/gi,
+            /\bReverter\b/gi,
+            /\bRevert\b/gi,
+            /\bTransformar\b/gi,
+            /\bTransform\b/gi,
         ];
 
         for (const regex of phrasesToProtect) {
@@ -340,6 +351,8 @@ export class Card {
                 return `__PROTECTED_PHRASE_${protectedPhrases.length - 1}__`;
             });
         }
+
+        formattedText = formattedText.replace(/\b(Attack)\b/gi, "[b]$1[/b]");
 
         const boldKeywords = Card.autoBoldKeywords
             .concat(this.alsoBold);
@@ -615,7 +628,7 @@ export class Card {
                 style.fontSize = originalSize * 0.65;
                 style.dropShadowDistance = Number(style.dropShadowDistance) * 0.65;
                 style.letterSpacing = Number(style.letterSpacing) * 0.65;
-                yOffset = (originalSize - Number(style.fontSize)) * 0.8;
+                yOffset = (originalSize - Number(style.fontSize)) * 0.6;
             }
 
             const textObj = new PIXI.Text(textPart, style);
