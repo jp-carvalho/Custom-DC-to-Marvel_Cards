@@ -95,9 +95,13 @@ export class Card {
         "Fim do Seu Turno",
         "SYMBIOTE",
         "SIMBIONTE",
+        "Discard a Super Power",
+        "Descarte um Superpoder",
         "Discard a",
         "Descarte um",
         "Once per your turns",
+        "Time Travel",
+        "Eco Temporal",
     ];
 
     /** The current width in pixels of the rendered card */
@@ -326,6 +330,8 @@ export class Card {
         const phrasesToProtect = [
             /(WHEN YOU GAIN THIS:\s*GAIN A WEAKNESS\.?)/gi,
             /(AO GANHAR ISTO:\s*GANHE UMA FRAQUEZA\.?)/gi,
+            /(When you buy or gain this card, gain 1 VP\.?)/gi,
+            /(Quando você comprar ou ganhar esta carta, ganhe 1 PV\.?)/gi,
             /(Galactus Herald:\s*\d+)/gi,
             /(Arauto de Galactus:\s*\d+)/gi,
             /First\ Appearance\s*[—–-]\s*Attack/gi,
@@ -883,7 +889,9 @@ export class Card {
         // Logic to highlight specific phrases
         const highlightPhrases = [
             "WHEN YOU GAIN THIS: GAIN A WEAKNESS.",
+            "When you buy or gain this card, gain 1 VP.",
             "AO GANHAR ISTO: GANHE UMA FRAQUEZA.",
+            "Quando você comprar ou ganhar esta carta, ganhe 1 PV.",
         ];
 
         // Flatten text nodes to find position
@@ -924,7 +932,7 @@ export class Card {
         let found = false;
 
         for (const phrase of highlightPhrases) {
-            const cleanPhrase = phrase.replace(/\s/g, "");
+            const cleanPhrase = phrase.replace(/\s/g, "").toUpperCase();
             const idx = upperCleanText.indexOf(cleanPhrase);
 
             if (idx !== -1) {
