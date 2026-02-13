@@ -93,6 +93,7 @@ export class LiveEditorTab extends Tab {
 
         this.defaultsTable.on(EditableTable.EventSymbols.rowAdded, (rowValues: IRowValues, row: IRowData) => {
             setTimeout(() => row.tr.classList.add("shown"), 50);
+            setTimeout(() => this.addFileUploadToRow(row, "logoURL"), 100);
         });
 
         // if the defaults rows are edited, update all custom cards
@@ -639,6 +640,8 @@ export class LiveEditorTab extends Tab {
             this.downloadCardAsImage(canvas, card.name);
         });
 
+        setTimeout(() => this.addFileUploadToRow(row, "imageURL"), 100);
+
         this.renderCard(row);
         this.checkMaxCards(this.cardsTable.rows.length);
     }
@@ -653,6 +656,80 @@ export class LiveEditorTab extends Tab {
         this.cards.delete(row);
         this.canvases.get(row).remove();
         this.canvases.delete(row);
+    }
+
+    /**
+     * Adds a file upload button to the specified cell to allow local file usage
+     */
+    private addFileUploadToRow(row: IRowData, columnKey: string = "imageURL"): void {
+        const cell = row.tr.querySelector(`.column-${columnKey}`) as HTMLElement;
+        if (!cell) { return; }
+
+        // Check if we already have the wrapper to avoid duplicates
+        if (cell.querySelector(".file-upload-wrapper")) { return; }
+
+        const input = cell.querySelector("input, textarea") as HTMLInputElement | HTMLTextAreaElement;
+        if (!input) { return; }
+
+        // Create wrapper to ensure input and button sit side-by-side correctly
+        const wrapper = document.createElement("div");
+        wrapper.className = "file-upload-wrapper";
+        wrapper.style.display = "flex";
+        wrapper.style.alignItems = "center";
+        wrapper.style.width = "100%";
+
+        // Move input into wrapper
+        cell.appendChild(wrapper);
+        wrapper.appendChild(input);
+
+        input.style.flex = "1";
+        input.style.width = "auto"; // Reset width to allow flex to work
+        input.style.minWidth = "0"; // Prevent flex overflow
+
+        const btn = document.createElement("button");
+        btn.innerHTML = "📂";
+        btn.className = "file-upload-btn";
+        btn.title = "Upload local image";
+        btn.type = "button";
+        btn.style.marginLeft = "5px";
+        btn.style.cursor = "pointer";
+        btn.style.border = "none";
+        btn.style.background = "transparent";
+        btn.style.fontSize = "1.2em";
+        btn.style.padding = "0";
+        btn.style.lineHeight = "1";
+        btn.style.flexShrink = "0"; // Prevent button from being squashed
+
+        const fileInput = document.createElement("input");
+        fileInput.type = "file";
+        fileInput.accept = "image/*";
+        fileInput.style.display = "none";
+
+        btn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            fileInput.click();
+        });
+
+        fileInput.addEventListener("change", () => {
+            if (fileInput.files && fileInput.files[0]) {
+                const file = fileInput.files[0];
+
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const url = e.target.result as string;
+                    input.value = url;
+                    if (row.values) {
+                        (row.values as any)[columnKey] = url;
+                    }
+                    // Trigger change for the table logic
+                    input.dispatchEvent(new Event("change", { bubbles: true }));
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        wrapper.appendChild(btn);
+        wrapper.appendChild(fileInput);
     }
 
     /**
