@@ -50,7 +50,7 @@ export const setsData = [
     { original: "Crossover9", en: "Crossover 9", pt: "Incursão 9", text: "#E3D4A2", bg: "#3B2314" },
     { original: "Crossover10", en: "Crossover 10", pt: "Incursão 10", text: "#F8F8FF", bg: "#483D8B" },
     { original: "Crossover11", en: "Crossover 11", pt: "Incursão 11", text: "#FFFFFF", bg: "#008080" },
-    { original: "Crossover12", en: "Hush", pt: "Incursão 12", text: "#FFFFFF", bg: "#8B4513" },
+    { original: "Crossover12", en: "Crossover 12", pt: "Incursão 12", text: "#FFFFFF", bg: "#8B4513" },
     { original: "Doom", en: "Retro Evil", pt: "Maldade Retrô", text: "#cccf08", bg: "#f30b2a" },
     { original: "Crisis1", en: "Infinity War 1", pt: "Guerra do Infinito 1", text: "#FFF4BD", bg: "#B8860B" },
     { original: "Crisis2", en: "Infinity War 2", pt: "Guerra do Infinito 2", text: "#FFE066", bg: "#916A08" },

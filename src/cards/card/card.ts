@@ -102,6 +102,8 @@ export class Card {
         "Once per your turns",
         "Time Travel",
         "Eco Temporal",
+        "Bombshell",
+        "Bombástico",
     ];
 
     /** The current width in pixels of the rendered card */
