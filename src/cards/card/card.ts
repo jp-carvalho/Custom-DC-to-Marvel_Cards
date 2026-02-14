@@ -36,6 +36,12 @@ export const CARD_MAX_HEIGHT = 1200;
 export class Card {
     /** Keywords that are automatically bolded for all card text */
     public static readonly autoBoldKeywords = [
+        "WHEN YOU GAIN THIS: Investigate",
+        "AO GANHAR ISSO: Investigue",
+        "Ataque Surpresa!",
+        "Ataque de Emboscada!",
+        "Investigate",
+        "Investigue",
         "+Power",
         "Power",
         "+Poder",
@@ -104,6 +110,9 @@ export class Card {
         "Eco Temporal",
         "Bombshell",
         "Bombástico",
+        "WHEN YOU GAIN THIS: Investigate.",
+        "AO GANHAR ISSO: Investigue",
+        "Ataque Surpresa!",
     ];
 
     /** The current width in pixels of the rendered card */
@@ -330,10 +339,6 @@ export class Card {
         // Temporarily protect the phrases to prevent double-bolding of keywords within them.
         const protectedPhrases: string[] = [];
         const phrasesToProtect = [
-            /(WHEN YOU GAIN THIS:\s*GAIN A WEAKNESS\.?)/gi,
-            /(AO GANHAR ISTO:\s*GANHE UMA FRAQUEZA\.?)/gi,
-            /(When you buy or gain this card, gain 1 VP\.?)/gi,
-            /(Quando você comprar ou ganhar esta carta, ganhe 1 PV\.?)/gi,
             /(Galactus Herald:\s*\d+)/gi,
             /(Arauto de Galactus:\s*\d+)/gi,
             /First\ Appearance\s*[—–-]\s*Attack/gi,
@@ -845,7 +850,7 @@ export class Card {
         let maxWidth = 750;
         let maxHeight = 195;
         let x = 39;
-        let y = 731;
+        let y = 725;
         if (this.oversized) {
             y = 974;
             maxWidth = 910;
@@ -894,15 +899,18 @@ export class Card {
             "When you buy or gain this card, gain 1 VP.",
             "AO GANHAR ISTO: GANHE UMA FRAQUEZA.",
             "Quando você comprar ou ganhar esta carta, ganhe 1 PV.",
+            "WHEN YOU GAIN THIS: Investigate, then shuffle 2 Ambush Attack! cards into the Investigation deck.",
+            "AO GANHAR ISSO: Investigue e, em seguida, embaralhe 2 cartas de Ataque Surpresa! no baralho de Investigação.",
         ];
 
         // Flatten text nodes to find position
-        const textNodes: {text: string, y: number, height: number}[] = [];
+        const textNodes: {node: PIXI.DisplayObject, text: string, y: number, height: number}[] = [];
         const extractTextNodes = (container: PIXI.Container, currentY: number) => {
             if (!container.children) { return; }
             for (const child of container.children) {
                 if (child instanceof PIXI.Text || (child as any).text) {
                     textNodes.push({
+                        node: child,
                         text: (child as any).text,
                         y: currentY + child.y,
                         height: (child as any).height,
@@ -945,6 +953,12 @@ export class Card {
                         const node = cleanCharToNode[i];
                         if (node.y < minY) { minY = node.y; }
                         if (node.y + node.height > maxY) { maxY = node.y + node.height; }
+
+                        if (node.node instanceof PIXI.Text) {
+                            const style = node.node.style.clone();
+                            style.fill = "#000000";
+                            node.node.style = style;
+                        }
                     }
                 }
             }
@@ -954,7 +968,7 @@ export class Card {
             const yellowBg = new PIXI.Graphics();
             yellowBg.beginFill(0xe1b327); // Amarelo
 
-            yellowBg.drawRect(0, minY - 12, this.pxWidth, maxY - minY + 12);
+            yellowBg.drawRect(0, minY - 10, this.pxWidth, maxY - minY + 3);
             yellowBg.endFill();
             textGroup.addChild(yellowBg);
         }
