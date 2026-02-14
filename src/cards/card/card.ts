@@ -313,6 +313,13 @@ export class Card {
 
         formattedText = formattedText.replace(/Meter Burn \((\d+)\)/gi, "[b]Meter Burn __LP__$1__RP__[/b]");
         formattedText = formattedText.replace(/Queima da barra \((\d+)\)/gi, "[b]Queima da barra __LP__$1__RP__[/b]");
+
+        const blockPhrases: string[] = [];
+        formattedText = formattedText.replace(/(Block|Bloqueio)(\s*)\((\d+)\)/gi, (match, p1, p2, p3) => {
+            blockPhrases.push(`${p1}${p2}(${p3})`);
+            return `__BLOCK_PHRASE_${blockPhrases.length - 1}__`;
+        });
+
         formattedText = surroundText(formattedText, /\(([^)]+)\)/g, "[i]", "[/i]");
         formattedText = formattedText.replace(/__LP__/g, "(");
         formattedText = formattedText.replace(/__RP__/g, ")");
@@ -385,6 +392,10 @@ export class Card {
         // Restore the protected phrases, now fully bolded.
         for (let i = 0; i < protectedPhrases.length; i++) {
             formattedText = formattedText.replace(`__PROTECTED_PHRASE_${i}__`, `[b]${protectedPhrases[i]}[/b]`);
+        }
+
+        for (let i = 0; i < blockPhrases.length; i++) {
+            formattedText = formattedText.replace(`__BLOCK_PHRASE_${i}__`, `[b]${blockPhrases[i]}[/b]`);
         }
 
         return formattedText;
@@ -849,7 +860,7 @@ export class Card {
         const collisions = [];
         let maxWidth = 750;
         let maxHeight = 195;
-        let x = 39;
+        let x = 19;
         let y = 725;
         if (this.oversized) {
             y = 974;
