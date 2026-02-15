@@ -881,6 +881,10 @@ export class Card {
             y += 5;
         }
 
+        if (this.variant && this.variant.indexOf("Bribe") === 0 && !this.oversized) {
+            y += 56;
+        }
+
         const style = this.getStyle("text");
         if ((this.variant === "Super Hero" || this.variant === "Super-Villain" || this.variant === "Impossible" || this.variant.indexOf("Hero lvl") === 0 || this.variant.indexOf("Villain lvl") === 0) && !this.oversized) {
             style.fill = "#ffffff";
