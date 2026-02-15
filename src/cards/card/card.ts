@@ -63,7 +63,6 @@ export class Card {
         "Recompensa",
         "Once during each of your turns",
         "Uma vez durante cada um dos seus turnos",
-        "Uma vez durante cada um de seus turnos",
         "Range",
         "Alcance",
         "Contínuo",
@@ -114,8 +113,6 @@ export class Card {
         "WHEN YOU GAIN THIS: Investigate.",
         "AO GANHAR ISSO: Investigue",
         "Ataque Surpresa!",
-        "Area",
-        "em Área",
     ];
 
     /** The current width in pixels of the rendered card */
@@ -863,7 +860,7 @@ export class Card {
         const collisions = [];
         let maxWidth = 750;
         let maxHeight = 195;
-        let x = 19;
+        let x = 39;
         let y = 725;
         if (this.oversized) {
             y = 974;
@@ -908,13 +905,25 @@ export class Card {
         textGroup.position.set(0, y);
 
         // Logic to highlight specific phrases
-        const highlightPhrases = [
-            "WHEN YOU GAIN THIS: GAIN A WEAKNESS.",
-            "When you buy or gain this card, gain 1 VP.",
-            "AO GANHAR ISTO: GANHE UMA FRAQUEZA.",
-            "Quando você comprar ou ganhar esta carta, ganhe 1 PV.",
-            "WHEN YOU GAIN THIS: Investigate, then shuffle 2 Ambush Attack! cards into the Investigation deck.",
-            "AO GANHAR ISSO: Investigue e, em seguida, embaralhe 2 cartas de Ataque Surpresa! no baralho de Investigação.",
+        const highlightConfigs = [
+            {
+                color: 0xe1b327, // Amarelo
+                phrases: [
+                    "WHEN YOU GAIN THIS: GAIN A WEAKNESS.",
+                    "When you buy or gain this card, gain 1 VP.",
+                    "AO GANHAR ISTO: GANHE UMA FRAQUEZA.",
+                    "Quando você comprar ou ganhar esta carta, ganhe 1 PV.",
+                    "WHEN YOU GAIN THIS: Investigate, then shuffle 2 Ambush Attack! cards into the Investigation deck.",
+                    "AO GANHAR ISSO: Investigue e, em seguida, embaralhe 2 cartas de Ataque Surpresa! no baralho de Investigação.",
+                ],
+            },
+            {
+                color: 0xa1dfff, // Azul (#a1dfff)
+                phrases: [
+                    "If you destroy or discard this card from your hand, deck, or discard pile, gain it and put it into your hand.",
+                    "Se você destruir ou descartar esta carta de sua mão, baralho ou pilha de descarte, ganhe-a e coloque-a em sua mão.",
+                ],
+            },
         ];
 
         // Flatten text nodes to find position
@@ -951,40 +960,42 @@ export class Card {
         }
 
         const upperCleanText = cleanFullText.toUpperCase();
-        let minY = Infinity;
-        let maxY = -Infinity;
-        let found = false;
 
-        for (const phrase of highlightPhrases) {
-            const cleanPhrase = phrase.replace(/\s/g, "").toUpperCase();
-            const idx = upperCleanText.indexOf(cleanPhrase);
+        for (const config of highlightConfigs) {
+            let minY = Infinity;
+            let maxY = -Infinity;
+            let found = false;
 
-            if (idx !== -1) {
-                found = true;
-                const endIdx = idx + cleanPhrase.length;
-                for (let i = idx; i < endIdx; i++) {
-                    if (i < cleanCharToNode.length) {
-                        const node = cleanCharToNode[i];
-                        if (node.y < minY) { minY = node.y; }
-                        if (node.y + node.height > maxY) { maxY = node.y + node.height; }
+            for (const phrase of config.phrases) {
+                const cleanPhrase = phrase.replace(/\s/g, "").toUpperCase();
+                const idx = upperCleanText.indexOf(cleanPhrase);
 
-                        if (node.node instanceof PIXI.Text) {
-                            const style = node.node.style.clone();
-                            style.fill = "#000000";
-                            node.node.style = style;
+                if (idx !== -1) {
+                    found = true;
+                    const endIdx = idx + cleanPhrase.length;
+                    for (let i = idx; i < endIdx; i++) {
+                        if (i < cleanCharToNode.length) {
+                            const node = cleanCharToNode[i];
+                            if (node.y < minY) { minY = node.y; }
+                            if (node.y + node.height > maxY) { maxY = node.y + node.height; }
+
+                            if (node.node instanceof PIXI.Text) {
+                                const style = node.node.style.clone();
+                                style.fill = "#000000";
+                                node.node.style = style;
+                            }
                         }
                     }
                 }
             }
-        }
 
-        if (found && minY !== Infinity) {
-            const yellowBg = new PIXI.Graphics();
-            yellowBg.beginFill(0xe1b327); // Amarelo
-
-            yellowBg.drawRect(0, minY - 10, this.pxWidth, maxY - minY + 3);
-            yellowBg.endFill();
-            textGroup.addChild(yellowBg);
+            if (found && minY !== Infinity) {
+                const bg = new PIXI.Graphics();
+                bg.beginFill(config.color);
+                bg.drawRect(0, minY - 10, this.pxWidth, maxY - minY + 3);
+                bg.endFill();
+                textGroup.addChild(bg);
+            }
         }
 
         // textContainer deve ser posicionado dentro do textGroup.
