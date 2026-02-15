@@ -63,6 +63,7 @@ export class Card {
         "Recompensa",
         "Once during each of your turns",
         "Uma vez durante cada um dos seus turnos",
+        "Uma vez durante cada um de seus turnos",
         "Range",
         "Alcance",
         "Contínuo",
@@ -113,6 +114,8 @@ export class Card {
         "WHEN YOU GAIN THIS: Investigate.",
         "AO GANHAR ISSO: Investigue",
         "Ataque Surpresa!",
+        "Area",
+        "em Área",
     ];
 
     /** The current width in pixels of the rendered card */
