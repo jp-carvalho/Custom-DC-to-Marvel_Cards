@@ -103,8 +103,6 @@ export class Card {
         "SIMBIONTE",
         "Discard a Super Power",
         "Descarte um Superpoder",
-        "Discard a",
-        "Descarte um",
         "Once per your turns",
         "Time Travel",
         "Eco Temporal",
@@ -113,6 +111,9 @@ export class Card {
         "WHEN YOU GAIN THIS: Investigate.",
         "AO GANHAR ISSO: Investigue",
         "Ataque Surpresa!",
+        "Seal a Location you control",
+        "Sele uma Localização que você controla",
+        "Once per your turn",
     ];
 
     /** The current width in pixels of the rendered card */
@@ -878,7 +879,7 @@ export class Card {
         }
 
         if (this.variant && this.variant.indexOf("lvl") !== -1 && !this.oversized) {
-            y += 5;
+            y += 10;
         }
 
         if (this.variant && this.variant.indexOf("Bribe") === 0 && !this.oversized) {
