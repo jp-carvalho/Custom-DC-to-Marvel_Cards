@@ -114,6 +114,12 @@ export class Card {
         "Seal a Location you control",
         "Sele uma Localização que você controla",
         "Once per your turn",
+        "Start of your turn",
+        "Início do seu turno",
+        "Area",
+        "em Área",
+        "END OF GAME",
+        "FIM DE JOGO",
     ];
 
     /** The current width in pixels of the rendered card */
@@ -857,11 +863,11 @@ export class Card {
         formattedText = replaceAll(formattedText, "[i]", wrapStyledTextCharacters.italicStart);
         formattedText = replaceAll(formattedText, "[/i]", wrapStyledTextCharacters.italicEnd);
 
-        const vpCircle = new PIXI.Circle(603, 230, 65);
+        const vpCircle = new PIXI.Circle(603, 230, 70);
         const collisions = [];
         let maxWidth = 750;
-        let maxHeight = 215;
-        let x = 39;
+        let maxHeight = 205;
+        let x = 29;
         let y = 725;
         if (this.oversized) {
             y = 974;
@@ -875,15 +881,18 @@ export class Card {
         let textWidth = maxWidth - x * 2;
         if (this.subtype && (this.subtype.toLowerCase() === "unity" || this.subtype.toLowerCase() === "união")) {
             x = 100;
-            textWidth = maxWidth - x - 39;
+            textWidth = maxWidth - x - 29;
         }
 
         if (this.variant && this.variant.indexOf("lvl") !== -1 && !this.oversized) {
             y += 10;
+            maxHeight -= 10;
+            maxHeight -= 30;
         }
 
         if (this.variant && this.variant.indexOf("Bribe") === 0 && !this.oversized) {
             y += 56;
+            maxHeight -= 56;
         }
 
         const style = this.getStyle("text");
