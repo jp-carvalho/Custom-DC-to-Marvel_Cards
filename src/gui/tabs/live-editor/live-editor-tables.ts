@@ -38,6 +38,7 @@ export const setsData = [
     { original: "Dark Nights Metal", en: "King In Black", pt: "Rei das trevas", text: "#FF0000", bg: "#000000" },
     { original: "Rebirth", en: "Secret Wars", pt: "Guerras Secretas", text: "#00E5FF", bg: "#1A1A1A" },
     { original: "Rebirth2", en: "Secret Wars 2", pt: "Guerras Secretas 2", text: "#03717e", bg: "#3a3939" },
+    { original: "Rebirth3", en: "Secret Wars 3", pt: "Guerras Secretas 3", text: "#18ffff", bg: "#311b92" },
     { original: "Injustice", en: "Civil War II", pt: "Guerra Civil II", text: "#212121", bg: "#FFB400" },
     { original: "Crossover1", en: "Crossover 1", pt: "Incursão 1", text: "#F0E68C", bg: "#354A21" },
     { original: "Crossover2", en: "Crossover 2", pt: "Incursão 2", text: "#E6E6E6", bg: "#4B0082" },

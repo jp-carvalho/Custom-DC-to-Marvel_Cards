@@ -879,7 +879,7 @@ export class Card {
         }
 
         let textWidth = maxWidth - x * 2;
-        if (this.subtype && (this.subtype.toLowerCase() === "unity" || this.subtype.toLowerCase() === "união")) {
+        if ((this.subtype && (this.subtype.toLowerCase() === "unity" || this.subtype.toLowerCase() === "união")) || this.variant === "Unity") {
             x = 100;
             textWidth = maxWidth - x - 29;
         }
