@@ -857,10 +857,10 @@ export class Card {
         formattedText = replaceAll(formattedText, "[i]", wrapStyledTextCharacters.italicStart);
         formattedText = replaceAll(formattedText, "[/i]", wrapStyledTextCharacters.italicEnd);
 
-        const vpCircle = new PIXI.Circle(603, 215, 78 + 5);
+        const vpCircle = new PIXI.Circle(603, 230, 65);
         const collisions = [];
         let maxWidth = 750;
-        let maxHeight = 195;
+        let maxHeight = 215;
         let x = 39;
         let y = 725;
         if (this.oversized) {
