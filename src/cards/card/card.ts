@@ -364,8 +364,19 @@ export class Card {
             return p1 ? "[b]Pilha Contínua[/b]" : "[b]Contínua[/b]";
         });
 
-        formattedText = formattedText.replace(/Super Power/g, "__SUPER_POWER__");
-        formattedText = formattedText.replace(/Super Poder/g, "__SUPER_PODER__");
+        // Protect phrases that contain keywords but should not be bolded themselves
+        const neutralProtected: string[] = [];
+        const phrasesToProtectNeutrally = [
+            /Super\s*Power(s)?/gi,
+            /Super\s*Poder(es)?/gi,
+        ];
+
+        for (const regex of phrasesToProtectNeutrally) {
+            formattedText = formattedText.replace(regex, (match) => {
+                neutralProtected.push(match);
+                return `__NEUTRAL_PROTECTED_${neutralProtected.length - 1}__`;
+            });
+        }
 
         // Manual bolding with {}
         const manualBolds: string[] = [];
@@ -436,8 +447,10 @@ export class Card {
             formattedText = formattedText.replace(`__HIGHLIGHT_PHRASE_${i}__`, highlightPlaceholders[i]);
         }
 
-        formattedText = formattedText.replace(/__SUPER_POWER__/g, "Super Power");
-        formattedText = formattedText.replace(/__SUPER_PODER__/g, "Super Poder");
+        // Restore neutral protected phrases
+        for (let i = 0; i < neutralProtected.length; i++) {
+            formattedText = formattedText.replace(`__NEUTRAL_PROTECTED_${i}__`, neutralProtected[i]);
+        }
 
         // Restore the protected phrases, now fully bolded.
         for (let i = 0; i < protectedPhrases.length; i++) {
@@ -585,6 +598,12 @@ export class Card {
                 spriteName = "Unity hero";
             } else if (this.type === "Villain" || this.type === "Vilão" || this.type === "Vilao" || this.type === "Villain Nemesis" || this.type === "Vilão Nêmesis") {
                 spriteName = "unity villain";
+            }
+        } else if (this.variant === "Transformed") {
+            if (this.type === "Hero" || this.type === "Herói" || this.type === "Heroi") {
+                spriteName = "Hero transform";
+            } else if (this.type === "Villain" || this.type === "Vilão" || this.type === "Vilao" || this.type === "Villain Nemesis" || this.type === "Vilão Nêmesis") {
+                spriteName = "Villain transform";
             }
         } else if (this.variant.indexOf("Bribe") === 0 && !this.oversized) {
             const lvl = this.variant.split(" ")[1];
@@ -939,7 +958,7 @@ export class Card {
         }
 
         const style = this.getStyle("text");
-        if ((this.variant === "Super Hero" || this.variant === "Super-Villain" || this.variant === "Impossible" || this.variant.indexOf("Hero lvl") === 0 || this.variant.indexOf("Villain lvl") === 0) && !this.oversized) {
+        if ((this.variant === "Super Hero" || this.variant === "Super-Villain" || this.variant === "Impossible" || this.variant === "Transformed" || this.variant.indexOf("Hero lvl") === 0 || this.variant.indexOf("Villain lvl") === 0) && !this.oversized) {
             style.fill = "#ffffff";
         }
 
@@ -1105,7 +1124,7 @@ export class Card {
         }
 
         const style = this.getStyle("copyright");
-        if ((this.variant === "Super Hero" || this.variant === "Super-Villain" || this.variant === "Impossible" || this.variant.indexOf("Hero lvl") === 0 || this.variant.indexOf("Villain lvl") === 0) && !this.oversized) {
+        if ((this.variant === "Super Hero" || this.variant === "Super-Villain" || this.variant === "Impossible" || this.variant === "Transformed" || this.variant.indexOf("Hero lvl") === 0 || this.variant.indexOf("Villain lvl") === 0) && !this.oversized) {
             style.fill = "#ffffff";
         }
 
