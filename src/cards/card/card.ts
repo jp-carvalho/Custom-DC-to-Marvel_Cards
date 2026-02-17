@@ -120,6 +120,30 @@ export class Card {
         "em Área",
         "END OF GAME",
         "FIM DE JOGO",
+        "Sidekicks",
+        "Ajudantes",
+    ];
+
+    /** Configuration for highlighting specific phrases with background colors */
+    public static readonly highlightConfigs = [
+        {
+            color: 0xe1b327, // Amarelo
+            phrases: [
+                "WHEN YOU GAIN THIS: GAIN A WEAKNESS.",
+                "When you buy or gain this card, gain 1 VP.",
+                "AO GANHAR ISTO: GANHE UMA FRAQUEZA.",
+                "Quando você comprar ou ganhar esta carta, ganhe 1 PV.",
+                "WHEN YOU GAIN THIS: Investigate, then shuffle 2 Ambush Attack! cards into the Investigation deck.",
+                "AO GANHAR ISSO: Investigue e, em seguida, embaralhe 2 cartas de Ataque Surpresa! no baralho de Investigação.",
+            ],
+        },
+        {
+            color: 0xa1dfff, // Azul (#a1dfff)
+            phrases: [
+                "If you destroy or discard this card from your hand, deck, or discard pile, gain it and put it into your hand.",
+                "Se você destruir ou descartar esta carta de sua mão, baralho ou pilha de descarte, ganhe-a e coloque-a em sua mão.",
+            ],
+        },
     ];
 
     /** The current width in pixels of the rendered card */
@@ -350,6 +374,19 @@ export class Card {
             return `__MANUAL_BOLD_${manualBolds.length - 1}__`;
         });
 
+        // Handle highlightConfigs with protection to avoid inner keyword bolding
+        const highlightPlaceholders: string[] = [];
+        for (const config of Card.highlightConfigs) {
+            for (const phrase of config.phrases) {
+                const escaped = phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                const regex = new RegExp(escaped, 'gi');
+                formattedText = formattedText.replace(regex, (match) => {
+                    highlightPlaceholders.push(`[b]${match}[/b]`);
+                    return `__HIGHLIGHT_PHRASE_${highlightPlaceholders.length - 1}__`;
+                });
+            }
+        }
+
         // Temporarily protect the phrases to prevent double-bolding of keywords within them.
         const protectedPhrases: string[] = [];
         const phrasesToProtect = [
@@ -381,16 +418,22 @@ export class Card {
 
         formattedText = formattedText.replace(/\b(Attack)\b/gi, "[b]$1[/b]");
 
-        const boldKeywords = Card.autoBoldKeywords
-            .concat(this.alsoBold);
+        const boldKeywords = Card.autoBoldKeywords.concat(this.alsoBold);
 
         for (const toBold of boldKeywords) {
-            formattedText = replaceAll(formattedText, toBold, `[b]${toBold}[/b]`);
+            const escaped = toBold.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const regex = new RegExp(escaped, 'gi');
+            formattedText = formattedText.replace(regex, (match) => `[b]${match}[/b]`);
         }
 
         // Restore manual bolds
         for (let i = 0; i < manualBolds.length; i++) {
             formattedText = formattedText.replace(`__MANUAL_BOLD_${i}__`, `[b]${manualBolds[i]}[/b]`);
+        }
+
+        // Restore highlight phrases
+        for (let i = 0; i < highlightPlaceholders.length; i++) {
+            formattedText = formattedText.replace(`__HIGHLIGHT_PHRASE_${i}__`, highlightPlaceholders[i]);
         }
 
         formattedText = formattedText.replace(/__SUPER_POWER__/g, "Super Power");
@@ -918,28 +961,6 @@ export class Card {
         // O grupo de texto será posicionado em (0, y) porque o fundo precisa começar em x=0.
         textGroup.position.set(0, y);
 
-        // Logic to highlight specific phrases
-        const highlightConfigs = [
-            {
-                color: 0xe1b327, // Amarelo
-                phrases: [
-                    "WHEN YOU GAIN THIS: GAIN A WEAKNESS.",
-                    "When you buy or gain this card, gain 1 VP.",
-                    "AO GANHAR ISTO: GANHE UMA FRAQUEZA.",
-                    "Quando você comprar ou ganhar esta carta, ganhe 1 PV.",
-                    "WHEN YOU GAIN THIS: Investigate, then shuffle 2 Ambush Attack! cards into the Investigation deck.",
-                    "AO GANHAR ISSO: Investigue e, em seguida, embaralhe 2 cartas de Ataque Surpresa! no baralho de Investigação.",
-                ],
-            },
-            {
-                color: 0xa1dfff, // Azul (#a1dfff)
-                phrases: [
-                    "If you destroy or discard this card from your hand, deck, or discard pile, gain it and put it into your hand.",
-                    "Se você destruir ou descartar esta carta de sua mão, baralho ou pilha de descarte, ganhe-a e coloque-a em sua mão.",
-                ],
-            },
-        ];
-
         // Flatten text nodes to find position
         const textNodes: {node: PIXI.DisplayObject, text: string, y: number, height: number}[] = [];
         const extractTextNodes = (container: PIXI.Container, currentY: number) => {
@@ -975,7 +996,7 @@ export class Card {
 
         const upperCleanText = cleanFullText.toUpperCase();
 
-        for (const config of highlightConfigs) {
+        for (const config of Card.highlightConfigs) {
             let minY = Infinity;
             let maxY = -Infinity;
             let found = false;
