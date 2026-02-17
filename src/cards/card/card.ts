@@ -964,6 +964,16 @@ export class Card {
 
         if (this.preferredTextSize > 0) {
             style.fontSize = this.preferredTextSize;
+        } else {
+            style.fontSize = 52;
+            const len = this.text.length;
+            if (len < 35) {
+                style.fontSize = 52;
+            } else if (len < 60) {
+                style.fontSize = 44;
+            } else {
+                style.fontSize = 38;
+            }
         }
 
         const textContainer = autoSizeAndWrapStyledText(
