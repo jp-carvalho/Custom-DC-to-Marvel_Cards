@@ -196,15 +196,15 @@ export const cardsRows: IRowValues[] = [
         name: "Vulnerability",
         type: "Starter",
         text: "",
-        imageURL: "https://i.imgur.com/em2ZPJG.png",
+        imageURL: "https://i.imgur.com/XLz4A1t.png",
         vp: 0,
         cost: 0,
     },
     {
-        name: "Wonder Girl",
+        name: "Spider Pig",
         type: "Hero",
         oversized: true,
-        imageURL: "https://i.imgur.com/RjNwCAX.png",
+        imageURL: "https://i.imgur.com/LiI1Sin.png",
         text: "Once during each of your turns, if you control two or more "
             + "Equipment, draw two cards and then discard a card.",
     },
