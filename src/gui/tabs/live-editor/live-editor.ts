@@ -403,7 +403,7 @@ export class LiveEditorTab extends Tab {
         let desiredOptions = [""];
 
         if (type === "Hero" || type === "Herói") {
-            desiredOptions = ["", "Super Hero", "Infinity War", "Crisis", "Speedster", "Symbiote", "Unity", "Transformed", "Hero lvl 1", "Hero lvl 2", "Hero lvl 3", "Hero lvl 4", "Bribe 1", "Bribe 2", "Bribe 3", "Bribe 4", "Bribe 5"];
+            desiredOptions = ["", "Super Hero", "Infinity War", "Crisis", "Speedster", "Symbiote", "Unity", "Transformed", "MC Transform", "Hero lvl 1", "Hero lvl 2", "Hero lvl 3", "Hero lvl 4", "Bribe 1", "Bribe 2", "Bribe 3", "Bribe 4", "Bribe 5"];
         } else if (type === "Villain" || type === "Vilão" || type === "Villain Nemesis" || type === "Vilão Nêmesis") {
             desiredOptions = ["", "Super-Villain", "Infinity War", "Crisis", "Speedster", "Symbiote", "Unity", "Transformed", "Impossible", "Villain lvl 1", "Villain lvl 2", "Villain lvl 3", "Villain lvl 4", "Bribe 1", "Bribe 2", "Bribe 3", "Bribe 4", "Bribe 5"];
         } else if (type === "Equipment" || type === "Equipamento") {

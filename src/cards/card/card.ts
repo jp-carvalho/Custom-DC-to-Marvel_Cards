@@ -605,6 +605,12 @@ export class Card {
             } else if (this.type === "Villain" || this.type === "Vilão" || this.type === "Vilao" || this.type === "Villain Nemesis" || this.type === "Vilão Nêmesis") {
                 spriteName = "Villain transform";
             }
+        } else if (this.variant === "MC Transform") {
+            if (this.type === "Hero") {
+                spriteName = "MC Transform Hero";
+            } else if (this.type === "Herói" || this.type === "Heroi") {
+                spriteName = "MC Transform Herói";
+            }
         } else if (this.variant.indexOf("Bribe") === 0 && !this.oversized) {
             const lvl = this.variant.split(" ")[1];
             if (this.type === "Hero") {
