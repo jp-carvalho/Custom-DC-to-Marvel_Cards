@@ -122,6 +122,8 @@ export class Card {
         "FIM DE JOGO",
         "Sidekicks",
         "Ajudantes",
+        "Seal",
+        "Sele",
     ];
 
     /** Configuration for highlighting specific phrases with background colors */
