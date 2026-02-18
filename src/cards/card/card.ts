@@ -490,6 +490,10 @@ export class Card {
             imageTop = 216;
         }
 
+        if (this.variant === "MC Transform") {
+            imageMaxHeight += 40;
+        }
+
         const backgroundImage = newSprite(this.imageURL, this.container);
         backgroundImage.position.x = imageMaxWidth / 2;
         backgroundImage.position.y = imageTop + imageMaxHeight / 2;
@@ -610,6 +614,12 @@ export class Card {
                 spriteName = "MC Transform Hero";
             } else if (this.type === "Herói" || this.type === "Heroi") {
                 spriteName = "MC Transform Herói";
+            }
+        } else if (this.variant === "Base transform") {
+            if (this.type === "Hero" || this.type === "Herói" || this.type === "Heroi") {
+                spriteName = "hero transf";
+            } else if (this.type === "Villain" || this.type === "Vilão" || this.type === "Vilao" || this.type === "Villain Nemesis" || this.type === "Vilão Nêmesis") {
+                spriteName = "villain transf";
             }
         } else if (this.variant.indexOf("Bribe") === 0 && !this.oversized) {
             const lvl = this.variant.split(" ")[1];
@@ -1101,6 +1111,9 @@ export class Card {
         }
         else {
             set.position.set(550, 934);
+            if (this.variant === "MC Transform") {
+                set.position.y += 50;
+            }
         }
 
         // now draw the background
@@ -1137,6 +1150,8 @@ export class Card {
             maxWidth = 182;
             x = 900 - 37;
             y = 1136;
+        } else if (this.variant === "MC Transform") {
+            y += 50;
         }
 
         const style = this.getStyle("copyright");
@@ -1191,6 +1206,9 @@ export class Card {
         }
         else {
             // no need to auto size on none oversized cards
+            if (this.variant === "MC Transform") {
+                y += 85;
+            }
             legal = wrapStyledText(
                 this.legal,
                 maxWidth,
