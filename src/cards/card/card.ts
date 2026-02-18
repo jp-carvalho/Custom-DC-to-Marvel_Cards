@@ -81,8 +81,8 @@ export class Card {
         "Vulnerabilidade ",
         "Discard two cards",
         "Descarte duas cartas",
-        "Discard 2 cards",
-        "Descarte 2 cartas",
+        // "Discard 2 cards",
+        // "Descarte 2 cartas",
         "Teamwork",
         "Trabalho em Equipe",
         "Punch",
@@ -124,6 +124,7 @@ export class Card {
         "Ajudantes",
         "Seal",
         "Sele",
+        "Selar",
     ];
 
     /** Configuration for highlighting specific phrases with background colors */
@@ -975,6 +976,11 @@ export class Card {
             maxHeight -= 56;
         }
 
+        if (this.variant === "Transformed" && !this.oversized) {
+            y += 10;
+            maxHeight -= 10;
+        }
+
         const style = this.getStyle("text");
         if ((this.variant === "Super Hero" || this.variant === "Super-Villain" || this.variant === "Impossible" || this.variant === "Transformed" || this.variant.indexOf("Hero lvl") === 0 || this.variant.indexOf("Villain lvl") === 0) && !this.oversized) {
             style.fill = "#ffffff";
@@ -1209,7 +1215,7 @@ export class Card {
         else {
             // no need to auto size on none oversized cards
             if (this.variant === "MC Transform") {
-                y += 85;
+                y += 50;
             }
             legal = wrapStyledText(
                 this.legal,
