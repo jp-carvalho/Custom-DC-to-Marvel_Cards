@@ -128,8 +128,8 @@ export const defaultsRows: IRowValues[] = [
         set: "Teen Titans",
         setTextColor: "#ffec34",
         setBackgroundColor: "#ed1c24",
-        copyright: "2015 CZE",
-        legal: "TEEN TITANS and all related character and elements are trademarks and © DC Comics\n(s15)",
+        copyright: "2026 DSN",
+        legal: "MARVEL and all related character and elements are trademarks and © Marvel Comics\nReprint from DCDB made by OakenRill 2026\n",
         logoScale: 1.0,
     },
     /*{
