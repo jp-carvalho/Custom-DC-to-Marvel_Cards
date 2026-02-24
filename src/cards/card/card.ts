@@ -620,6 +620,18 @@ export class Card {
                 spriteName = `villain bribe ${lvl}`;
             } else if (this.type === "Vilão" || this.type === "Vilao" || this.type === "Vilão Nêmesis") {
                 spriteName = `vilão suborno ${lvl}`;
+            } else if (this.type === "Equipment") {
+                spriteName = `equipment bribe ${lvl}`;
+            } else if (this.type === "Equipamento") {
+                spriteName = `equipmento suborno ${lvl}`;
+            } else if (this.type === "Location") {
+                spriteName = `Location Bribe ${lvl}`;
+            } else if (this.type === "Localização") {
+                spriteName = `Localização suborno ${lvl}`;
+            } else if (this.type === "Super Power") {
+                spriteName = `Super Power bribe ${lvl}`;
+            } else if (this.type === "Superpoder") {
+                spriteName = `Superpoder suborno ${lvl}`;
             }
         } else {
             backgroundType = this.type;
@@ -776,6 +788,22 @@ export class Card {
 
         cardTypeText.scale.y *= 0.75;
         cardTypeText.scale.x *= 0.96;
+
+        if (this.variant && this.variant.indexOf("Bribe") === 0 && (
+            this.type === "Equipamento" ||
+            this.type === "Localização" ||
+            this.type === "Super Power" || this.type === "Superpoder"
+        )) {
+            cardTypeText.scale.x *= 0.80;
+            cardTypeText.x = 25;
+        }
+        
+        if (this.variant && this.variant.indexOf("Bribe") === 0 && (
+            this.type === "Equipment"
+        )) {
+            cardTypeText.x = 25;
+        }
+
         cardTypeText.skew.x = -0.265;
         this.container.addChild(cardTypeText);
     }
