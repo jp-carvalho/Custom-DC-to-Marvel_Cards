@@ -61,7 +61,7 @@ export class Card {
         "Uma vez por turno",
         "Reward",
         "Recompensa",
-        "Once during each of your turns",
+        // "Once during each of your turns",
         "Uma vez durante cada um dos seus turnos",
         "Range",
         "Alcance",
@@ -118,13 +118,15 @@ export class Card {
         "Início do seu turno",
         "Area",
         "em Área",
-        "END OF GAME",
-        "FIM DE JOGO",
+        // "END OF GAME",
+        // "FIM DE JOGO",
         "Sidekicks",
         "Ajudantes",
         "Seal",
         "Sele",
         "Selar",
+        "Infinity Stone",
+        "Joia do Infinito",
     ];
 
     /** Configuration for highlighting specific phrases with background colors */
@@ -145,6 +147,8 @@ export class Card {
             phrases: [
                 "If you destroy or discard this card from your hand, deck, or discard pile, gain it and put it into your hand.",
                 "Se você destruir ou descartar esta carta de sua mão, baralho ou pilha de descarte, ganhe-a e coloque-a em sua mão.",
+                "After you discard or Seal this card from any zone, you may surge.",
+                "Depois de descartar ou Selar esta carta de qualquer zona, Surge.",
             ],
         },
     ];
@@ -388,19 +392,6 @@ export class Card {
             return `__MANUAL_BOLD_${manualBolds.length - 1}__`;
         });
 
-        // Handle highlightConfigs with protection to avoid inner keyword bolding
-        const highlightPlaceholders: string[] = [];
-        for (const config of Card.highlightConfigs) {
-            for (const phrase of config.phrases) {
-                const escaped = phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-                const regex = new RegExp(escaped, 'gi');
-                formattedText = formattedText.replace(regex, (match) => {
-                    highlightPlaceholders.push(`[b]${match}[/b]`);
-                    return `__HIGHLIGHT_PHRASE_${highlightPlaceholders.length - 1}__`;
-                });
-            }
-        }
-
         // Temporarily protect the phrases to prevent double-bolding of keywords within them.
         const protectedPhrases: string[] = [];
         const phrasesToProtect = [
@@ -443,11 +434,6 @@ export class Card {
         // Restore manual bolds
         for (let i = 0; i < manualBolds.length; i++) {
             formattedText = formattedText.replace(`__MANUAL_BOLD_${i}__`, `[b]${manualBolds[i]}[/b]`);
-        }
-
-        // Restore highlight phrases
-        for (let i = 0; i < highlightPlaceholders.length; i++) {
-            formattedText = formattedText.replace(`__HIGHLIGHT_PHRASE_${i}__`, highlightPlaceholders[i]);
         }
 
         // Restore neutral protected phrases
