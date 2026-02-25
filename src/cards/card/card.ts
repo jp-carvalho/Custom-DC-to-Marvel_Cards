@@ -1011,12 +1011,10 @@ export class Card {
         } else {
             style.fontSize = 52;
             const len = this.text.length;
-            if (len < 35) {
-                style.fontSize = 52;
-            } else if (len < 60) {
-                style.fontSize = 44;
+            if (len < 75) {
+                style.fontSize = 48;
             } else {
-                style.fontSize = 38;
+                style.fontSize = 40;
             }
         }
 
