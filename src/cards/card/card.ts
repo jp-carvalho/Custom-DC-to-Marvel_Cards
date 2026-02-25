@@ -526,7 +526,13 @@ export class Card {
         let backgroundType: string;
         let spriteName: string;
 
-        if (this.variant === "Impossible" && (this.type === "Villain" || this.type === "Vilão" || this.type === "Villain Nemesis" || this.type === "Vilão Nêmesis") && !this.oversized) {
+        if ((this.type === "Equipment" || this.type === "Equipamento") && this.subtype && (this.subtype.toLowerCase() === "unity" || this.subtype.toLowerCase() === "unidade")) {
+            spriteName = "Unity equipment";
+        } else if ((this.type === "Super Power" || this.type === "Superpoder") && this.subtype && (this.subtype.toLowerCase() === "unity" || this.subtype.toLowerCase() === "unidade")) {
+            spriteName = "Unity super power";
+        } else if ((this.type === "Location" || this.type === "Localização") && this.subtype && (this.subtype.toLowerCase() === "unity" || this.subtype.toLowerCase() === "unidade")) {
+            spriteName = "Unity location";
+        } else if (this.variant === "Impossible" && (this.type === "Villain" || this.type === "Vilão" || this.type === "Villain Nemesis" || this.type === "Vilão Nêmesis") && !this.oversized) {
             if (this.type === "Villain" || this.type === "Villain Nemesis") {
                 spriteName = "super-villain imp";
             } else { // Vilão
@@ -974,7 +980,7 @@ export class Card {
         }
 
         let textWidth = maxWidth - x * 2;
-        if ((this.subtype && (this.subtype.toLowerCase() === "unity" || this.subtype.toLowerCase() === "união")) || this.variant === "Unity") {
+        if ((this.subtype && (this.subtype.toLowerCase() === "unity" || this.subtype.toLowerCase() === "união" || this.subtype.toLowerCase() === "unidade")) || this.variant === "Unity") {
             x = 100;
             textWidth = maxWidth - x - 29;
         }

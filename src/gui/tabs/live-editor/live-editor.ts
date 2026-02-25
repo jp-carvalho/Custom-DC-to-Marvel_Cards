@@ -25,6 +25,7 @@ const typeTranslations: {[key: string]: string} = {
 /** Map for EN to PT subtypes */
 const subtypeTranslations: {[key: string]: string} = {
     "test": "teste",
+    "Unity": "Unidade",
 };
 
 /** The Live Editor tab of a Tabular */
