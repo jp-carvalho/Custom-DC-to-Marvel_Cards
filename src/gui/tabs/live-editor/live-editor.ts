@@ -26,6 +26,7 @@ const typeTranslations: {[key: string]: string} = {
 const subtypeTranslations: {[key: string]: string} = {
     "test": "teste",
     "Unity": "Unidade",
+    "Timeline-up": "QG Temporal",
 };
 
 /** The Live Editor tab of a Tabular */

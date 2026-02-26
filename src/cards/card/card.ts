@@ -97,6 +97,7 @@ export class Card {
         "Uma vez durante o seu turno",
         "Bribe",
         "Suborno",
+        "Subornar",
         "End of Your Turn",
         "Fim do Seu Turno",
         "SYMBIOTE",
@@ -1009,10 +1010,10 @@ export class Card {
         if (this.preferredTextSize > 0) {
             style.fontSize = this.preferredTextSize;
         } else {
-            style.fontSize = 52;
+            style.fontSize = 42;
             const len = this.text.length;
             if (len < 75) {
-                style.fontSize = 48;
+                style.fontSize = 42;
             } else {
                 style.fontSize = 40;
             }
