@@ -20,6 +20,7 @@ const typeTranslations: {[key: string]: string} = {
     "Super Power": "Superpoder",
     "Weakness": "Fraqueza",
     "Villain Nemesis": "Vilão Nêmesis",
+    "Hostage": "Refém",
 };
 
 /** Map for EN to PT subtypes */

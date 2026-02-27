@@ -570,6 +570,8 @@ export class Card {
             } else if (this.type === "Villain" || this.type === "Vilão" || this.type === "Vilao" || this.type === "Villain Nemesis" || this.type === "Vilão Nêmesis") {
                 spriteName = "Speedster villain";
             }
+        } else if (this.type === "Hostage" || this.type === "Refém") {
+            spriteName = "Hostage";
         } else if (this.variant === "Symbiote") {
             if (this.type === "Hero") {
                 spriteName = "Symbiote hero";

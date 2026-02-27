@@ -231,6 +231,23 @@ const styles: {
             fill: "#000000",
         },
     },
+    Hostage: {
+        name: {
+            fill: "#ad641d",
+        },
+        type: {
+            fill: "#ffffff",
+        },
+    },
+    
+    Refém: {
+        name: {
+            fill: "#ad641d",
+        },
+        type: {
+            fill: "#ffffff",
+        },
+    },
 
     // tslint:enable:object-literal-sort-keys
 };

@@ -147,7 +147,7 @@ export const cardsHeadings: IColumnData[] = [
     },
     {
         name: "Type",
-        allowedValues: ["Equipment", "Hero", "Location", "Starter", "Super Power", "Villain", "Villain Nemesis", "Weakness"],
+        allowedValues: ["Equipment", "Hero", "Location", "Starter", "Super Power", "Villain", "Villain Nemesis", "Weakness", "Hostage"],
     },
     {
         name: "Text",
