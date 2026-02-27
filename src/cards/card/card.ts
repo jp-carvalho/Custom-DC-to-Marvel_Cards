@@ -596,6 +596,10 @@ export class Card {
             } else if (this.type === "Villain" || this.type === "Vilão" || this.type === "Vilao" || this.type === "Villain Nemesis" || this.type === "Vilão Nêmesis") {
                 spriteName = "Villain transform";
             }
+        } else if (this.variant === "Transform") {
+            if (this.type === "Equipment" || this.type === "Equipamento") {
+                spriteName = "Equipment transform";
+            }
         } else if (this.variant === "MC Transform") {
             if (this.type === "Hero") {
                 spriteName = "MC Transform Hero";
@@ -993,8 +997,13 @@ export class Card {
             maxHeight -= 10;
         }
 
+        if (this.variant === "Transform" && (this.type === "Equipment" || this.type === "Equipamento") && !this.oversized) {
+            y += 15;
+            maxHeight -= 15;
+        }
+
         const style = this.getStyle("text");
-        if ((this.variant === "Super Hero" || this.variant === "Super-Villain" || this.variant === "Impossible" || this.variant === "Transformed" || this.variant.indexOf("Hero lvl") === 0 || this.variant.indexOf("Villain lvl") === 0) && !this.oversized) {
+        if ((this.variant === "Super Hero" || this.variant === "Super-Villain" || this.variant === "Impossible" || this.variant === "Transformed" || (this.variant === "Transform" && (this.type === "Equipment" || this.type === "Equipamento")) || this.variant.indexOf("Hero lvl") === 0 || this.variant.indexOf("Villain lvl") === 0) && !this.oversized) {
             style.fill = "#ffffff";
         }
 
@@ -1173,7 +1182,7 @@ export class Card {
         }
 
         const style = this.getStyle("copyright");
-        if ((this.variant === "Super Hero" || this.variant === "Super-Villain" || this.variant === "Impossible" || this.variant === "Transformed" || this.variant.indexOf("Hero lvl") === 0 || this.variant.indexOf("Villain lvl") === 0) && !this.oversized) {
+        if ((this.variant === "Super Hero" || this.variant === "Super-Villain" || this.variant === "Impossible" || this.variant === "Transformed" || (this.variant === "Transform" && (this.type === "Equipment" || this.type === "Equipamento")) || this.variant.indexOf("Hero lvl") === 0 || this.variant.indexOf("Villain lvl") === 0) && !this.oversized) {
             style.fill = "#ffffff";
         }
 

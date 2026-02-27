@@ -27,6 +27,7 @@ const subtypeTranslations: {[key: string]: string} = {
     "test": "teste",
     "Unity": "Unidade",
     "Timeline-up": "QG Temporal",
+    "Transformed": "Transformado",
 };
 
 /** The Live Editor tab of a Tabular */
@@ -409,7 +410,7 @@ export class LiveEditorTab extends Tab {
         } else if (type === "Villain" || type === "Vilão" || type === "Villain Nemesis" || type === "Vilão Nêmesis") {
             desiredOptions = ["", "Super-Villain", "Infinity War", "Crisis", "Speedster", "Symbiote", "Unity", "Transformed", "Base transform", "Impossible", "Villain lvl 1", "Villain lvl 2", "Villain lvl 3", "Villain lvl 4", "Bribe 1", "Bribe 2", "Bribe 3", "Bribe 4", "Bribe 5"];
         } else if (type === "Equipment" || type === "Equipamento") {
-            desiredOptions = ["", "Symbiote", "Bribe 1", "Bribe 2", "Bribe 3", "Bribe 4", "Bribe 5"];
+            desiredOptions = ["", "Transform", "Symbiote", "Bribe 1", "Bribe 2", "Bribe 3", "Bribe 4", "Bribe 5"];
         } else if (type === "Location" || type === "Localização") {
             desiredOptions = ["", "Bribe 1", "Bribe 2", "Bribe 3", "Bribe 4", "Bribe 5"];
         } else if (type === "Super Power" || type === "Superpoder") {
