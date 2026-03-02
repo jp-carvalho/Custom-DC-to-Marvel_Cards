@@ -602,6 +602,12 @@ export class Card {
             if (this.type === "Equipment" || this.type === "Equipamento") {
                 spriteName = "Equipment transform";
             }
+        } else if (this.variant === "Materialization") {
+            if (this.type === "Super Power") {
+                spriteName = "superpower materization";
+            } else if (this.type === "Superpoder") {
+                spriteName = "superpoder materialização";
+            }
         } else if (this.variant === "MC Transform") {
             if (this.type === "Hero") {
                 spriteName = "MC Transform Hero";
