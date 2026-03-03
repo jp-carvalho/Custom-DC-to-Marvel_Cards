@@ -52,11 +52,13 @@ export class Card {
         "Bloqueio",
         "Bombshell",
         "Bombástico",
-        "Bribe",
+        // "Bribe",
+        "Cara",
         "Confrontation",
         "Confronto",
         "Contínuas",
         "Contínuo",
+        "Coroa",
         "Defense",
         "Defesa",
         "Descarte 2 cartas diferentes",
@@ -70,6 +72,7 @@ export class Card {
         "End of Your Turn",
         "Fim do Seu Turno",
         "Fraqueza",
+        "Heads",
         "INDEFENSÁVEL",
         "Infinity Stone",
         "Início do seu turno",
@@ -105,6 +108,7 @@ export class Card {
         "Surpresa",
         "Soco",
         "SYMBIOTE",
+        "Tails",
         "Teamwork",
         "Time Travel",
         "Trabalho em Equipe",
@@ -119,6 +123,8 @@ export class Card {
         "Vulnerability ",
         "Weakness",
         "WHEN YOU GAIN THIS: Investigate",
+        "You must play this card before ending your turn.",
+        "Você deve jogar esta carta antes de encerrar seu turno.",
     ];
 
     /** Configuration for highlighting specific phrases with background colors */
@@ -130,6 +136,7 @@ export class Card {
                 "When you buy or gain this card, gain 1 VP.",
                 "AO GANHAR ISTO: GANHE UMA FRAQUEZA.",
                 "Quando você comprar ou ganhar esta carta, ganhe 1 PV.",
+                "Quando você compra ou ganha esta carta, ganhe 1 PV.",
                 "WHEN YOU GAIN THIS: Investigate, then shuffle 2 Ambush Attack! cards into the Investigation deck.",
                 "AO GANHAR ISSO: Investigue e, em seguida, embaralhe 2 cartas de Ataque Surpresa! no baralho de Investigação.",
             ],
@@ -141,6 +148,15 @@ export class Card {
                 "Se você destruir ou descartar esta carta de sua mão, baralho ou pilha de descarte, ganhe-a e coloque-a em sua mão.",
                 "After you discard or Seal this card from any zone, you may surge.",
                 "Depois de descartar ou Selar esta carta de qualquer zona, Surge.",
+                "After this card enters your discard pile from any zone, you may put it on the bottom of your deck.",
+                "Depois que esta carta entrar em sua pilha de descarte vinda de qualquer zona, você pode colocá-la no fundo do seu baralho.",
+            ],
+        },
+        {
+            color: 0x78bf09, // Verde (#78bf09)
+            phrases: [
+                "You must play this card before ending your turn.",
+                "Você deve jogar esta carta antes de encerrar seu turno.",
             ],
         },
     ];
@@ -585,6 +601,10 @@ export class Card {
                 spriteName = "Symbiote equipment";
             } else if (this.type === "Equipamento") {
                 spriteName = "Symbiote equipamento";
+            } else if (this.type === "Super Power") {
+                spriteName = "Superpower Symbiote";
+            } else if (this.type === "Superpoder") {
+                spriteName = "Superpoder Simbionte";
             }
         } else if (this.variant === "Unity") {
             if (this.type === "Hero" || this.type === "Herói" || this.type === "Heroi") {
