@@ -54,8 +54,8 @@ export class Card {
         "Bombástico",
         // "Bribe",
         "Cara",
-        "Confrontation",
-        "Confronto",
+        // "Confrontation",
+        // "Confronto",
         "Contínuas",
         "Contínuo",
         "Coroa",
@@ -370,6 +370,36 @@ export class Card {
         formattedText = formattedText.replace(/__LP__/g, "(");
         formattedText = formattedText.replace(/__RP__/g, ")");
 
+        // Temporarily protect the phrases to prevent double-bolding of keywords within them.
+        const protectedPhrases: string[] = [];
+        const phrasesToProtect = [
+            /(Galactus Herald:\s*\d+)/gi,
+            /(Arauto de Galactus:\s*\d+)/gi,
+            /First\ Appearance\s*[—–-]\s*Attack/gi,
+            /Primeira\ Aparição\s*[—–-]\s*Ataque/gi,
+            /\+([\d\sX]*?)\ Power/gi,
+            /\+([\d\sX]*?)\ de\ Poder/gi,
+            /(\d+)\s*\+\s*Power/gi,
+            /(\d+)\s*\+\s*de\ Poder/gi,
+            /(\d)\ Power/gi,
+            /Pay\s*[1-9]\s*VPs/gi,
+            /Pague\s*[1-9]\s*PVs/gi,
+            /(Discard a non-Weakness card)/gi,
+            /(Descarte uma carta de não-Fraqueza)/gi,
+            /(não-Contínua)/gi,
+            /\bReverter\b/gi,
+            /\bRevert\b/gi,
+            /\bTransformar\b/gi,
+            /\bTransform\b/gi,
+        ];
+
+        for (const regex of phrasesToProtect) {
+            formattedText = formattedText.replace(regex, (match) => {
+                protectedPhrases.push(match);
+                return `__PROTECTED_PHRASE_${protectedPhrases.length - 1}__`;
+            });
+        }
+
         formattedText = formattedText.replace(/(Range:|Alcance:)(\s*)(\d+)/gi, "$1$2[b]$3[/b]");
 
         formattedText = formattedText.replace(/(Stack\ Ongoing)|(Ongoing)/g, (match, p1, p2) => {
@@ -399,35 +429,6 @@ export class Card {
             manualBolds.push(content);
             return `__MANUAL_BOLD_${manualBolds.length - 1}__`;
         });
-
-        // Temporarily protect the phrases to prevent double-bolding of keywords within them.
-        const protectedPhrases: string[] = [];
-        const phrasesToProtect = [
-            /(Galactus Herald:\s*\d+)/gi,
-            /(Arauto de Galactus:\s*\d+)/gi,
-            /First\ Appearance\s*[—–-]\s*Attack/gi,
-            /Primeira\ Aparição\s*[—–-]\s*Ataque/gi,
-            /\+([\d\sX]*?)\ Power/gi,
-            /\+([\d\sX]*?)\ de\ Poder/gi,
-            /(\d+)\s*\+\s*Power/gi,
-            /(\d+)\s*\+\s*de\ Poder/gi,
-            /(\d)\ Power/gi,
-            /Pay\s*[1-9]\s*VPs/gi,
-            /Pague\s*[1-9]\s*PVs/gi,
-            /(Discard a non-Weakness card)/gi,
-            /(Descarte uma carta de não-Fraqueza)/gi,
-            /\bReverter\b/gi,
-            /\bRevert\b/gi,
-            /\bTransformar\b/gi,
-            /\bTransform\b/gi,
-        ];
-
-        for (const regex of phrasesToProtect) {
-            formattedText = formattedText.replace(regex, (match) => {
-                protectedPhrases.push(match);
-                return `__PROTECTED_PHRASE_${protectedPhrases.length - 1}__`;
-            });
-        }
 
         formattedText = formattedText.replace(/\b(Attack)\b/gi, "[b]$1[/b]");
 
