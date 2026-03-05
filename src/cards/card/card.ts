@@ -358,7 +358,7 @@ export class Card {
         let formattedText = this.text;
 
         formattedText = formattedText.replace(/Meter Burn \((\d+)\)/gi, "[b]Meter Burn __LP__$1__RP__[/b]");
-        formattedText = formattedText.replace(/Queima da barra \((\d+)\)/gi, "[b]Queima da barra __LP__$1__RP__[/b]");
+        formattedText = formattedText.replace(/Queima da barra \((\d+)\)/gi, "[b]Queima da Barra __LP__$1__RP__[/b]");
 
         const blockPhrases: string[] = [];
         formattedText = formattedText.replace(/(Block|Bloqueio)(\s*)\((\d+)\)/gi, (match, p1, p2, p3) => {
@@ -1039,12 +1039,9 @@ export class Card {
         if (this.preferredTextSize > 0) {
             style.fontSize = this.preferredTextSize;
         } else {
-            style.fontSize = 42;
-            const len = this.text.length;
-            if (len < 75) {
+            style.fontSize = 44;
+            if (this.text.length >= 100) {
                 style.fontSize = 42;
-            } else {
-                style.fontSize = 40;
             }
         }
 
