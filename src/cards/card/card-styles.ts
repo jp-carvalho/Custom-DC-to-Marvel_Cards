@@ -249,6 +249,24 @@ const styles: {
         },
     },
 
+    "White Card": {
+        name: {
+            fill: "#000000",
+        },
+        type: {
+            fill: "#000000",
+        },
+    },
+
+    "Carta Branca": {
+        name: {
+            fill: "#000000",
+        },
+        type: {
+            fill: "#000000",
+        },
+    },
+
     // tslint:enable:object-literal-sort-keys
 };
 

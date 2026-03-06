@@ -21,6 +21,7 @@ const typeTranslations: {[key: string]: string} = {
     "Weakness": "Fraqueza",
     "Villain Nemesis": "Vilão Nêmesis",
     "Hostage": "Refém",
+    "White Card": "Carta Branca",
 };
 
 /** Map for EN to PT subtypes */

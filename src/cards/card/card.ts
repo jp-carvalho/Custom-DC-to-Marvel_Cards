@@ -22,6 +22,8 @@ const cardTypeTranslations: {[key: string]: string} = {
     "Fraqueza": "Fraqueza",
     "Villain Nemesis": "Nemesis",
     "Vilão Nêmesis": "Nêmesis",
+    "White Card": "White Card",
+    "Carta Branca": "Carta Branca",
 };
 
 /** The maximum width (in pixels) that a card can be (oversized) */
@@ -139,6 +141,8 @@ export class Card {
                 "Quando você compra ou ganha esta carta, ganhe 1 PV.",
                 "WHEN YOU GAIN THIS: Investigate, then shuffle 2 Ambush Attack! cards into the Investigation deck.",
                 "AO GANHAR ISSO: Investigue e, em seguida, embaralhe 2 cartas de Ataque Surpresa! no baralho de Investigação.",
+                "WHEN YOU GAIN THIS: Investigate.",
+                "QUANDO VOCÊ GANHAR ESTA CARTA: Investigue.",
             ],
         },
         {
@@ -172,7 +176,7 @@ export class Card {
 
     /** The type of the card, used for background generation */
     public type: "Equipment" | "Hero" | "Location" | "Starter" | "Equipamento" |
-                 "Super Power" | "Villain" | "Weakness" | "Herói" | "Localização" | "Inicial" | "Superpoder" | "Vilão" | "Fraqueza" |
+                 "Super Power" | "Villain" | "Weakness" | "White Card" | "Herói" | "Localização" | "Inicial" | "Superpoder" | "Vilão" | "Fraqueza" | "Carta Branca" |
                  "Weakness" | "Villain Nemesis" | "Vilão Nêmesis" = "Starter";
 
     /** If this card is a variant with black background text */
@@ -589,6 +593,8 @@ export class Card {
             }
         } else if (this.type === "Hostage" || this.type === "Refém") {
             spriteName = "Hostage";
+        } else if (this.type === "White Card" || this.type === "Carta Branca") {
+            spriteName = "White card BG";
         } else if (this.variant === "Symbiote") {
             if (this.type === "Hero") {
                 spriteName = "Symbiote hero";
@@ -805,6 +811,10 @@ export class Card {
      */
     private renderType(): void {
         if (this.oversized) {
+            return;
+        }
+
+        if (this.type === "White Card" || this.type === "Carta Branca") {
             return;
         }
 
