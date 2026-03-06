@@ -594,7 +594,15 @@ export class Card {
         } else if (this.type === "Hostage" || this.type === "Refém") {
             spriteName = "Hostage";
         } else if (this.type === "White Card" || this.type === "Carta Branca") {
-            spriteName = "White card BG";
+            if (this.variant === "Materialization") {
+                if (this.type === "White Card") {
+                    spriteName = "White card Materialization";
+                } else { // Carta Branca
+                    spriteName = "White card Materialização";
+                }
+            } else {
+                spriteName = "White card BG";
+            }
         } else if (this.variant === "Symbiote") {
             if (this.type === "Hero") {
                 spriteName = "Symbiote hero";
