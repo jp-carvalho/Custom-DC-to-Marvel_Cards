@@ -163,6 +163,13 @@ export class Card {
                 "Você deve jogar esta carta antes de encerrar seu turno.",
             ],
         },
+        {
+            color: 0xe80a8b, // Rosa (#e80a8b)
+            phrases: [
+                "When you play this card, leave it in front of you for the rest of the game.",
+                "Quando você jogar esta carta, deixe-a à sua frente pelo resto do jogo.",
+            ],
+        },
     ];
 
     /** The current width in pixels of the rendered card */
@@ -1145,7 +1152,7 @@ export class Card {
             if (found && minY !== Infinity) {
                 const bg = new PIXI.Graphics();
                 bg.beginFill(config.color);
-                bg.drawRect(0, minY - 10, this.pxWidth, maxY - minY + 3);
+                bg.drawRect(0, minY - 10, this.pxWidth, maxY - minY + 15);
                 bg.endFill();
                 textGroup.addChild(bg);
             }
