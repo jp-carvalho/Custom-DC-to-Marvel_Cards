@@ -2233,6 +2233,8 @@ masterCardTable = {
 	-- Locations
 	["ARK Ace Chemical Plant"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
 	["ARK Arkham Asylum"] = {vp=2, isLocation=true, isOngoing=true, cost=6,},
+    	["ARK Arkham Asylum"] = {vp=2, isLocation=true, isOngoing=true, cost=6,},
+        ["ARK Arkham Asylum"] = {vp=2, isLocation=true, isOngoing=true, cost=6,},
 	["ARK Iceberg Lounge"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
 	-- Super Powers
 	["ARK ...Tails You Die"] = {vp=1, isSuperPower=true, cost=4,},
@@ -3123,6 +3125,8 @@ masterCardTable = {
 	["RC Trident of Neptune"] = {vp=1, isEquipment=true, cost=2, id=1100},
 	--Locations
 	["RC Amnesty Bay"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=4403},
+    	["CW Muir Island"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=4403},
+        ["CW Ilha Muir"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=4403},
 	["RC Daily Planet"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=4033},
 	["RC Lex Corp"] = {vp=1, isLocation=true, isOngoing=true, cost=6, id=1167},
 	["RC Olympus"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=8381},
@@ -3507,6 +3511,8 @@ masterCardTable = {
 	--Locations
 	["CO9 Atlantis"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
 	["CO9 London"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
+    	["CO9 Latveria"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
+        ["CO9 Latveria"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
 	--Super-Villains
 	["CO9 Baroness Paula Von Gunther"] = {vp=5, isVillain=true, isBoss=true, cost=10,},
 	["CO9 General Faora"] = {vp=7, isVillain=true, isBoss=true, cost=15,},
@@ -4905,6 +4911,8 @@ masterCardTable = {
 	["TTG Jump City"] = {vp=1, isLocation=true, isOngoing=true, cost=3, id=6643},
 	["TTG Titans Tower"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=8202},
 	["TTG Trash Hole"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=4247},
+        ["TU90 Yancy Street"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=4247},
+        ["TU90 Rua Yancy"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=4247},
 	--Nemesis
 	["TTG Billy Numerous"] = {vp=5, isBoss=true, cost=10, id=5844},
 	["TTG Brother Blood"] = {vp=5, isBoss=true, cost=10, id=4483},
