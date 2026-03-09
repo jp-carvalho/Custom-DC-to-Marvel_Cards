@@ -1465,9 +1465,13 @@ masterCardTable = {
 	["DC Utility Belt"] = {vp=0, isEquipment=true, cost=5, id=7618},
 	--Locations
 	["DC Arkham Asylum"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=7037},
+    	["MARVEL Ravencroft Institute"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=7037},
+        ["MARVEL Instituto Ravencroft"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=7037},
 	["DC Fortress of Solitude"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=9435},
 	["DC The Batcave"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=5956},
 	["DC The Watchtower"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=1617},
+    	["MARVEL Avenger's Mansion"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=1617},
+        ["MARVEL Mansão dos Vingadores"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=1617},
 	["DC Titans Tower"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=8226},
 	--Super Villains
 	["DC Atrocitus"] = {vp=5, isVillain=true, isBoss=true, cost=10, id=6446},
@@ -2233,8 +2237,8 @@ masterCardTable = {
 	-- Locations
 	["ARK Ace Chemical Plant"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
 	["ARK Arkham Asylum"] = {vp=2, isLocation=true, isOngoing=true, cost=6,},
-    	["ARK Arkham Asylum"] = {vp=2, isLocation=true, isOngoing=true, cost=6,},
-        ["ARK Arkham Asylum"] = {vp=2, isLocation=true, isOngoing=true, cost=6,},
+    	["RC The Raft"] = {vp=2, isLocation=true, isOngoing=true, cost=6,},
+        ["RC A Balsa"] = {vp=2, isLocation=true, isOngoing=true, cost=6,},
 	["ARK Iceberg Lounge"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
 	-- Super Powers
 	["ARK ...Tails You Die"] = {vp=1, isSuperPower=true, cost=4,},
@@ -2299,6 +2303,8 @@ masterCardTable = {
 	--Locations
 	["SHD Lazarus Pit"] = {vp=2, isLocation=true, isOngoing=true, cost=6,},
 	["SHD Santa Prisca"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
+    	["TV Madripoor"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
+        ["TV Madripoor"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
 	--Super Powers
 	["SHD Break the Bat"] = {vp=1, isSuperPower=true, cost=5, isAttack=true,},
 	["SHD Hired Hit"] = {vp=1, isSuperPower=true, cost=4, isBribe=true,},
@@ -3004,6 +3010,8 @@ masterCardTable = {
 	-- Locations
 	["R5 Fortress of Solitude"] = {vp=2, isLocation=true, isOngoing=true, cost=5,},
 	["R5 Metropolis"] = {vp=2, isLocation=true, isOngoing=true, cost=5,},
+    	["R5 Daily Bugle"] = {vp=2, isLocation=true, isOngoing=true, cost=5,},
+        ["R5 Clarim Diário"] = {vp=2, isLocation=true, isOngoing=true, cost=5,},
 	["R5 Stryker's Island Penitentiary"] = {vp=2, isLocation=true, isOngoing=true, cost=6,},
 	-- Super Powers
 	["R5 Corrupt Dealing"] = {vp=1, isSuperPower=true, cost=2,},
@@ -3512,7 +3520,7 @@ masterCardTable = {
 	["CO9 Atlantis"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
 	["CO9 London"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
     	["CO9 Latveria"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
-        ["CO9 Latveria"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
+        ["CO9 Latvéria"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
 	--Super-Villains
 	["CO9 Baroness Paula Von Gunther"] = {vp=5, isVillain=true, isBoss=true, cost=10,},
 	["CO9 General Faora"] = {vp=7, isVillain=true, isBoss=true, cost=15,},
@@ -5339,6 +5347,8 @@ masterCardTable = {
 	["RC Trident of Lucifer (DCDB)"] = {vp=1, isEquipment=true, cost=5, id=4105},
 	--Locations
 	["C2 Atlantis (DCDB)"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=7099},
+    	["C2 Atlantis (DCDB)"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=7099},
+        ["C2 Atlantis (DCDB)"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=7099},
 	--Super Villains
 	["C1 Ra's Al Ghul (DCDB)"] = {vp=4, isVillain=true, isBoss=true, isStartBoss=true, cost=9, id=5876},
 	["C2 Helspont (DCDB)"] = {vp=5, isVillain=true, isBoss=true, cost=11, id=9335},
