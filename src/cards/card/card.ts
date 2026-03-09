@@ -404,6 +404,14 @@ export class Card {
             /\bTransform\b/gi,
         ];
 
+        // Add highlight phrases to be protected and bolded
+        for (const config of Card.highlightConfigs) {
+            for (const phrase of config.phrases) {
+                const escaped = phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                phrasesToProtect.unshift(new RegExp(escaped, 'gi'));
+            }
+        }
+
         for (const regex of phrasesToProtect) {
             formattedText = formattedText.replace(regex, (match) => {
                 protectedPhrases.push(match);
