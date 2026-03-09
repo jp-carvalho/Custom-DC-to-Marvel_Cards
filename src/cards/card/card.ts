@@ -636,6 +636,8 @@ export class Card {
         } else if (this.variant === "Transform") {
             if (this.type === "Equipment" || this.type === "Equipamento") {
                 spriteName = "Equipment transform";
+            } else if (this.type === "Starter" || this.type === "Inicial") {
+                spriteName = "Starter transform";
             }
         } else if (this.variant === "Materialization") {
             if (this.type === "Super Power") {
@@ -1050,16 +1052,16 @@ export class Card {
         }
 
         const style = this.getStyle("text");
-        if ((this.variant === "Super Hero" || this.variant === "Super-Villain" || this.variant === "Impossible" || this.variant === "Transformed" || (this.variant === "Transform" && (this.type === "Equipment" || this.type === "Equipamento")) || this.variant.indexOf("Hero lvl") === 0 || this.variant.indexOf("Villain lvl") === 0) && !this.oversized) {
+        if ((this.variant === "Super Hero" || this.variant === "Super-Villain" || this.variant === "Impossible" || this.variant === "Transformed" || (this.variant === "Transform" && (this.type === "Equipment" || this.type === "Equipamento" || this.type === "Starter" || this.type === "Inicial")) || this.variant.indexOf("Hero lvl") === 0 || this.variant.indexOf("Villain lvl") === 0) && !this.oversized) {
             style.fill = "#ffffff";
         }
 
         if (this.preferredTextSize > 0) {
             style.fontSize = this.preferredTextSize;
         } else {
-            style.fontSize = 44;
+            style.fontSize = 40;
             if (this.text.length >= 100) {
-                style.fontSize = 42;
+                style.fontSize = 40;
             }
         }
 
@@ -1226,7 +1228,7 @@ export class Card {
         }
 
         const style = this.getStyle("copyright");
-        if ((this.variant === "Super Hero" || this.variant === "Super-Villain" || this.variant === "Impossible" || this.variant === "Transformed" || (this.variant === "Transform" && (this.type === "Equipment" || this.type === "Equipamento")) || this.variant.indexOf("Hero lvl") === 0 || this.variant.indexOf("Villain lvl") === 0) && !this.oversized) {
+        if ((this.variant === "Super Hero" || this.variant === "Super-Villain" || this.variant === "Impossible" || this.variant === "Transformed" || (this.variant === "Transform" && (this.type === "Equipment" || this.type === "Equipamento" || this.type === "Starter" || this.type === "Inicial")) || this.variant.indexOf("Hero lvl") === 0 || this.variant.indexOf("Villain lvl") === 0) && !this.oversized) {
             style.fill = "#ffffff";
         }
 

@@ -417,6 +417,8 @@ export class LiveEditorTab extends Tab {
             desiredOptions = ["", "Bribe 1", "Bribe 2", "Bribe 3", "Bribe 4", "Bribe 5"];
         } else if (type === "Super Power" || type === "Superpoder") {
             desiredOptions = ["", "Bribe 1", "Bribe 2", "Bribe 3", "Bribe 4", "Bribe 5", "Materialization", "Symbiote"];
+        } else if (type === "Starter" || type === "Inicial") {
+            desiredOptions = ["", "Transform"];
         } else if (type === "White Card" || type === "Carta Branca") {
             desiredOptions = ["", "Materialization"];
         }

@@ -249,21 +249,27 @@ const styles: {
         },
     },
 
-    "White Card": {
+    WhiteCard: {
         name: {
-            fill: "#000000",
+            fill: "#ffffff",
         },
         type: {
             fill: "#000000",
+        },
+        legal: {
+            fill: "#2c2c2c",
         },
     },
 
-    "Carta Branca": {
+    CartaBranca: {
         name: {
-            fill: "#000000",
+            fill: "#ffffff",
         },
         type: {
             fill: "#000000",
+        },
+        legal: {
+            fill: "#2c2c2c",
         },
     },
 
