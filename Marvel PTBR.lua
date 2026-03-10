@@ -1,3 +1,27 @@
+--Heróis
+    ["CW Cavaleiro da Lua"] = {vp=1, isHero=true, cost=3, id=7178},
+    ["R4 Armadura"] = {vp=2, isHero=true, isDefense=true, cost=5,},
+    ["RC Radical"] = {vp=1, isHero=true, cost=5,},
+    ["R4 Freyja"] = {vp=2, isHero=true, isBlock=true, blockValue=3, cost=5,},
+    ["IW Estrela Polar"] = {vp=1, isHero=true, isOngoing=true, cost=4, id=1791},
+    ["RC Jessica Jones"] = {vp=1, isHero=true, isBribe=true, cost=3,},
+    ["RC Patriota de Ferro"] = {vp=2, isHero=true, cost=6,},
+    ["CW Cosmo"] = {vp=1, isHero=true, isDefense=true, cost=3, id=5000},
+    ["R5 Cosmo"] = {vp=1, isHero=true, cost=4,},
+    ["RC Linda Carter"] = {vp=1, isHero=true, cost=4,},
+    ["CW2 Viúva Negra"] = {vp=1, isHero=true, isAttack=true, cost=3,},
+    ["IW5 Jeff"] = {vp=2, isHero=true, isDefense=true, cost=7,},
+    ["CO11 Demolidor"] = {vp=1, isHero=true, cost=5,},
+    ["SW Namor"] = {vp=1, isHero=true, cost=3, id=1049},
+    ["CO11 Gavião Arqueiro"] = {vp=2, isHero=true, cost=4,},
+    ["IW5 Adam Warlock"] = {vp=3, isHero=true, isDefense=true, cost=8,},
+    ["RC Dinossauro Diabólico"] = {vp=1, isHero=true, isDefense=true, cost=3,},
+    ["TV Valquíria"] = {vp=1, isHero=true, cost=4, isOngoing=true, isBribe=true,},
+    ["CW Tritão"] = {vp=1, isHero=true, cost=3, id=6213},
+    ["TV A Coisa"] = {vp=2, isHero=true, cost=6, isBribe=true,},
+    ["R4 Howard o Pato"] = {vp=1, isHero=true, isDefense=true, cost=4,},
+    
+
 --Localizações
     ["TU90 Rua Yancy"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=4247},
     ["CW Ilha Muir"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=4403},

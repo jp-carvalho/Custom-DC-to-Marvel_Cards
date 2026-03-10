@@ -1,3 +1,27 @@
+--Heroes
+        ["CW Moon Knight"] = {vp=1, isHero=true, cost=3, id=7178},
+        ["R4 Armor"] = {vp=2, isHero=true, isDefense=true, cost=5,},
+        ["RC Night Thrasher"] = {vp=1, isHero=true, cost=5,},
+        ["R4 Freyja"] = {vp=2, isHero=true, isBlock=true, blockValue=3, cost=5,},
+        ["IW Northstar"] = {vp=1, isHero=true, isOngoing=true, cost=4, id=1791},
+        ["RC Jessica Jones"] = {vp=1, isHero=true, isBribe=true, cost=3,},
+        ["RC Iron Patriot"] = {vp=2, isHero=true, cost=6,},
+        ["CW Cosmo"] = {vp=1, isHero=true, isDefense=true, cost=3, id=5000},
+        ["R5 Cosmo"] = {vp=1, isHero=true, cost=4,},
+        ["RC Linda Carter"] = {vp=1, isHero=true, cost=4,},
+        ["CW2 Black Widdow"] = {vp=1, isHero=true, isAttack=true, cost=3,},
+        ["IW5 Jeff"] = {vp=2, isHero=true, isDefense=true, cost=7,},
+        ["CO11 Daredevil"] = {vp=1, isHero=true, cost=5,},
+        ["SW Namor"] = {vp=1, isHero=true, cost=3, id=1049},
+        ["CO11 Hawkeye"] = {vp=2, isHero=true, cost=4,},
+        ["IW5 Adam Warlock"] = {vp=3, isHero=true, isDefense=true, cost=8,},
+        ["RC Devil DInossaur"] = {vp=1, isHero=true, isDefense=true, cost=3,},
+        ["TV Valkyrie"] = {vp=1, isHero=true, cost=4, isOngoing=true, isBribe=true,},
+        ["CW Triton"] = {vp=1, isHero=true, cost=3, id=6213},
+        ["TV The Thing"] = {vp=2, isHero=true, cost=6, isBribe=true,},
+        ["R4 Howard the Duck"] = {vp=1, isHero=true, isDefense=true, cost=4,},
+        
+
 --Locations
         ["TU90 Yancy Street"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=4247},
         ["CW Muir Island"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=4403},
@@ -33,4 +57,3 @@
         ["TU Monster Isle"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=3123},
         ["MARVEL The Blue Area of the Moon"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=9435},
         ["IW2 Atlantis"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=7099},
-        
