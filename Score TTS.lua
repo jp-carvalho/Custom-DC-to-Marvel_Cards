@@ -1468,11 +1468,17 @@ masterCardTable = {
     	["MARVEL Ravencroft Institute"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=7037},
         ["MARVEL Instituto Ravencroft"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=7037},
 	["DC Fortress of Solitude"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=9435},
+		["MARVEL The Blue Area of the Moon"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=9435},
+		["MARVEL A Área Azul da Lua"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=9435},
 	["DC The Batcave"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=5956},
+		["MARVEL Danger Room"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=5956},
+		["MARVEL Sala de Perigo"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=5956},
 	["DC The Watchtower"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=1617},
     	["MARVEL Avenger's Mansion"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=1617},
         ["MARVEL Mansão dos Vingadores"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=1617},
 	["DC Titans Tower"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=8226},
+		["MARVEL Brooklyn Bridge"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=8226},
+		["MARVEL Ponte do Brooklyn"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=8226},
 	--Super Villains
 	["DC Atrocitus"] = {vp=5, isVillain=true, isBoss=true, cost=10, id=6446},
 	["DC Black Manta"] = {vp=4, isVillain=true, isBoss=true, cost=8, id=6162},
@@ -1752,6 +1758,8 @@ masterCardTable = {
 	["TT Tamaran"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=7093},
 	["TT The Colony"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=9684},
 	["TT Titans Memorial"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=3123},
+		["TU Monster Isle"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=3123},
+		["TU Ilha dos Monstros"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=3123},
 	--Super Villains
 	["TT Blackfire"] = {vp=6, isVillain=true, isBoss=true, cost=11, id=4486},
 	["TT Brother Blood"] = {vp=6, isVillain=true, isBoss=true, cost=11, id=2078},
@@ -1842,6 +1850,8 @@ masterCardTable = {
 	["DNM Challenger Mountain"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=9764},
 	["DNM Forge of Worlds"] = {vp=2, isLocation=true, isOngoing=true, cost=7, id=9075},
 	["DNM Oblivion Bar"] = {vp=1, isLocation=true, isDefense=true, isOngoing=true, cost=5, id=7085},
+		["KIB Bar With No Name"] = {vp=1, isLocation=true, isDefense=true, isOngoing=true, cost=5, id=7085},
+		["KIB Bar Sem Nome"] = {vp=1, isLocation=true, isDefense=true, isOngoing=true, cost=5, id=7085},
 	["DNM The Dark Multiverse"] = {vp=2, isLocation=true, isOngoing=true, cost=5, id=6821},
 	["DNM Tomb of Hath-Set"] = {vp=2, isLocation=true, isOngoing=true, cost=5, id=5912},
 	--Super-Villains
@@ -2240,6 +2250,8 @@ masterCardTable = {
 	["ARK Vicki Vale"] = {vp=0, isHostage=true, isOngoing=true, cost=2,},
 	-- Locations
 	["ARK Ace Chemical Plant"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
+		["RC Oscorp Industries"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
+		["RC Indústrias Oscorp"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
 	["ARK Arkham Asylum"] = {vp=2, isLocation=true, isOngoing=true, cost=6,},
     	["RC The Raft"] = {vp=2, isLocation=true, isOngoing=true, cost=6,},
         ["RC A Balsa"] = {vp=2, isLocation=true, isOngoing=true, cost=6,},
@@ -2308,6 +2320,8 @@ masterCardTable = {
 	["SHD Thunder"] = {vp=1, isHero=true, cost=5, isOngoing=true, isDefense=true,},
 	--Locations
 	["SHD Lazarus Pit"] = {vp=2, isLocation=true, isOngoing=true, cost=6,},
+		["TV Genosha"] = {vp=2, isLocation=true, isOngoing=true, cost=6,},
+		["TV Genosha"] = {vp=2, isLocation=true, isOngoing=true, cost=6,},
 	["SHD Santa Prisca"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
     	["TV Madripoor"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
         ["TV Madripoor"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
@@ -2651,6 +2665,8 @@ masterCardTable = {
 	["C5 Mister Miracle"] = {vp=3, isHero=true, isDefense=true, cost=8,},
 	--Locations
 	["C5 Crypt of Heroes"] = {vp=2, isLocation=true, isOngoing=true, cost=7,},
+		["IW5 Olympus"] = {vp=2, isLocation=true, isOngoing=true, cost=7,},
+		["IW5 Olimpo"] = {vp=2, isLocation=true, isOngoing=true, cost=7,},
 	--Super Powers
 	["C5 Reverse Polarity"] = {vp=2, isSuperPower=true, cost=5,},
 	["C5 Godly Ascension"] = {vp=3, isSuperPower=true, cost=8,},
@@ -2773,6 +2789,8 @@ masterCardTable = {
 	["R1 Abandoned Amusement Park"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=6140},
 	["R1 Arkham Asylum"] = {vp=1, isLocation=true, isOngoing=true, cost=6, id=1412},
 	["R1 The Batcave"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=5817},
+		["R1 Tony Stark's Workshop"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=5817},
+		["R1 Oficina do Tony Stark"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=5817},
 	["R1 Wayne Manor"] = {vp=1, isLocation=true, isOngoing=true, cost=6, id=3139},
 	--Oversized Character Cards
 	["R1 Batman (Level 1)"] = {vp=4, isHero=true, isCharacter=true, cost=9, id=5267},
@@ -2839,6 +2857,8 @@ masterCardTable = {
 	["R2 Sinestro Power Battery"] = {vp=1, isEquipment=true, cost=5, id=9404},
 	--Locations
 	["R2 Mogo"] = {vp=1, isLocation=true, isOngoing=true, cost=6, id=5400},
+		["R2 Asteroid M"] = {vp=1, isLocation=true, isOngoing=true, cost=6, id=5400},
+		["R2 Asteróide M"] = {vp=1, isLocation=true, isOngoing=true, cost=6, id=5400},
 	["R2 New Korugar"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=5589},
 	["R2 Oa"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=7408},
 		["R2 Midtown High School"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=7408},
@@ -2913,9 +2933,13 @@ masterCardTable = {
 	["R3 Weather Wand"] = {vp=2, isEquipment=true, cost=6,},
 	--Locations
 	["R3 Central City PD"] = {vp=1, isLocation=true, isOngoing=true, cost=5},
+		["R3 S.H.I.E.L.D. Helicarrier"] = {vp=1, isLocation=true, isOngoing=true, cost=5},
+		["R3 Porta-aviões da S.H.I.E.L.D."] = {vp=1, isLocation=true, isOngoing=true, cost=5},
 	["R3 S.T.A.R. Labs"] = {vp=1, isLocation=true, isOngoing=true, cost=5},
 	["R3 The Flash Museum"] = {vp=1, isLocation=true, isOngoing=true, cost=4},
 	["R3 The Negative Speed Force"] = {vp=1, isLocation=true, isOngoing=true, cost=5},
+		["R3 Worldship"] = {vp=1, isLocation=true, isOngoing=true, cost=5},
+		["R3 Nave-Mundo"] = {vp=1, isLocation=true, isOngoing=true, cost=5},
 	["R3 The Speed Force"] = {vp=2, isLocation=true, isOngoing=true, cost=6},
 	--Oversized Character Cards
 	["R3 Reverse-Flash (Level 1)"] = {vp=4, isVillain=true, isCharacter=true, cost=9,},
@@ -3025,6 +3049,8 @@ masterCardTable = {
     	["R5 Daily Bugle"] = {vp=2, isLocation=true, isOngoing=true, cost=5,},
         ["R5 Clarim Diário"] = {vp=2, isLocation=true, isOngoing=true, cost=5,},
 	["R5 Stryker's Island Penitentiary"] = {vp=2, isLocation=true, isOngoing=true, cost=6,},
+		["R5 Hydra Flying Island"] = {vp=2, isLocation=true, isOngoing=true, cost=6,},
+		["R5 Ilha Flutuante da Hydra"] = {vp=2, isLocation=true, isOngoing=true, cost=6,},
 	-- Super Powers
 	["R5 Corrupt Dealing"] = {vp=1, isSuperPower=true, cost=2,},
 	["R5 Super Hearing"] = {vp=1, isSuperPower=true, cost=3,},
@@ -3232,6 +3258,8 @@ masterCardTable = {
 	["CO2 Explosive Arrow"] = {vp=1, isEquipment=true, isAttack=true, cost=2, id=1764},
 	--Locations
 	["CO2 Verdant"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=6086},
+		["CO2 The Peak"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=6086},
+		["CO2 O Pico"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=6086},
 	--Super Villains
 	["CO2 Brother Blood"] = {vp=6, isVillain=true, isBoss=true, cost=13, id=6591},
 	["CO2 China White"] = {vp=5, isVillain=true, isBoss=true, cost=9, id=6400},
@@ -3267,6 +3295,8 @@ masterCardTable = {
 	["CO3 Time Sphere"] = {vp=1, isEquipment=true, cost=5, id=1809},
 	--Locations
 	["CO3 Legion Headquarters"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=6972},
+		["CO3 Negative Zone"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=6972},
+		["CO3 Zona Negativa"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=6972},
 	--Super Villains
 	["CO3 Emerald Empress"] = {vp=6, isVillain=true, isBoss=true, isAttack=true, cost=11, id=3940},
 	["CO3 Lightning Lord"] = {vp=6, isVillain=true, isBoss=true, isAttack=true, cost=13, id=5139},
@@ -5189,6 +5219,8 @@ masterCardTable = {
 	--Locations
 	["VP Convention Center"] = {vp=0, isLocation=true, isOngoing=true, cost=5, id=0},
 	["C1 Gotham City Docks"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=4657},
+		["C1 Hell's Kitchen"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=4657},
+		["C1 A Cozinha do Diabo"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=4657},
 	--Bosses
 	["DC Felix Faust"] = {vp=6, isVillain=true, isBoss=true, cost=11, id=7975},
 	["C2 Red Lantern Spectre"] = {vp=6, isVillain=true, isBoss=true, cost=13, id=6412},
@@ -5251,6 +5283,8 @@ masterCardTable = {
 	["MV Bizarro World"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=4900},
 	["MV Follywood, Califurnia"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=9114},
 	["MV Moscow"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=4537},
+		["MV Xavier Institute"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=4537},
+		["MV Instituto Xavier"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=4537},
 	["MV Skartaris"] = {vp=1, isLocation=true, isDefense=true, isOngoing=true, cost=3, id=7723},
 	["MV Vanishing Point"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=7899},
 	--Super-Villains
@@ -5363,8 +5397,8 @@ masterCardTable = {
 	["RC Trident of Lucifer (DCDB)"] = {vp=1, isEquipment=true, cost=5, id=4105},
 	--Locations
 	["C2 Atlantis (DCDB)"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=7099},
-    	["C2 Atlantis (DCDB)"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=7099},
-        ["C2 Atlantis (DCDB)"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=7099},
+    	["IW2 Atlantis"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=7099},
+        ["IW2 Atlântida"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=7099},
 	--Super Villains
 	["C1 Ra's Al Ghul (DCDB)"] = {vp=4, isVillain=true, isBoss=true, isStartBoss=true, cost=9, id=5876},
 	["C2 Helspont (DCDB)"] = {vp=5, isVillain=true, isBoss=true, cost=11, id=9335},

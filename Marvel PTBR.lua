@@ -1,4 +1,4 @@
---Locations
+--Localizações
     ["TU90 Rua Yancy"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=4247},
     ["CW Ilha Muir"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=4403},
     ["CO9 Latvéria"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
@@ -15,3 +15,22 @@
     ["IW1 Dimensão de Enxofre"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=5570},
     ["RC Terra Selvagem"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
     ["CO1 Wakanda"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=1030},
+    ["R3 Nave-Mundo"] = {vp=1, isLocation=true, isOngoing=true, cost=5},
+    ["CO2 O Pico"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=6086},
+    ["IW5 Olimpo"] = {vp=2, isLocation=true, isOngoing=true, cost=7,},
+    ["MARVEL Ponte do Brooklyn"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=8226},
+    ["KIB Bar Sem Nome"] = {vp=1, isLocation=true, isDefense=true, isOngoing=true, cost=5, id=7085},
+    ["R1 Oficina do Tony Stark"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=5817},
+    ["TV Genosha"] = {vp=2, isLocation=true, isOngoing=true, cost=6,},
+    ["R5 Ilha Flutuante da Hydra"] = {vp=2, isLocation=true, isOngoing=true, cost=6,},
+    ["CO3 Zona Negativa"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=6972},
+    ["R3 Porta-aviões da S.H.I.E.L.D."] = {vp=1, isLocation=true, isOngoing=true, cost=5},
+    ["MARVEL Sala de Perigo"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=5956},
+    ["R2 Asteróide M"] = {vp=1, isLocation=true, isOngoing=true, cost=6, id=5400},
+    ["MV Instituto Xavier"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=4537},
+    ["RC Indústrias Oscorp"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
+    ["C1 A Cozinha do Diabo"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=4657},
+    ["TU Ilha dos Monstros"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=3123},
+    ["MARVEL A Área Azul da Lua"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=9435},
+    ["IW2 Atlântida"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=7099},
+    
