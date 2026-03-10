@@ -1651,6 +1651,8 @@ masterCardTable = {
 	["FE Blackgate Prison"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=4302},
 	["FE Central City"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=3055},
 	["FE Earth-3"] = {vp=1, isLocation=true, isOngoing=true, cost=6, id=6434},
+		["DA Baxter Building"] = {vp=1, isLocation=true, isOngoing=true, cost=6, id=6434},
+		["DA Edifício Baxter"] = {vp=1, isLocation=true, isOngoing=true, cost=6, id=6434},
 	["FE Happy Harbor"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=6053},
 	["FE S.T.A.R. Labs"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=8886},
 	--Super Heroes
@@ -1743,6 +1745,8 @@ masterCardTable = {
 	["TT T-Wing"] = {vp=0, isEquipment=true, cost=6, id=7316},
 	--Locations
 	["TT Azarath"] = {vp=1, isLocation=true, isAttack=true, isOngoing=true, cost=5, id=8132},
+		["TU The Concaverse"] = {vp=1, isLocation=true, isAttack=true, isOngoing=true, cost=5, id=8132},
+		["TU O Concaverso"] = {vp=1, isLocation=true, isAttack=true, isOngoing=true, cost=5, id=8132},
 	["TT Cadmus Labs"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=6376},
 	["TT New Titans Tower"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=8241},
 	["TT Tamaran"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=7093},
@@ -2240,6 +2244,8 @@ masterCardTable = {
     	["RC The Raft"] = {vp=2, isLocation=true, isOngoing=true, cost=6,},
         ["RC A Balsa"] = {vp=2, isLocation=true, isOngoing=true, cost=6,},
 	["ARK Iceberg Lounge"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
+		["RC Savage Land"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
+		["RC Terra Selvagem"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
 	-- Super Powers
 	["ARK ...Tails You Die"] = {vp=1, isSuperPower=true, cost=4,},
 	["ARK Arms Deal"] = {vp=1, isSuperPower=true, cost=3,},
@@ -2378,6 +2384,8 @@ masterCardTable = {
 	["C1 Signature Trenchcoat"] = {vp=1, isEquipment=true, cost=4, id=2037},
 	--Locations
 	["C1 House of Mystery"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=5570},
+		["IW1 Brimstone Dimension"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=5570},
+		["IW1 Dimensão de Enxofre"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=5570},
 	["C1 The Rot"] = {vp=1, isLocation=true, isOngoing=true, cost=1, id=5469},
 	--Super Villains
 	["C1 Atrocitus"] = {vp=5, isVillain=true, isBoss=true, cost=11, id=9098},
@@ -2833,6 +2841,8 @@ masterCardTable = {
 	["R2 Mogo"] = {vp=1, isLocation=true, isOngoing=true, cost=6, id=5400},
 	["R2 New Korugar"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=5589},
 	["R2 Oa"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=7408},
+		["R2 Midtown High School"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=7408},
+		["R2 Colégio Midtown"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=7408},
 	["R2 Ranx"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=5357},
 	--Oversized Character Cards
 	["R2 Green Lantern (Level 1)"] = {vp=4, isHero=true, isCharacter=true, cost=9, id=9521},
@@ -3009,6 +3019,8 @@ masterCardTable = {
 	["R5 Men of Tomorrow"] = {vp=0, cost=3,},
 	-- Locations
 	["R5 Fortress of Solitude"] = {vp=2, isLocation=true, isOngoing=true, cost=5,},
+		["R5 Sanctum Sanctorium"] = {vp=2, isLocation=true, isOngoing=true, cost=5,},
+		["R5 Sanctum Sanctorium"] = {vp=2, isLocation=true, isOngoing=true, cost=5,},
 	["R5 Metropolis"] = {vp=2, isLocation=true, isOngoing=true, cost=5,},
     	["R5 Daily Bugle"] = {vp=2, isLocation=true, isOngoing=true, cost=5,},
         ["R5 Clarim Diário"] = {vp=2, isLocation=true, isOngoing=true, cost=5,},
@@ -3181,6 +3193,8 @@ masterCardTable = {
 	["CO1 T-Spheres"] = {vp=2, isEquipment=true, cost=6, id=6097},
 	--Locations
 	["CO1 Monument Point"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=1030},
+		["CO1 Wakanda"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=1030},
+		["CO1 Wakanda"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=1030},
 	--Super Villains
 	["CO1 Eclipso"] = {vp=7, isVillain=true, isBoss=true, cost=14, id=5945},
 	["CO1 Gentleman Ghost"] = {vp=6, isVillain=true, isBoss=true, cost=13, id=9924},
@@ -4917,6 +4931,8 @@ masterCardTable = {
 	--Locations
 	["TTG Hive Tower"] = {vp=1, isLocation=true, isOngoing=true, cost=3, id=1690},
 	["TTG Jump City"] = {vp=1, isLocation=true, isOngoing=true, cost=3, id=6643},
+		["TU90 New York City"] = {vp=1, isLocation=true, isOngoing=true, cost=3, id=6643},
+		["TU90 Cidade de Nova York"] = {vp=1, isLocation=true, isOngoing=true, cost=3, id=6643},
 	["TTG Titans Tower"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=8202},
 	["TTG Trash Hole"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=4247},
         ["TU90 Yancy Street"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=4247},
