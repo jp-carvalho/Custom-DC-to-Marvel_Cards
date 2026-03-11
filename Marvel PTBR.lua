@@ -20,7 +20,28 @@
     ["CW Tritão"] = {vp=1, isHero=true, cost=3, id=6213},
     ["TV A Coisa"] = {vp=2, isHero=true, cost=6, isBribe=true,},
     ["R4 Howard o Pato"] = {vp=1, isHero=true, isDefense=true, cost=4,},
+    ["TV Goose"] = {vp=1, isHero=true, cost=5, isOngoing=true, isDefense=true,},
+    ["IW5 Youndu"] = {vp=2, isHero=true, cost=5,},
+    ["R3 Seda"] = {vp=1, isHero=true, cost=4,},
+    ["IW2 Capitão Mar-Vell"] = {vp=1, isHero=true, cost=4, id=6613},
+    ["R3 Homem de Gelo"] = {vp=1, isHero=true, isAttack=true, cost=4,},
+    ["CO9 Falcão"] = {vp=1, isHero=true, isAttack=true, cost=4,},
+    ["RC Felina"] = {vp=1, isHero=true, isAttack=true, isBribe=true, cost=5,},
+    ["AS Adam Warlock"] = {vp=2, isHero=true, cost=7, id=7644},
+    ["CO10 Namora Terra X"] = {vp=-2, isHero=true, isDefense=true, isTimeLineUp=true, cost=6,},
+    ["MS Dr. Michael Morbius"] = {vp=1, isHero=true, cost=4,},
+    ["TU Drax"] = {vp=1, isHero=true, cost=4, id=7267},
+    ["RC Mancha Solar"] = {vp=1, isHero=true, isDefense=true, cost=4,},
+    ["R1 Miles Morales"] = {vp=1, isHero=true, cost=4, id=5295},
+    ["CW Filhos da Meia-Noite"] = {vp=1, isHero=true, isDefense=true, cost=3, id=6352},
+    ["RC Misty Knight"] = {vp=2, isHero=true, cost=6,},
+    ["SW2 Thor Jane Foster"] = {vp=2, isHero=true, isDefense=true, cost=6,},
+    ["SW Eve Bakian nova corp."] = {vp=1, isHero=true, cost=4, id=1285},
+    ["TV Motoqueiro Fantasma"] = {vp=1, isHero=true, cost=3, isBribe=true,},
+    ["R5 Coração de Ferro"] = {vp=2, isHero=true, cost=5,},
+    ["KIB Sr. Fantástico"] = {vp=1, isHero=true, cost=3, id=6084},
     
+
 
 --Localizações
     ["TU90 Rua Yancy"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=4247},
