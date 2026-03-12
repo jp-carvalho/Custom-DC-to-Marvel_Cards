@@ -1074,9 +1074,9 @@ export class Card {
         if (this.preferredTextSize > 0) {
             style.fontSize = this.preferredTextSize;
         } else {
-            style.fontSize = 45;
+            style.fontSize = 46;
             if (this.text.length >= 130) {
-                style.fontSize = 36;
+                style.fontSize = 34;
             }
         }
 
