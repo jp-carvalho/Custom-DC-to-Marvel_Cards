@@ -9,3 +9,14 @@ Heroes Unite - Avengers Assemble - AA
 JLD - Midnight Sons - MS
 Rebitrh os3 - Secret Wars 2 - SW2
 Forever Evil - Dark Avengers - DA
+
+
+-- CARTAS COM DIFERENTES VP
+    ["ARK Black Mask"] = {vp=0, isVillain=true, isExpBribe=true, cost=7,},
+		["RC Hammerhead"] = {vp=0, isVillain=true, isExpBribe=true, cost=7,},
+		["RC Cabeça de Martelo"] = {vp=0, isVillain=true, isExpBribe=true, cost=7,},
+    
+    ["DC Suicide Squad"] = {vp=0, isVillain=true, cost=4, id=9516},
+		["Marvel Thunderbolts"] = {vp=0, isVillain=true, cost=4, id=9516},
+
+    

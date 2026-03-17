@@ -1043,6 +1043,8 @@ export class Card {
         if ((this.subtype && (this.subtype.toLowerCase() === "unity" || this.subtype.toLowerCase() === "união" || this.subtype.toLowerCase() === "unidade")) || this.variant === "Unity") {
             x = 100;
             textWidth = maxWidth - x - 29;
+            y += 15;
+            maxHeight -= 15;
         }
 
         if (this.variant && this.variant.indexOf("lvl") !== -1 && !this.oversized) {
@@ -1076,7 +1078,7 @@ export class Card {
         } else {
             style.fontSize = 44;
             if (this.text.length >= 130) {
-                style.fontSize = 40;
+                style.fontSize = 42;
             }
         }
 

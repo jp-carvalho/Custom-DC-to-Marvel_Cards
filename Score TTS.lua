@@ -311,6 +311,14 @@ function checkCardsinMasterList(card, tempScoreList, spot, underCheck)
 			end
 			tempScoreList[i].vp = tempScoreList[i].vp + tempScoreList[i].suicideSquad
 			tempScoreList[i].countOfSuicideSquads = tempScoreList[i].countOfSuicideSquads + 1
+		elseif card.nickname == "Marvel Thunderbolts" then
+			if tempScoreList[i].suicideSquad == 0 then
+				tempScoreList[i].suicideSquad = 1
+			else
+				tempScoreList[i].suicideSquad = tempScoreList[i].suicideSquad + 2
+			end
+			tempScoreList[i].vp = tempScoreList[i].vp + tempScoreList[i].suicideSquad
+			tempScoreList[i].countOfSuicideSquads = tempScoreList[i].countOfSuicideSquads + 1
 		elseif card.nickname == "SF Agents of Shadaloo" then
 			if tempScoreList[i].agentsOfShadaloo == 0 then
 				tempScoreList[i].agentsOfShadaloo = 1
@@ -380,7 +388,11 @@ function checkCardsinMasterList(card, tempScoreList, spot, underCheck)
 		elseif card.nickname == "CO10 Traverse Timelines" then
 			tempScoreList[i].traverseTimelines = tempScoreList[i].traverseTimelines + 1
 		elseif card.nickname == "ARK Black Mask" then
-    tempScoreList[i].expBribes = tempScoreList[i].expBribes + 1
+    		tempScoreList[i].expBribes = tempScoreList[i].expBribes + 1
+		elseif card.nickname == "RC Hammerhead" then
+    		tempScoreList[i].expBribes = tempScoreList[i].expBribes + 1
+		elseif card.nickname == "RC Cabeça de Martelo" then
+    		tempScoreList[i].expBribes = tempScoreList[i].expBribes + 1
 		elseif card.nickname == "FotR Strider the Ranger" then
 			tempScoreList[i].striderRanger = tempScoreList[i].striderRanger + 1
 		elseif card.nickname == "FotR Moria Orc Captain" then
@@ -1431,13 +1443,18 @@ masterCardTable = {
 	["DC Zatanna Zatara"] = {vp=1, isHero=true, cost=4, id=6912}, 
 	--Villains
 	["DC Bane"] = {vp=1, isVillain=true, isAttack=true, cost=4, id=5050},
+		["MARVEL Venom"] = {vp=1, isVillain=true, isAttack=true, cost=4, id=5050},
 	["DC Bizarro"] = {vp=0, isVillain=true, cost=7, id=7156},
 	["DC Cheetah"] = {vp=1, isVillain=true, cost=2, id=3447},
+		["MARVEL Legion"] = {vp=1, isVillain=true, cost=2, id=3447},
+		["MARVEL Legião"] = {vp=1, isVillain=true, cost=2, id=3447},
 	["DC Clayface"] = {vp=1, isVillain=true, cost=4, id=7401},
 	["DC Doomsday"] = {vp=2, isVillain=true, cost=6, id=6855},
 	["DC Gorilla Grodd"] = {vp=2, isVillain=true, cost=5, id=5629},
 	["DC Harley Quinn"] = {vp=1, isVillain=true, isAttack=true, cost=2, id=7217},
 	["DC Lobo"] = {vp=2, isVillain=true, cost=7, id=5005},
+		["MARVEL Sabertooth"] = {vp=2, isVillain=true, cost=7, id=5005},
+		["MARVEL Dentes de Sabre"] = {vp=2, isVillain=true, cost=7, id=5005},
 	["DC Poison Ivy"] = {vp=1, isVillain=true, isAttack=true, cost=3, id=9583},
 	["DC Scarecrow"] = {vp=1, isVillain=true, isAttack=true, cost=5, id=8397},
 	["DC Solomon Grundy"] = {vp=2, isVillain=true, cost=6, id=6070},
@@ -1543,6 +1560,8 @@ masterCardTable = {
 	["HU Larfleeze"] = {vp=0, isVillain=true, cost=7, id=1358},
 	["HU Manhunter"] = {vp=1, isVillain=true, cost=3, id=1578},
 	["HU Mr. Zsasz"] = {vp=1, isVillain=true, isAttack=true, cost=3, id=7807},
+		["AA Muse"] = {vp=1, isVillain=true, isAttack=true, cost=3, id=7807},
+		["AA Muse"] = {vp=1, isVillain=true, isAttack=true, cost=3, id=7807},
 	["HU Ocean Master"] = {vp=1, isVillain=true, cost=2, id=1336},
 		["AA Attuma"] = {vp=1, isVillain=true, cost=2, id=1336},
 	["HU Parasite"] = {vp=1, isVillain=true, isAttack=true, cost=4, id=3480},
@@ -1637,6 +1656,8 @@ masterCardTable = {
 	["FE Emperor Penguin"] = {vp=0, isVillain=true, cost=1, id=8455},
 	["FE Giganta"] = {vp=1, isVillain=true, cost=4, id=6273},
 	["FE Grid"] = {vp=1, isVillain=true, cost=2, id=4899},
+		["DA Leader"] = {vp=1, isVillain=true, cost=2, id=4899},
+		["DA Líder"] = {vp=1, isVillain=true, cost=2, id=4899},
 	["FE Johnny Quick"] = {vp=1, isVillain=true, cost=2, id=8297},
 	["FE Man-Bat"] = {vp=1, isVillain=true, isDefense=true, cost=3, id=4863},
 	["FE Owlman"] = {vp=2, isVillain=true, cost=6, id=3567},
@@ -1644,6 +1665,8 @@ masterCardTable = {
 	["FE Royal Flush Gang"] = {vp=0, isVillain=true, cost=5, id=4913},
 	["FE Superwoman"] = {vp=3, isVillain=true, cost=7, id=8419},
 	["FE The Blight"] = {vp=1, isVillain=true, cost=4, id=7265},
+		["DA Gargoyle"] = {vp=1, isVillain=true, cost=4, id=7265},
+		["DA Gárgula Cinzento"] = {vp=1, isVillain=true, cost=4, id=7265},
 	["FE Ultraman"] = {vp=3, isVillain=true, cost=8, id=1096},
 	--Super Powers
 	["FE Bizarro Power"] = {vp=-1, isSuperPower=true, isAttack=true, cost=6, id=4390},
@@ -1745,6 +1768,7 @@ masterCardTable = {
 	["TT H.I.V.E. Agent"] = {vp=1, isVillain=true, cost=1, id=9953},
 	["TT Inertia"] = {vp=2, isVillain=true, isOngoing=true, cost=6, id=4126},
 	["TT Jinx"] = {vp=2, isVillain=true, isAttack=true, cost=6, id=4075},
+		["TU Cassandra Nova"] = {vp=2, isVillain=true, isAttack=true, cost=6, id=4075},
 	["TT Lady Vic"] = {vp=1, isVillain=true, isOngoing=true, cost=4, id=9940},
 		["TU Nebula"] = {vp=1, isVillain=true, isOngoing=true, cost=4, id=9940},
 	["TT Mad Mod"] = {vp=1, isVillain=true, isAttack=true, cost=3, id=1316},
@@ -1754,6 +1778,8 @@ masterCardTable = {
 	["TT Match"] = {vp=2, isVillain=true, isAttack=true, cost=7, id=4654},
 	["TT Phobia"] = {vp=1, isVillain=true, isAttack=true, cost=4, id=9000},
 	["TT Plasmus"] = {vp=1, isVillain=true, cost=3, id=6799},
+		["TU Radioactive Man"] = {vp=1, isVillain=true, cost=3, id=6799},
+		["TU Homem Radioativo"] = {vp=1, isVillain=true, cost=3, id=6799},
 	["TT Shimmer"] = {vp=1, isVillain=true, isAttack=true, cost=4, id=1616},
 	["TT Sons of Trigon"] = {vp=2, isVillain=true, isAttack=true, cost=7, id=3594},
 	["TT Zoo Keeper"] = {vp=1, isVillain=true, isDefense=true, isOngoing=true, cost=2, id=5859},
@@ -1851,6 +1877,8 @@ masterCardTable = {
 	["DNM Clayface"] = {vp=1, isVillain=true, cost=3, id=8037},
 	["DNM Court of Owls"] = {vp=1, isVillain=true, isAttack=true, cost=5, id=8257},
 	["DNM Deathstroke"] = {vp=1, isVillain=true, isMetal=true, isDefense=true, cost=4, id=9630},
+		["KIB Bullseye"] = {vp=1, isVillain=true, isMetal=true, isDefense=true, cost=4, id=9630},
+		["KIB Mercenário"] = {vp=1, isVillain=true, isMetal=true, isDefense=true, cost=4, id=9630},
 	["DNM Lady Blackhawk"] = {vp=2, isVillain=true, isMetal=true, cost=4, id=9205},
 	["DNM Onimar Synn"] = {vp=2, isVillain=true, isMetal=true, cost=5, id=9064},
 	["DNM Ra's Al Ghul"] = {vp=1, isVillain=true, isAttack=true, cost=4, id=3164},
@@ -1948,6 +1976,8 @@ masterCardTable = {
 	["INJ Injustice Aquaman"] = {vp=3, isVillain=true, isAttack=true, cost=7,},
 	["INJ Injustice Atom Smasher"] = {vp=2, isVillain=true, cost=5,},
 	["INJ Injustice Bane"] = {vp=1, isVillain=true, cost=3,},
+		["CW2 Agent Venom"] = {vp=1, isVillain=true, cost=3,},
+		["CW2 Agente Venom"] = {vp=1, isVillain=true, cost=3,},
 	["INJ Injustice Bizarro"] = {vp=2, isVillain=true, isAttack=true, cost=5,},
 	["INJ Injustice Cyborg"] = {vp=1, isVillain=true, cost=4,},
 	["INJ Injustice Deadshot"] = {vp=1, isVillain=true, isAttack=true, cost=3,},
@@ -2132,13 +2162,18 @@ masterCardTable = {
 	["JLD Fuseli"] = {vp=1, isVillain=true, cost=2,},
 	["JLD Jinx"] = {vp=1, isVillain=true, cost=4,},
 	["JLD Klarion"] = {vp=2, isVillain=true, cost=6,},
+		["MS Alioth"] = {vp=2, isVillain=true, cost=6,},
 	["JLD Mister E"] = {vp=1, isVillain=true, isDefense=true, cost=5,},
 	["JLD Nergal"] = {vp=2, isVillain=true, isAttack=true, cost=7,},
 	["JLD Nick Necro"] = {vp=1, isVillain=true, cost=3,},
 	["JLD Papa Midnite"] = {vp=1, isVillain=true, cost=4,},
 	["JLD Solomon Grundy"] = {vp=1, isVillain=true, isDefense=true, cost=4,},
+		["MS Juggernaut"] = {vp=1, isVillain=true, isDefense=true, cost=4,},
+		["MS Fanático"] = {vp=1, isVillain=true, isDefense=true, cost=4,},
 	["JLD Tannarak"] = {vp=0, isVillain=true, cost=5,},
 	["JLD Teekl"] = {vp=1, isVillain=true, cost=3,},
+		["MS Mimic"] = {vp=1, isVillain=true, cost=3,},
+		["MS Mímico"] = {vp=1, isVillain=true, cost=3,},
 	["JLD The Demons Three"] = {vp=1, isVillain=true, cost=3,},
 	["JLD Witchmarked Black Orchid"] = {vp=1, isVillain=true, isAttack=true, cost=4,},
 	["JLD Witchmarked Manitou Dawn"] = {vp=1, isVillain=true, cost=3,},
@@ -2242,6 +2277,7 @@ masterCardTable = {
 	--1)7)A) Justice League Dark Expansion
 	--Villains 
 	["JLDX Blackbriar Thorn, Druid"] = {vp=1, isVillain=true, cost=4,},
+		["MS Gabriel Housman"] = {vp=1, isVillain=true, cost=4,},
 	--Super Powers
 	["JLDX Born On A Monday"] = {vp=1, isSuperPower=true, cost=3,},
 	--Transformed Villains
@@ -2359,12 +2395,16 @@ masterCardTable = {
 	["ARK Bane"] = {vp=2, isVillain=true, cost=7,},
 		["RC Venom"] = {vp=2, isVillain=true, cost=7,},
 	["ARK Black Mask"] = {vp=0, isVillain=true, isExpBribe=true, cost=7,},
+		["RC Hammerhead"] = {vp=0, isVillain=true, isExpBribe=true, cost=7,},
+		["RC Cabeça de Martelo"] = {vp=0, isVillain=true, isExpBribe=true, cost=7,},
 	["ARK Firefly"] = {vp=1, isVillain=true, isAttack=true, isBribe=true, cost=4,},
 		["RC Pyro"] = {vp=1, isVillain=true, isAttack=true, isBribe=true, cost=4,},
 	["ARK Jervis Tetch (Mad Hatter)"] = {vp=1, isVillain=true, isBribe=true, cost=4,},
 		["RC Mad Thinker"] = {vp=1, isVillain=true, isBribe=true, cost=4,},
 		["RC Pensador Louco"] = {vp=1, isVillain=true, isBribe=true, cost=4,},
 	["ARK Killer Moth"] = {vp=1, isVillain=true, cost=3,},
+		["RC Beetle"] = {vp=1, isVillain=true, cost=3,},
+		["RC Besouro"] = {vp=1, isVillain=true, cost=3,},
 	["ARK Kite Man"] = {vp=1, isVillain=true, isBribe=true, cost=5,},
 		["RC Leap-Frog"] = {vp=1, isVillain=true, isBribe=true, cost=5,},
 		["RC Sapo"] = {vp=1, isVillain=true, isBribe=true, cost=5,},
@@ -2372,7 +2412,10 @@ masterCardTable = {
 		["RC Prowler"] = {vp=1, isVillain=true, isBribe=true, cost=3,},
 		["RC Gatuno"] = {vp=1, isVillain=true, isBribe=true, cost=3,},
 	["ARK Man-Bat"] = {vp=1, isVillain=true, cost=4,},
+		["RC Morbius"] = {vp=1, isVillain=true, cost=4,},
 	["ARK Professor Pyg"] = {vp=2, isVillain=true, cost=6,},
+		["RC Madcap"] = {vp=2, isVillain=true, cost=6,},
+		["RC Capitão Louco"] = {vp=2, isVillain=true, cost=6,},
 	["ARK Punchline"] = {vp=1, isVillain=true, isDefense=true, cost=5,},
 		["RC Shriek"] = {vp=1, isVillain=true, isDefense=true, cost=5,},
 	["ARK Ratcatcher"] = {vp=1, isVillain=true, isBribe=true, cost=2,},
@@ -2382,6 +2425,8 @@ masterCardTable = {
 		["RC Juggernaut"] = {vp=1, isVillain=true, isDefense=true, cost=4,},
 		["RC Fanático"] = {vp=1, isVillain=true, isDefense=true, cost=4,},
 	["ARK Ventriloquist"] = {vp=1, isVillain=true, cost=2,},
+		["RC Puppet Master"] = {vp=1, isVillain=true, cost=2,},
+		["RC Mestre dos Bonecos"] = {vp=1, isVillain=true, cost=2,},
 	["ARK Henchmen"] = {vp=1, isVillain=true, cost=3,},
 	-- Super Heroes (Bosses)
 	["ARK Azrael"] = {vp=5, isHero=true, isBoss=true, cost=10,},
@@ -2439,6 +2484,8 @@ masterCardTable = {
 		["TV Tinkerer"] = {vp=1, isVillain=true, cost=2, isOngoing=true, isBribe=true,},
 		["TV O Consertador"] = {vp=1, isVillain=true, cost=2, isOngoing=true, isBribe=true,},
 	["SHD Punch & Jewelee"] = {vp=1, isVillain=true, cost=4, isOngoing=true, isBribe=true,},
+		["TV Cloak and Dagger"] = {vp=1, isVillain=true, cost=4, isOngoing=true, isBribe=true,},
+		["TV Manto e Adaga"] = {vp=1, isVillain=true, cost=4, isOngoing=true, isBribe=true,},
 	["SHD Victor Zsasz"] = {vp=1, isVillain=true, cost=3, isBribe=true,},
 		["TV Muse"] = {vp=1, isVillain=true, cost=3, isBribe=true,},
 	-- Super Heroes (Bosses)
@@ -2494,6 +2541,7 @@ masterCardTable = {
 	--Villains
 	["C1 Avatar of the Rot"] = {vp=3, isVillain=true, cost=7, id=9672},
 	["C1 Killer Frost"] = {vp=1, isVillain=true, isAttack=true, cost=4, id=3920},
+		["IW1 Emma Frost"] = {vp=1, isVillain=true, isAttack=true, cost=4, id=3920},
 	["C1 Psycho Pirate"] = {vp=1, isVillain=true, isAttack=true, cost=5, id=8709},
 	["C1 Strife"] = {vp=1, isVillain=true, isAttack=true, cost=3, id=8124},
 	--Super Powers
@@ -2723,6 +2771,8 @@ masterCardTable = {
 		["IW Estrela Polar"] = {vp=1, isHero=true, isOngoing=true, cost=4, id=1791},
 	--Villains
 	["C4 Blank"] = {vp=1, isVillain=true, isOngoing=true, cost=1, id=6259},
+		["IW4 The Hood"] = {vp=1, isVillain=true, isOngoing=true, cost=1, id=6259},
+		["IW4 O Capuz"] = {vp=1, isVillain=true, isOngoing=true, cost=1, id=6259},
 	["C4 Mara Al Ghul"] = {vp=2, isVillain=true, isOngoing=true, cost=7, id=6984},
 	["C4 Nightstorm"] = {vp=1, isVillain=true, isAttack=true, isOngoing=true, cost=3, id=6810},
 	["C4 Plague"] = {vp=2, isVillain=true, isAttack=true, isOngoing=true, cost=6, id=4656},
@@ -2799,11 +2849,17 @@ masterCardTable = {
 	["C5 Godly Ascension"] = {vp=3, isSuperPower=true, cost=8,},
 	--Villains
 	["C5 Batom"] = {vp=2, isVillain=true, cost=4,},
+		["IW5 Lady Deathstrike"] = {vp=2, isVillain=true, cost=4,},
+		["IW5 Lady Letal"] = {vp=2, isVillain=true, cost=4,},
 	["C5 Pararobins"] = {vp=0, isVillain=true, cost=5,},
 		["IW5 Hobgoblin"] = {vp=0, isVillain=true, cost=5,},
 		["IW5 Duende Macabro"] = {vp=0, isVillain=true, cost=5,},
 	["C5 Black Monday"] = {vp=3, isVillain=true, cost=5,},
+		["IW5 Iron Man Sentinel"] = {vp=3, isVillain=true, cost=5,},
+		["IW5 Homem  de Ferro Sentinela"] = {vp=3, isVillain=true, cost=5,},
 	["C5 Batmobeast"] = {vp=3, isVillain=true, cost=6,},
+		["IW5 Iron Man Cancerverse"] = {vp=3, isVillain=true, cost=6,},
+		["IW5 Homem de Ferro Cancerverso"] = {vp=3, isVillain=true, cost=6,},
 	["C5 Joker Dragon"] = {vp=3, isVillain=true, cost=6,},
 		["IW5 Carnage Werewolf"] = {vp=3, isVillain=true, cost=6,},
 		["IW5 Carnificina Lobisomem"] = {vp=3, isVillain=true, cost=6,},
@@ -2912,6 +2968,7 @@ masterCardTable = {
 	["R1 The Riddler"] = {vp=1, isVillain=true, cost=2, id=6656},
 	["R1 Two-Face"] = {vp=1, isVillain=true, isAttack=true, cost=3, id=9718},
 	["R1 Victor Zsasz"] = {vp=1, isVillain=true, cost=2, id=7511},
+		["R1 Muse"] = {vp=1, isVillain=true, cost=2, id=7511},
 	--Super Powers
 	["R1 Billionaire"] = {vp=1, isSuperPower=true, cost=5, id=6204},
 	["R1 Homicidal Maniac"] = {vp=1, isSuperPower=true, cost=3, id=4867},
@@ -2981,6 +3038,7 @@ masterCardTable = {
 	["R2 Maash"] = {vp=1, isVillain=true, isAttack=true, cost=2, id=9163},
 	["R2 Manhunter Army"] = {vp=1, isVillain=true, cost=5, id=2109},
 	["R2 Nax"] = {vp=1, isVillain=true, cost=3, id=5482},
+		["R2 Shocker"] = {vp=1, isVillain=true, cost=3, id=5482},
 	["R2 Parallax"] = {vp=2, isVillain=true, isAttack=true, cost=7, id=5824},
 	["R2 Rigen Kale"] = {vp=1, isVillain=true, cost=3, id=8749},
 	["R2 Romat-Ru"] = {vp=1, isVillain=true, cost=4, id=5544},
@@ -3052,9 +3110,13 @@ masterCardTable = {
 	["R3 Doctor Alchemy"] = {vp=1, isVillain=true, cost=4,},
 	["R3 Girder"] = {vp=1, isVillain=true, cost=3,},
 	["R3 Godspeed"] = {vp=2, isVillain=true, cost=6,},
+		["R3 The Living Laser"] = {vp=2, isVillain=true, cost=6,},
+		["R3 Laser Vivo"] = {vp=2, isVillain=true, cost=6,},
 	["R3 Golden Glider"] = {vp=0, isVillain=true, cost=3,},
 	["R3 Gorilla Grodd"] = {vp=1, isVillain=true, cost=4,},
 	["R3 Heat Wave"] = {vp=0, isVillain=true, cost=3,},
+		["R3 Vulcano"] = {vp=0, isVillain=true, cost=3,},
+		["R3 Vulcan"] = {vp=0, isVillain=true, cost=3,},
 	["R3 Mirror Master"] = {vp=0, isVillain=true, cost=3,},
 	["R3 Negative Flash"] = {vp=2, isVillain=true, cost=5,},
 	["R3 Rag Doll"] = {vp=1, isVillain=true, cost=2,},
@@ -3146,6 +3208,8 @@ masterCardTable = {
 	["R4 Envy"] = {vp=1, isVillain=true, cost=3,},
 	["R4 Famine"] = {vp=1, isVillain=true, cost=5,},
 	["R4 Felix Faust"] = {vp=2, isVillain=true, isConfrontation=true, cost=5,},
+		["R4 Mephisto"] = {vp=2, isVillain=true, isConfrontation=true, cost=5,},
+		["R4 Mefisto"] = {vp=2, isVillain=true, isConfrontation=true, cost=5,},
 	["R4 Gluttony"] = {vp=1, isVillain=true, isConfrontation=true, cost=3,},
 	["R4 Greed"] = {vp=1, isVillain=true, cost=3,},
 	["R4 Lust"] = {vp=1, isVillain=true, isAttack=true, cost=3,},
@@ -3253,6 +3317,8 @@ masterCardTable = {
 		["R5 Blazing Skull"] = {vp=1, isVillain=true, cost=3,},
 		["R5 Crânio Ardente"] = {vp=1, isVillain=true, cost=3,},
 	["R5 Bruno Mannheim"] = {vp=1, isVillain=true, cost=3,},
+		["R5 Mister Negative"] = {vp=1, isVillain=true, cost=3,},
+		["R5 Senhor Negativo"] = {vp=1, isVillain=true, cost=3,},
 	["R5 Mercy Graves"] = {vp=1, isVillain=true, cost=3,},
 		["R5 Proxima Midnight"] = {vp=1, isVillain=true, cost=3,},
 		["R5 Próxima Meia-Noite"] = {vp=1, isVillain=true, cost=3,},
@@ -3260,17 +3326,23 @@ masterCardTable = {
 		["R5 Songbird"] = {vp=1, isVillain=true, cost=3,},
 		["R5 Soprano"] = {vp=1, isVillain=true, cost=3,},
 	["R5 Lena Luthor"] = {vp=1, isVillain=true, cost=4,},
+		["R5 Cynthia Von Doom"] = {vp=1, isVillain=true, cost=4,},
 	["R5 Livewire"] = {vp=1, isVillain=true, cost=4,},
+		["R5 Electro"] = {vp=1, isVillain=true, cost=4,},
 	["R5 Cyborg Superman"] = {vp=1, isVillain=true, cost=5,},
 		["R5 Hulk World War"] = {vp=1, isVillain=true, cost=5,},
 		["R5 Hulk Contra o Mundo"] = {vp=1, isVillain=true, cost=5,},
 	["R5 Bizarro"] = {vp=2, isVillain=true, cost=5,},
+		["R5 Grey Hulk Joe Fixit"] = {vp=2, isVillain=true, cost=5,},
+		["R5 Hulk Cinza Sr. Tira-teima"] = {vp=2, isVillain=true, cost=5,},
 	["R5 Eradicator"] = {vp=2, isVillain=true, cost=5,},
 		["R5 Nimrod"] = {vp=2, isVillain=true, cost=5,},
 	["R5 Mr. Mxyzptlk"] = {vp=2, isVillain=true, cost=6,},
 		["R5 Impossible Man"] = {vp=2, isVillain=true, cost=6,},
 		["R5 Homem-Impossível"] = {vp=2, isVillain=true, cost=6,},
 	["R5 Doomsday"] = {vp=2, isVillain=true, cost=7,},
+		["R5 Abomination"] = {vp=2, isVillain=true, cost=7,},
+		["R5 Abominável"] = {vp=2, isVillain=true, cost=7,},
 	-- Oversized Character Cards
 	["R5 Superman (Level 2)"] = {vp=6, isCharacter=true,},
 	["R5 Lex Luthor (Level 3)"] = {vp=0, isCharacter=true,},
@@ -3332,6 +3404,7 @@ masterCardTable = {
 	["RC Atlan"] = {vp=1, isVillain=true, cost=4, id=2101},
 	["RC Bizarro"] = {vp=1, isVillain=true, cost=6, id=9439},
 	["RC Black Manta"] = {vp=1, isVillain=true, cost=3, id=6914},
+		["CW Magneto"] = {vp=1, isVillain=true, cost=3, id=6914},
 	["RC Blackbriar Thorn"] = {vp=1, isVillain=true, cost=3, id=3500},
 		["CW Blackheart"] = {vp=1, isVillain=true, cost=3, id=3500},
 		["CW Coração Negro"] = {vp=1, isVillain=true, cost=3, id=3500},
@@ -3354,12 +3427,15 @@ masterCardTable = {
 	["RC Magog"] = {vp=2, isVillain=true, cost=7, id=7215},
 	["RC Metallo"] = {vp=1, isVillain=true, cost=4, id=6606},
 	["RC Nereus"] = {vp=1, isVillain=true, isAttack=true, cost=3, id=4838},
+		["CW Orka"] = {vp=1, isVillain=true, isAttack=true, cost=3, id=4838},
 	["RC Parasite"] = {vp=1, isVillain=true, cost=3, id=5677},
 	["RC Silver Banshee"] = {vp=1, isVillain=true, isAttack=true, cost=3, id=7399},
 	["RC Siren"] = {vp=1, isVillain=true, cost=3, id=6783},
 	["RC Strife"] = {vp=2, isVillain=true, isAttack=true, cost=6, id=2041},
 	["RC The Creeper"] = {vp=1, isVillain=true, cost=2, id=9396},
 	["RC The Trench"] = {vp=1, isVillain=true, cost=2, id=3899},
+		["CW The Brood"] = {vp=1, isVillain=true, cost=2, id=3899},
+		["CW A Ninhada"] = {vp=1, isVillain=true, cost=2, id=3899},
 	["RC Zod"] = {vp=1, isVillain=true, cost=5, id=1395},
 	--Super Powers
 	["RC Cold Breath"] = {vp=2, isSuperPower=true, cost=6, id=1178},
@@ -3904,10 +3980,12 @@ masterCardTable = {
 	["CO11 Devastating Strength"] = {vp=1, isSuperPower=true, cost=4,},
 	--Villains
 	["CO11 Killer Croc"] = {vp=1, isVillain=true, isDefense=true, cost=3,},
+		["CO11 Lizard"] = {vp=1, isVillain=true, isDefense=true, cost=3,},
+		["CO11 Lagarto"] = {vp=1, isVillain=true, isDefense=true, cost=3,},
 	["CO11 Harley Quinn"] = {vp=1, isVillain=true, cost=4,},
 		["CO11 Elektra"] = {vp=1, isVillain=true, cost=4,},
 	["CO11 Poison Ivy"] = {vp=1, isVillain=true, cost=5,},
-		["CO11 Viper"] = {vp=1, isVillain=true, cost=5,},
+		["CO11 Viper"] = {vp=1, isVillain=true, cost=5,}
 		["CO11 Víbora"] = {vp=1, isVillain=true, cost=5,},
 	["CO11 The Joker"] = {vp=2, isVillain=true, isAttack=true, cost=6,},
 		["CO11 Carnage"] = {vp=2, isVillain=true, isAttack=true, cost=6,},
@@ -5641,6 +5719,8 @@ masterCardTable = {
 	--Villains
 	["R1 Harley Quinn (DCDB)"] = {vp=1, isVillain=true, cost=3, id=4448},
 	["R1 Talia Al Ghul (DCDB)"] = {vp=1, isVillain=true, cost=5, id=5622},
+		["R1 Typhoid Mary"] = {vp=1, isVillain=true, cost=5, id=5622},
+		["R1 Mary Tifoide"] = {vp=1, isVillain=true, cost=5, id=5622},
 	["R2 Arkillo (DCDB)"] = {vp=2, isVillain=true, cost=6, id=7329},
 	["R2 Manhunter Army (DCDB)"] = {vp=1, isVillain=true, cost=5, id=2109},
 	["RC Cheetah (DCDB)"] = {vp=1, isVillain=true, cost=4, id=8217},
