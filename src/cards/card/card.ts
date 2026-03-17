@@ -161,6 +161,7 @@ export class Card {
             phrases: [
                 "You must play this card before ending your turn.",
                 "Você deve jogar esta carta antes de encerrar seu turno.",
+                "Você deve jogar esta carta antes do fim do turno.",
             ],
         },
         {
@@ -407,6 +408,10 @@ export class Card {
         // Add highlight phrases to be protected and bolded
         for (const config of Card.highlightConfigs) {
             for (const phrase of config.phrases) {
+                if (phrase === "After this card enters your discard pile from any zone, you may put it on the bottom of your deck." ||
+                    phrase === "Depois que esta carta entrar em sua pilha de descarte vinda de qualquer zona, você pode colocá-la no fundo do seu baralho.") {
+                    continue;
+                }
                 const escaped = phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
                 phrasesToProtect.unshift(new RegExp(escaped, 'gi'));
             }
@@ -1076,9 +1081,9 @@ export class Card {
         if (this.preferredTextSize > 0) {
             style.fontSize = this.preferredTextSize;
         } else {
-            style.fontSize = 44;
+            style.fontSize = 40;
             if (this.text.length >= 130) {
-                style.fontSize = 42;
+                style.fontSize = 38;
             }
         }
 

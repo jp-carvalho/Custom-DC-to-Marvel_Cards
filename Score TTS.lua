@@ -1469,6 +1469,8 @@ masterCardTable = {
 	--Super Powers
 	["DC Bulletproof"] = {vp=1, isSuperPower=true, isDefense=true, cost=4, id=4830},
 	["DC Heat Vision"] = {vp=2, isSuperPower=true, cost=6, id=9007},
+		["MARVEL Optic Blast"] = {vp=2, isSuperPower=true, cost=6, id=9007},
+		["MARVEL Rajada Óptica"] = {vp=2, isSuperPower=true, cost=6, id=9007},
 	["DC Kick"] = {vp=1, isSuperPower=true, cost=3, id=9883},
 	["DC Super Speed"] = {vp=1, isSuperPower=true, isDefense=true, cost=3, id=4007},
 	["DC Super Strength"] = {vp=2, isSuperPower=true, cost=7, id=5698},
@@ -1571,9 +1573,13 @@ masterCardTable = {
 	--Super Powers
 	["HU Canary Cry"] = {vp=1, isSuperPower=true, isDefense=true, cost=4, id=1443},
 	["HU Force Field"] = {vp=1, isSuperPower=true, isDefense=true, isOngoing=true, cost=3, id=1757},
+		["AA Invisibility"] = {vp=1, isSuperPower=true, isDefense=true, isOngoing=true, cost=3, id=1757},
+		["AA Invisibilidade"] = {vp=1, isSuperPower=true, isDefense=true, isOngoing=true, cost=3, id=1757},
 	["HU Kick"] = {vp=1, isSuperPower=true, cost=3, id=9883},
 	["HU Power of The Green"] = {vp=1, isSuperPower=true, cost=3, id=9273},
 	["HU Shazam!"] = {vp=2, isSuperPower=true, cost=7, id=8004},
+		["AA Molecular Mastery"] = {vp=2, isSuperPower=true, cost=7, id=8004},
+		["AA Domínio Molecular"] = {vp=2, isSuperPower=true, cost=7, id=8004},
 	["HU Starbolt"] = {vp=1, isSuperPower=true, cost=5, id=4595},
 	["HU Teleportation"] = {vp=1, isSuperPower=true, cost=7, id=5847},
 	["HU Whirlwind"] = {vp=1, isSuperPower=true, cost=2, id=3450},
@@ -1678,6 +1684,7 @@ masterCardTable = {
 	["FE Kick"] = {vp=1, isSuperPower=true, cost=3, id=9883},
 	["FE Power Drain"] = {vp=1, isSuperPower=true, isAttack=true, cost=4, id=9716},
 	["FE Super Intellect"] = {vp=1, isSuperPower=true, cost=4, id=5429},
+		["DA Unibeam"] = {vp=1, isSuperPower=true, cost=4, id=5429},
 	["FE Transmutation"] = {vp=1, isSuperPower=true, cost=5, id=9706},
 	["FE Ultra Strength"] = {vp=3, isSuperPower=true, cost=9, id=6593},
 	["FE Word of Power"] = {vp=0, isSuperPower=true, cost=1, id=3067},
@@ -1787,6 +1794,8 @@ masterCardTable = {
 		["TU Homem-Toupeira"] = {vp=1, isVillain=true, isDefense=true, isOngoing=true, cost=2, id=5859},
 	--Super Powers
 	["TT Acrobatic Agility"] = {vp=1, isSuperPower=true, isDefense=true, cost=1, id=6956},
+		["TU Acrobatic Agility"] = {vp=1, isSuperPower=true, isDefense=true, cost=1, id=6956},
+		["TU Agilidade Acrobática"] = {vp=1, isSuperPower=true, isDefense=true, cost=1, id=6956},
 	["TT Azarath Metrion Zinthos"] = {vp=1, isSuperPower=true, isOngoing=true, cost=5, id=1513},
 	["TT Demonic Influence"] = {vp=1, isSuperPower=true, cost=5, id=9602},
 	["TT Energy Absorption"] = {vp=1, isSuperPower=true, cost=4, id=7566},
@@ -1796,6 +1805,8 @@ masterCardTable = {
 	["TT Shapeshift"] = {vp=1, isSuperPower=true, cost=2, id=6366},
 	["TT Speed Force"] = {vp=2, isSuperPower=true, cost=7, id=1866},
 	["TT Tactile Telekinesis"] = {vp=2, isSuperPower=true, isOngoing=true, cost=6, id=6409},
+		["TU Overgrow"] = {vp=2, isSuperPower=true, isOngoing=true, cost=6, id=6409},
+		["TU Crescimento Desenfreado"] = {vp=2, isSuperPower=true, isOngoing=true, cost=6, id=6409},
 	["TT Teen Titans Go!"] = {vp=3, isSuperPower=true, cost=8, id=7966},
 	--Equipment
 	["TT Birdarang"] = {vp=1, isEquipment=true, cost=1, id=8600},
@@ -1901,6 +1912,8 @@ masterCardTable = {
 	["DNM Speed Force"] = {vp=1, isSuperPower=true, isDefense=true, cost=3, id=1097},
 	["DNM War Cry"] = {vp=1, isSuperPower=true, cost=4, id=7924},
 	["DNM X-Ray Vision"] = {vp=1, isSuperPower=true, cost=4, id=2703},
+		["KIB Arcane Revelation"] = {vp=1, isSuperPower=true, cost=4, id=2703},
+		["KIB Revelação Arcana"] = {vp=1, isSuperPower=true, cost=4, id=2703},
 	--Equipment
 	["DNM Anti-Monitor's Antenna"] = {vp=1, isEquipment=true, isOngoing=true, cost=5, id=8741},
 	["DNM Batmanium"] = {vp=4, isEquipment=true, isMetal=true, cost=5, id=1023},
@@ -2002,6 +2015,8 @@ masterCardTable = {
 	["INJ Flying Ground Slam"] = {vp=2, isSuperPower=true, cost=6,},
 	["INJ Frostbite"] = {vp=1, isSuperPower=true, cost=4,},
 	["INJ Heat Vision"] = {vp=2, isSuperPower=true, isAttack=true, cost=5,},
+		["CW2 Hypersonic Scream"] = {vp=2, isSuperPower=true, isAttack=true, cost=5,},
+		["CW2 Grito Hipersônico"] = {vp=2, isSuperPower=true, isAttack=true, cost=5,},
 	["INJ Mind Games"] = {vp=1, isSuperPower=true, cost=3,},
 	["INJ Running Man Stance"] = {vp=1, isSuperPower=true, cost=5,},
 	["INJ Soaring Hawk"] = {vp=1, isSuperPower=true, cost=2,},
@@ -2186,6 +2201,8 @@ masterCardTable = {
 	["JLD Leather Wings"] = {vp=1, isSuperPower=true, cost=2,},
 	["JLD Magical Portal"] = {vp=1, isSuperPower=true, cost=2,},
 	["JLD Magical Shield"] = {vp=1, isSuperPower=true, isDefense=true, isOngoing=true, cost=5,},
+		["MS Shield of the Serraphim"] = {vp=1, isSuperPower=true, isDefense=true, isOngoing=true, cost=5,},
+		["MS Escudo dos Serafins"] = {vp=1, isSuperPower=true, isDefense=true, isOngoing=true, cost=5,},
 	["JLD Noitanivid"] = {vp=1, isSuperPower=true, cost=4,},
 	["JLD Polymorph"] = {vp=2, isSuperPower=true, isAttack=true, cost=6,},
 	["JLD Possession"] = {vp=1, isSuperPower=true, isAttack=true, cost=3,},
@@ -2280,6 +2297,8 @@ masterCardTable = {
 		["MS Gabriel Housman"] = {vp=1, isVillain=true, cost=4,},
 	--Super Powers
 	["JLDX Born On A Monday"] = {vp=1, isSuperPower=true, cost=3,},
+		["MS Mirrored Fury"] = {vp=1, isSuperPower=true, cost=3,},
+		["MS Fúria Espelhada"] = {vp=1, isSuperPower=true, cost=3,},
 	--Transformed Villains
 	["JLDX Blackbriar Thorn, Elemental"] = {vp=1, isVillain=true, cost=6,},
 	--Super-Heroes
@@ -2381,16 +2400,26 @@ masterCardTable = {
 		["RC Terra Selvagem"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
 	-- Super Powers
 	["ARK ...Tails You Die"] = {vp=1, isSuperPower=true, cost=4,},
+		["RC Feline Fortune"] = {vp=1, isSuperPower=true, cost=4,},
+		["RC Fortuna Felina"] = {vp=1, isSuperPower=true, cost=4,},
 	["ARK Arms Deal"] = {vp=1, isSuperPower=true, cost=3,},
 	["ARK Cannibalism"] = {vp=1, isSuperPower=true, isBribe=true, cost=3,},
+		["RC Seismic Slam"] = {vp=1, isSuperPower=true, isBribe=true, cost=3,},
+		["RC Pancada Sísmica"] = {vp=1, isSuperPower=true, isBribe=true, cost=3,},
 	["ARK Criminally Insane"] = {vp=1, isSuperPower=true, isBribe=true, cost=3,},
 	["ARK Heads You Live..."] = {vp=1, isSuperPower=true, cost=4,},
 	["ARK Homicidal Mania"] = {vp=1, isSuperPower=true, isBribe=true, cost=5,},
+		["RC Unstable Host"] = {vp=1, isSuperPower=true, isBribe=true, cost=5,},
+		["RC Hospedeiro Instável"] = {vp=1, isSuperPower=true, isBribe=true, cost=5,},
 	["ARK Hulking Strength"] = {vp=2, isSuperPower=true, isBribe=true, cost=6,},
+		["RC Brute Force"] = {vp=2, isSuperPower=true, isBribe=true, cost=6,},
+		["RC Força Bruta"] = {vp=2, isSuperPower=true, isBribe=true, cost=6,},
 	["ARK Hypnotic Pheromones"] = {vp=1, isSuperPower=true, isDefense=true, cost=4,},
 	["ARK Let Chance Decide"] = {vp=1, isSuperPower=true, isBribe=true, cost=2,},
 	["ARK Mind Control"] = {vp=1, isSuperPower=true, cost=5,},
 	["ARK Unleash the Inmates"] = {vp=3, isSuperPower=true, isBribe=true, cost=7,},
+		["RC Hail Hydra!"] = {vp=3, isSuperPower=true, isBribe=true, cost=7,},
+		["RC Salve Hydra!"] = {vp=3, isSuperPower=true, isBribe=true, cost=7,},
 	-- Villains
 	["ARK Bane"] = {vp=2, isVillain=true, cost=7,},
 		["RC Venom"] = {vp=2, isVillain=true, cost=7,},
@@ -2475,6 +2504,8 @@ masterCardTable = {
     	["TV Madripoor"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
 	--Super Powers
 	["SHD Break the Bat"] = {vp=1, isSuperPower=true, cost=5, isAttack=true,},
+		["TV Titan's Wrath"] = {vp=1, isSuperPower=true, cost=5, isAttack=true,},
+		["TV Ira do Titã"] = {vp=1, isSuperPower=true, cost=5, isAttack=true,},
 	["SHD Hired Hit"] = {vp=1, isSuperPower=true, cost=4, isBribe=true,},
 	--Villains
 	["SHD Anarky"] = {vp=2, isVillain=true, cost=5, isAttack=true,},
@@ -2624,6 +2655,8 @@ masterCardTable = {
 	--Super Powers
 	["C2 Channeling The Emotional Spectrum"] = {vp=1, isSuperPower=true, cost=3, id=8990},
 	["C2 Crystal Shield"] = {vp=1, isSuperPower=true, isDefense=true, cost=4, id=5857},
+		["IW2 Invisible Force Field"] = {vp=1, isSuperPower=true, isDefense=true, cost=4, id=5857},
+		["IW2 Campo de força Invisível"] = {vp=1, isSuperPower=true, isDefense=true, cost=4, id=5857},
 	["C2 Possession"] = {vp=2, isSuperPower=true, cost=6, id=1173},
 	["C2 Rage Blood"] = {vp=1, isSuperPower=true, cost=5, id=9676},
 	--Equipment
@@ -2779,6 +2812,8 @@ masterCardTable = {
 	["C4 Stone"] = {vp=1, isVillain=true, isAttack=true, isOngoing=true, cost=5, id=5281},
 	--Super Powers
 	["C4 Titans Together"] = {vp=1, isSuperPower=true, isOngoing=true, cost=5, id=7223},
+		["IW4 Avengers Assemble!"] = {vp=1, isSuperPower=true, isOngoing=true, cost=5, id=7223},
+		["IW4 Avante Vingadores!"] = {vp=1, isSuperPower=true, isOngoing=true, cost=5, id=7223},
 	["C4 Vigilant Guard"] = {vp=1, isSuperPower=true, isDefense=true, cost=2, id=8918},
 	["C4 Warm Embrace"] = {vp=1, isSuperPower=true, cost=5, id=4214},
 	--Equipment
@@ -2846,7 +2881,11 @@ masterCardTable = {
 		["IW5 Olimpo"] = {vp=2, isLocation=true, isOngoing=true, cost=7,},
 	--Super Powers
 	["C5 Reverse Polarity"] = {vp=2, isSuperPower=true, cost=5,},
+		["IW5 Parasitic Embrace"] = {vp=2, isSuperPower=true, cost=5,},
+		["IW5 Abraço Parasita"] = {vp=2, isSuperPower=true, cost=5,},
 	["C5 Godly Ascension"] = {vp=3, isSuperPower=true, cost=8,},
+		["IW5 Phoenix Force"] = {vp=3, isSuperPower=true, cost=8,},
+		["IW5 Força Fênix"] = {vp=3, isSuperPower=true, cost=8,},
 	--Villains
 	["C5 Batom"] = {vp=2, isVillain=true, cost=4,},
 		["IW5 Lady Deathstrike"] = {vp=2, isVillain=true, cost=4,},
@@ -2908,6 +2947,8 @@ masterCardTable = {
 		["CC1 Escorpião"] = {vp=2, isVillain=true, isAttack=true, cost=6,},
 	--Super Powers
 	["CC1 Nine Lives"] = {vp=1, isSuperPower=true, cost=5,},
+		["CC1 Ressurrection"] = {vp=1, isSuperPower=true, cost=5,},
+		["CC1 Ressurreição"] = {vp=1, isSuperPower=true, cost=5,},
 	--Equipment
 	["CC1 Starheart"] = {vp=1, isEquipment=true, cost=4,},
 	--Super Villains
@@ -2973,6 +3014,8 @@ masterCardTable = {
 	["R1 Billionaire"] = {vp=1, isSuperPower=true, cost=5, id=6204},
 	["R1 Homicidal Maniac"] = {vp=1, isSuperPower=true, cost=3, id=4867},
 	["R1 Insanity"] = {vp=1, isSuperPower=true, isDefense=true, cost=2, id=1709},
+		["R1 Rooftop Vigil"] = {vp=1, isSuperPower=true, isDefense=true, cost=2, id=1709},
+		["R1 Vigília Urbana"] = {vp=1, isSuperPower=true, isDefense=true, cost=2, id=1709},
 	["R1 Kick"] = {vp=1, isSuperPower=true, cost=3, id=9883},
 	["R1 Killing Joke"] = {vp=3, isSuperPower=true, cost=7, id=4856},
 	["R1 Maniacal Laugh"] = {vp=1, isSuperPower=true, cost=4, id=8782},
@@ -3050,6 +3093,8 @@ masterCardTable = {
 	["R2 Construct Beasts"] = {vp=1, isSuperPower=true, cost=2, id=6664},
 	["R2 Construct Jet"] = {vp=1, isSuperPower=true, cost=4, id=1580},
 	["R2 Construct Missiles"] = {vp=1, isSuperPower=true, cost=5, id=8463},
+		["R2 PSychic Knife"] = {vp=1, isSuperPower=true, cost=5, id=8463},
+		["R2 Adaga Psíquica"] = {vp=1, isSuperPower=true, cost=5, id=8463},
 	["R2 Construct Shields"] = {vp=1, isSuperPower=true, cost=4, id=5096},
 	["R2 Construct Slam"] = {vp=1, isSuperPower=true, cost=3, id=7044},
 	["R2 Construct Train"] = {vp=1, isSuperPower=true, isDefense=true, cost=5, id=7210},
@@ -3141,6 +3186,8 @@ masterCardTable = {
 	["R3 Run On Water"] = {vp=1, isSuperPower=true, cost=2,},
 	["R3 Sonic Snap"] = {vp=1, isSuperPower=true,isAttack=true, cost=5,},
 	["R3 Speed Clone"] = {vp=1, isSuperPower=true, cost=3,},
+		["R3 Snow Battalion"] = {vp=1, isSuperPower=true, cost=3,},
+		["R3 Batalhão de Neve"] = {vp=1, isSuperPower=true, cost=3,},
 	["R3 Think Fast"] = {vp=1, isSuperPower=true, cost=4,},
 	["R3 Time Travel"] = {vp=2, isSuperPower=true, cost=6,},
 	["R3 Vibrating Hand"] = {vp=2, isSuperPower=true, cost=5,},
@@ -3233,10 +3280,20 @@ masterCardTable = {
 	["R4 Power of Aten"] = {vp=2, isSuperPower=true, cost=6,},
 	["R4 Power of Zeus"] = {vp=1, isSuperPower=true, isAttack=true, cost=5,},
 	["R4 Speed of Mercury"] = {vp=2, isSuperPower=true, cost=7,},
+		["R4 Cosmic Velocity"] = {vp=2, isSuperPower=true, cost=7,},
+		["R4 Velocidade Cósmica"] = {vp=2, isSuperPower=true, cost=7,},
 	["R4 Stamina of Atlas"] = {vp=1, isSuperPower=true, cost=4,},
+		["R4 Olympian Strength"] = {vp=1, isSuperPower=true, cost=4,},
+		["R4 Força Olímpica"] = {vp=1, isSuperPower=true, cost=4,},
 	["R4 Stamina of Shu"] = {vp=1, isSuperPower=true, cost=2,},
+		["R4 Brutal Offensive"] = {vp=1, isSuperPower=true, cost=2,},
+		["R4 Ofensiva Brutal"] = {vp=1, isSuperPower=true, cost=2,},
 	["R4 Strength of Amon"] = {vp=1, isSuperPower=true, cost=4,},
+		["R4 Neutralization Beam"] = {vp=1, isSuperPower=true, cost=4,},
+		["R4 Feixe de Neutralização"] = {vp=1, isSuperPower=true, cost=4,},
 	["R4 Strength of Hercules"] = {vp=1, isSuperPower=true, cost=3,},
+		["R4 Mutant Union"] = {vp=1, isSuperPower=true, cost=3,},
+		["R4 União Mutante"] = {vp=1, isSuperPower=true, cost=3,},
 	["R4 Swiftness of Horus"] = {vp=1, isSuperPower=true, cost=3,},
 	["R4 Wisdom of Solomon"] = {vp=1, isSuperPower=true, cost=2,},
 	["R4 Wisdom of Zehuti"] = {vp=1, isSuperPower=true, cost=5,},
@@ -3305,9 +3362,17 @@ masterCardTable = {
 		["R5 Ilha Flutuante da Hydra"] = {vp=2, isLocation=true, isOngoing=true, cost=6,},
 	-- Super Powers
 	["R5 Corrupt Dealing"] = {vp=1, isSuperPower=true, cost=2,},
+		["R5 Dangerous Alliance"] = {vp=1, isSuperPower=true, cost=2,},
+		["R5 Aliança Perigosa"] = {vp=1, isSuperPower=true, cost=2,},
 	["R5 Super Hearing"] = {vp=1, isSuperPower=true, cost=3,},
+		["R5 Heightened Senses"] = {vp=1, isSuperPower=true, cost=3,},
+		["R5 Sentidos Apurados"] = {vp=1, isSuperPower=true, cost=3,},
 	["R5 Heat Vision"] = {vp=1, isSuperPower=true, cost=4,},
+		["R5 Organic Arsenal"] = {vp=1, isSuperPower=true, cost=4,},
+		["R5 Arsenal Orgânico"] = {vp=1, isSuperPower=true, cost=4,},
 	["R5 Nefarious Planning"] = {vp=1, isSuperPower=true, cost=4,},
+		["R5 Master Plan"] = {vp=1, isSuperPower=true, cost=4,},
+		["R5 Plano Mestre"] = {vp=1, isSuperPower=true, cost=4,},
 	["R5 Flight"] = {vp=2, isSuperPower=true, cost=7,},
 	-- Villains
 	["R5 Eve Teschmacher"] = {vp=1, isVillain=true, cost=2,},
@@ -3447,6 +3512,8 @@ masterCardTable = {
 	["RC Pots!"] = {vp=1, isSuperPower=true, cost=2, id=8912},
 	["RC Scientific Genius"] = {vp=2, isSuperPower=true, cost=7, id=4319},
 	["RC Strength of the Gods"] = {vp=1, isSuperPower=true, cost=4, id=8968},
+		["CW Shock Absorption"] = {vp=1, isSuperPower=true, cost=4, id=8968},
+		["CW Absorção de Choque"] = {vp=1, isSuperPower=true, cost=4, id=8968},
 	["RC Tegrof!"] = {vp=1, isSuperPower=true, isAttack=true, cost=5, id=4550},
 	["RC Telepathy"] = {vp=1, isSuperPower=true, cost=3, id=1856},
 	["RC Water Control"] = {vp=1, isSuperPower=true, isDefense=true, cost=4, id=9799},
@@ -3588,6 +3655,8 @@ masterCardTable = {
 	["CO3 Universo"] = {vp=2, isVillain=true, isAttack=true, cost=6, id=7801},
 	--Super Powers
 	["CO3 Electricity"] = {vp=1, isSuperPower=true, cost=4, id=8431},
+		["CO3 Limitless Potential"] = {vp=1, isSuperPower=true, cost=4, id=8431},
+		["CO3 Potencial Ilimitado"] = {vp=1, isSuperPower=true, cost=4, id=8431},
 	["CO3 Magnetism"] = {vp=2, isSuperPower=true, cost=6, id=2002},
 	["CO3 Telepathy"] = {vp=1, isSuperPower=true, cost=5, id=4089},
 	--Equipment
@@ -3674,6 +3743,8 @@ masterCardTable = {
 	["CO5 The Top"] = {vp=0, isVillain=true, isAttack=true, cost=6, id=9605},
 	--Super Powers
 	["CO5 Engulfing Flames"] = {vp=0, isSuperPower=true, cost=5, id=9446},
+		["CO5 Flame On!"] = {vp=0, isSuperPower=true, cost=5, id=9446},
+		["CO5 Em Chamas!"] = {vp=0, isSuperPower=true, cost=5, id=9446},
 	["CO5 Lightning Strike"] = {vp=0, isSuperPower=true, cost=6, id=3845},
 	["CO5 Mirror Images"] = {vp=0, isSuperPower=true, cost=5, id=7929},
 	["CO5 Phasing"] = {vp=0, isSuperPower=true, cost=7, id=3032},
@@ -3976,8 +4047,14 @@ masterCardTable = {
 		["CO11 Visão"] = {vp=2, isHero=true, cost=6,},
 	--Super Powers
 	["CO11 Summon Dead Waters"] = {vp=1, isSuperPower=true, cost=3,},
+		["CO11 Spirit Smoke"] = {vp=1, isSuperPower=true, cost=3,},
+		["CO11 Fumaça Espiritual"] = {vp=1, isSuperPower=true, cost=3,},
 	["CO11 Speed Force Bats"] = {vp=2, isSuperPower=true, cost=3,},
+		["CO11 Explosive Cards"] = {vp=2, isSuperPower=true, cost=3,},
+		["CO11 Cartas Explosivas"] = {vp=2, isSuperPower=true, cost=3,},
 	["CO11 Devastating Strength"] = {vp=1, isSuperPower=true, cost=4,},
+		["CO11 Brutal Impact"] = {vp=1, isSuperPower=true, cost=4,},
+		["CO11 Impacto Brutal"] = {vp=1, isSuperPower=true, cost=4,},
 	--Villains
 	["CO11 Killer Croc"] = {vp=1, isVillain=true, isDefense=true, cost=3,},
 		["CO11 Lizard"] = {vp=1, isVillain=true, isDefense=true, cost=3,},
@@ -4016,6 +4093,8 @@ masterCardTable = {
 		["CO12 Micro"] = {vp=1, isHero=true, cost=2,},
 	--Super Powers
 	["CO12 Track Down"] = {vp=1, isSuperPower=true, cost=4,},
+		["CO12 Insanity"] = {vp=1, isSuperPower=true, cost=4,},
+		["CO12 Insanidade"] = {vp=1, isSuperPower=true, cost=4,},
 	--Super-Villains
 	["CO12 Killer Croc"] = {vp=4, isVillain=true, isStartBoss=true, isBoss=true, cost=8,},
 	["CO12 Poison Ivy"] = {vp=5, isVillain=true, isBoss=true, cost=9,},
@@ -5340,6 +5419,8 @@ masterCardTable = {
 	--Super Powers
 	["TTGX Octopus Form"] = {vp=1, isSuperPower=true, isDefense=true, cost=4,},
 	["TTGX Tamaranian Princess"] = {vp=1, isSuperPower=true, cost=2,},
+		["TU90-2 Elemental Deity"] = {vp=1, isSuperPower=true, cost=2,},
+		["TU90-2 Divindade Elemental"] = {vp=1, isSuperPower=true, cost=2,},
 	--Villains
 	["TTGX Sandwich Guardian"] = {vp=1, isVillain=true, cost=5,},
 		["TU902 Forbush Man"] = {vp=1, isVillain=true, cost=5,},
@@ -5558,6 +5639,8 @@ masterCardTable = {
 	--Super Powers
 	["VP Extraordinary Stamina"] = {vp=1, isSuperPower=true, isDefense=true, cost=4},
 	["JLD Incorporeal"] = {vp=2, isSuperPower=true, isDefense=true, cost=6},
+		["MS Astral Form"] = {vp=2, isSuperPower=true, isDefense=true, cost=6},
+		["MS Forma Astral"] = {vp=2, isSuperPower=true, isDefense=true, cost=6},
 	--Equipment
 	["VP Gamer's Lucky Dice"] = {vp=1, isEquipment=true, cost=5},
 	["JLD Vestments of Fate"] = {vp=2, isEquipment=true, cost=7},
@@ -5739,6 +5822,8 @@ masterCardTable = {
 	["RC Scientific Genius (DCDB)"] = {vp=2, isSuperPower=true, cost=7, id=4319},
 	["RC Strength of the Gods (DCDB)"] = {vp=1, isSuperPower=true, cost=4, id=8968},
 	["TT Geokinesis (DCDB)"] = {vp=1, isSuperPower=true, isAttack=true, cost=4, id=7492},
+		["TU Electrokinesis"] = {vp=1, isSuperPower=true, isAttack=true, cost=4, id=7492},
+		["TU Eletrocinese"] = {vp=1, isSuperPower=true, isAttack=true, cost=4, id=7492},
 	["TT Shapeshift (DCDB)"] = {vp=1, isSuperPower=true, isPowerRing=true, cost=2, id=6366},
 	--Equipment
 	["R1 Grappling Hook (DCDB)"] = {vp=1, isEquipment=true, cost=3, id=8605},
@@ -6275,6 +6360,8 @@ masterCardTable = {
 	["RB Flurry of Fists"] = {vp=1, isSuperPower=true, cost=5, id=3391},
 	["RB Hard Water Bubble"] = {vp=1, isSuperPower=true, isDefense=true, cost=2, id=5311},
 	["RB Heat Vision"] = {vp=1, isSuperPower=true, cost=5, id=3498},
+		["SW Cosmic Beam"] = {vp=1, isSuperPower=true, cost=5, id=3498},
+		["SW Raio Cósmico"] = {vp=1, isSuperPower=true, cost=5, id=3498},
 	["RB Shields Up"] = {vp=2, isSuperPower=true, isDefense=true, cost=5, id=2145},
 	["RB Speed Force"] = {vp=2, isSuperPower=true, cost=6, id=1688},
 	["RB Super Breath"] = {vp=1, isSuperPower=true, cost=4, id=5154},
@@ -6400,6 +6487,8 @@ masterCardTable = {
 		["SW2 Thor Jane Foster"] = {vp=2, isHero=true, isDefense=true, cost=6,},
 	--Super Powers
 	["OS3 Incantation"] = {vp=1, isSuperPower=true, cost=5,},
+		["SW3 Arcane Supremacy"] = {vp=1, isSuperPower=true, cost=5,},
+		["SW3 Supremacia Arcana"] = {vp=1, isSuperPower=true, cost=5,},
 	--Oversized Character Cards
 	["OS3 Billy Batson/Shazam"] = {vp=0, isCharacter=true,},
 	["OS3 Zatanna"] = {vp=0, isCharacter=true,},
