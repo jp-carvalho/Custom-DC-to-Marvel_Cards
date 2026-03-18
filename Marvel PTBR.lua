@@ -1,3 +1,19 @@
+--Equipamento
+    ["AA Joia da Mente"] = {vp=0, isEquipment=true, isExpPowerRing=true, isAttack=true, cost=5, id=7910},
+    ["AA A Joia do Poder"] = {vp=0, isEquipment=true, isExpPowerRing=true, isDefense=true, cost=5, id=5382},
+    ["R2 A Joia do Poder"] = {vp=1, isEquipment=true, isPowerRing=true, isDefense=true, cost=5, id=6406},
+    ["IW5 A Manopla do Infinito"] = {vp=3, isEquipment=true, isPowerRing=true, cost=8,},
+    ["MARVEL A Joia da Alma"] = {vp=1, isEquipment=true, isPowerRing=true, cost=3, id=1737},
+    ["CW2 A Joia do Poder"] = {vp=2, isEquipment=true, isPowerRing=true, cost=6,},
+    ["IW2 A Joia da Alma"] = {vp=0, isEquipment=true, isExpPowerRing=true, cost=5, id=7525},
+    ["AA A Joia do Espaço"] = {vp=0, isEquipment=true, isExpPowerRing=true, cost=5, id=7121},
+    ["AA A Joia da Realidade"] = {vp=0, isEquipment=true, isExpPowerRing=true, cost=5, id=9741},
+    ["AA A Joia do Espaço"] = {vp=0, isEquipment=true, isExpPowerRing=true, cost=5, id=8012},
+    ["IW2 A Joia do Tempo"] = {vp=0, isEquipment=true, isExpPowerRing=true, cost=5, id=9986},
+    ["CW2 A Joia da Mente"] = {vp=2, isEquipment=true, isPowerRing=true, cost=6,},
+    ["R2 A Joia da Mente"] = {vp=1, isEquipment=true, isPowerRing=true, isAttack=true, cost=4, id=7365},
+    
+
 --Super Poder
     ["TU90-2 Divindade Elemental"] = {vp=1, isSuperPower=true, cost=2,},
     ["RC Força Bruta"] = {vp=2, isSuperPower=true, isBribe=true, cost=6,},

@@ -1,3 +1,19 @@
+--Equipment
+        ["AA The Mind Stone"] = {vp=0, isEquipment=true, isExpPowerRing=true, isAttack=true, cost=5, id=7910},
+        ["AA The Power Stone"] = {vp=0, isEquipment=true, isExpPowerRing=true, isDefense=true, cost=5, id=5382},
+        ["R2 The Power Stone"] = {vp=1, isEquipment=true, isPowerRing=true, isDefense=true, cost=5, id=6406},
+        ["IW5 The Infinite Gauntlet"] = {vp=3, isEquipment=true, isPowerRing=true, cost=8,},
+        ["MARVEL The Soul Stone"] = {vp=1, isEquipment=true, isPowerRing=true, cost=3, id=1737},
+        ["CW2 The Power Stone"] = {vp=2, isEquipment=true, isPowerRing=true, cost=6,},
+        ["IW2 The Soul Stone"] = {vp=0, isEquipment=true, isExpPowerRing=true, cost=5, id=7525},
+        ["AA The Space Stone"] = {vp=0, isEquipment=true, isExpPowerRing=true, cost=5, id=7121},
+        ["AA The Reality Stone"] = {vp=0, isEquipment=true, isExpPowerRing=true, cost=5, id=9741},
+        ["AA The Space Stone"] = {vp=0, isEquipment=true, isExpPowerRing=true, cost=5, id=8012},
+        ["IW2 The Time Stone"] = {vp=0, isEquipment=true, isExpPowerRing=true, cost=5, id=9986},
+        ["CW2 The Mind Stone"] = {vp=2, isEquipment=true, isPowerRing=true, cost=6,},
+        ["R2 The Mind Stone"] = {vp=1, isEquipment=true, isPowerRing=true, isAttack=true, cost=4, id=7365},
+        
+
 --Superpower
         ["TU90-2 Elemental Deity"] = {vp=1, isSuperPower=true, cost=2,},
         ["RC Brute Force"] = {vp=2, isSuperPower=true, isBribe=true, cost=6,},

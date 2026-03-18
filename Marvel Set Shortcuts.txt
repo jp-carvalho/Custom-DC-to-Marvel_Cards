@@ -18,5 +18,8 @@ Forever Evil - Dark Avengers - DA
     
     ["DC Suicide Squad"] = {vp=0, isVillain=true, cost=4, id=9516},
 		["Marvel Thunderbolts"] = {vp=0, isVillain=true, cost=4, id=9516},
-
+    
+	["CO10 Traverse Timelines"] = {vp=0, isSuperPower=true, isTimeLineUp=true, cost=6,},
+		["CO10 Temporal Breakthrough"] = {vp=0, isSuperPower=true, isTimeLineUp=true, cost=6,},
+		["CO10 Ruptura Temporal"] = {vp=0, isSuperPower=true, isTimeLineUp=true, cost=6,},
     

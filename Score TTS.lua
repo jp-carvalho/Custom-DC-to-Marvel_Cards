@@ -387,6 +387,10 @@ function checkCardsinMasterList(card, tempScoreList, spot, underCheck)
 			--Need Global to Compare
 		elseif card.nickname == "CO10 Traverse Timelines" then
 			tempScoreList[i].traverseTimelines = tempScoreList[i].traverseTimelines + 1
+		elseif card.nickname == "CO10 Temporal Breakthrough" then
+			tempScoreList[i].traverseTimelines = tempScoreList[i].traverseTimelines + 1
+		elseif card.nickname == "CO10 Ruptura Temporal" then
+			tempScoreList[i].traverseTimelines = tempScoreList[i].traverseTimelines + 1
 		elseif card.nickname == "ARK Black Mask" then
     		tempScoreList[i].expBribes = tempScoreList[i].expBribes + 1
 		elseif card.nickname == "RC Hammerhead" then
@@ -1486,6 +1490,8 @@ masterCardTable = {
 	["DC Lasso of Truth"] = {vp=1, isEquipment=true, isDefense=true, cost=2, id=9914},
 	["DC Nth Metal"] = {vp=1, isEquipment=true, cost=3, id=1120},
 	["DC Power Ring"] = {vp=1, isEquipment=true, isPowerRing=true, cost=3, id=1737},
+		["MARVEL The Soul Stone"] = {vp=1, isEquipment=true, isPowerRing=true, cost=3, id=1737},
+		["MARVEL A Joia da Alma"] = {vp=1, isEquipment=true, isPowerRing=true, cost=3, id=1737},
 	["DC The Bat Signal"] = {vp=1, isEquipment=true, cost=5, id=3877},
 	["DC The Cape and Cowl"] = {vp=1, isEquipment=true, isDefense=true, cost=4, id=4439},
 	["DC Utility Belt"] = {vp=0, isEquipment=true, cost=5, id=7618},
@@ -1595,18 +1601,28 @@ masterCardTable = {
 	["HU Batarang"] = {vp=1, isEquipment=true, cost=2, id=1245},
 	["HU Blue Lantern Power Ring"] = {vp=0, isEquipment=true, isExpPowerRing=true, cost=5, id=4371},
 	["HU Green Lantern Power Ring"] = {vp=0, isEquipment=true, isExpPowerRing=true, isDefense=true, cost=5, id=5382},
+		["AA The Power Stone"] = {vp=0, isEquipment=true, isExpPowerRing=true, isDefense=true, cost=5, id=5382},
+		["AA A Joia do Poder"] = {vp=0, isEquipment=true, isExpPowerRing=true, isDefense=true, cost=5, id=5382},
 	["HU Helmet of Fate"] = {vp=1, isEquipment=true, isDefense=true, cost=3, id=7652},
 	["HU Indigo Tribe Power Ring"] = {vp=0, isEquipment=true, isExpPowerRing=true, cost=5, id=8012},
+		["AA The Space Stone"] = {vp=0, isEquipment=true, isExpPowerRing=true, cost=5, id=8012},
+		["AA A Joia do Espaço"] = {vp=0, isEquipment=true, isExpPowerRing=true, cost=5, id=8012},
 	["HU Legion Flight Ring"] = {vp=1, isEquipment=true, cost=2, id=4853},
 	["HU Mind Control Hat"] = {vp=2, isEquipment=true, isAttack=true, cost=7, id=2081},
 	["HU Orange Lantern Power Ring"] = {vp=0, isEquipment=true, isExpPowerRing=true, cost=5, id=7121},
+		["AA The Space Stone"] = {vp=0, isEquipment=true, isExpPowerRing=true, cost=5, id=7121},
+		["AA A Joia do Espaço"] = {vp=0, isEquipment=true, isExpPowerRing=true, cost=5, id=7121},
 	["HU Red Lantern Power Ring"] = {vp=0, isEquipment=true, isExpPowerRing=true, cost=5, id=9166},
 	["HU Sciencell"] = {vp=0, isEquipment=true, cost=6, id=5502},
 	["HU Skeets"] = {vp=1, isEquipment=true, isDefense=true, cost=4, id=3517},
 	["HU Soultaker Sword"] = {vp=1, isEquipment=true, cost=4, id=3101},
 	["HU Star Sapphire Power Ring"] = {vp=0, isEquipment=true, isExpPowerRing=true, cost=5, id=9741},
+		["AA The Reality Stone"] = {vp=0, isEquipment=true, isExpPowerRing=true, cost=5, id=9741},
+		["AA A Joia da Realidade"] = {vp=0, isEquipment=true, isExpPowerRing=true, cost=5, id=9741},
 	["HU White Lantern Power Battery"] = {vp=2, isEquipment=true, cost=7, id=9070},
 	["HU Yellow Lantern Corps Power Ring"] = {vp=0, isEquipment=true, isExpPowerRing=true, isAttack=true, cost=5, id=7910},
+		["AA The Mind Stone"] = {vp=0, isEquipment=true, isExpPowerRing=true, isAttack=true, cost=5, id=7910},
+		["AA Joia da Mente"] = {vp=0, isEquipment=true, isExpPowerRing=true, isAttack=true, cost=5, id=7910},
 	--Locations
 	["HU Apokolips"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=6508},
 	["HU Gotham City"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=2054},
@@ -2063,12 +2079,16 @@ masterCardTable = {
 	["INJ Giant Mallet"] = {vp=1, isEquipment=true, cost=4,},
 	["INJ Grapnel Launcher"] = {vp=1, isEquipment=true, cost=3,},
 	["INJ Green Lantern Power Ring"] = {vp=2, isEquipment=true, isPowerRing=true, cost=6,},
+		["CW2 The Power Stone"] = {vp=2, isEquipment=true, isPowerRing=true, cost=6,},
+		["CW2 A Joia do Poder"] = {vp=2, isEquipment=true, isPowerRing=true, cost=6,},
 	["INJ Knife"] = {vp=1, isEquipment=true, cost=3,},
 	["INJ Lasso of Truth"] = {vp=3, isEquipment=true, cost=7,},
 	["INJ Nth Metal Mace"] = {vp=2, isEquipment=true, isDefense=true, cost=6,},
 	["INJ Power Armor"] = {vp=1, isEquipment=true, cost=4,},
 	["INJ Quiver of Arrows"] = {vp=1, isEquipment=true, cost=3,},
 	["INJ Sinestro Corps Power Ring"] = {vp=2, isEquipment=true, isPowerRing=true, cost=6,},
+		["CW2 The Mind Stone"] = {vp=2, isEquipment=true, isPowerRing=true, cost=6,},
+		["CW2 A Joia da Mente"] = {vp=2, isEquipment=true, isPowerRing=true, cost=6,},
 	["INJ Sword and Shield"] = {vp=1, isEquipment=true, isAttack=true, isDefense=true, cost=5,},
 	["INJ Wing Ding"] = {vp=1, isEquipment=true, isDefense=true, cost=4,},
 	--Super-Heroes
@@ -2714,10 +2734,14 @@ masterCardTable = {
 	["C2 Rage Blood"] = {vp=1, isSuperPower=true, cost=5, id=9676},
 	--Equipment
 	["C2 Black Lantern Power Ring"] = {vp=0, isEquipment=true, isExpPowerRing=true, cost=5, id=7525},
+		["IW2 The Soul Stone"] = {vp=0, isEquipment=true, isExpPowerRing=true, cost=5, id=7525},
+		["IW2 A Joia da Alma"] = {vp=0, isEquipment=true, isExpPowerRing=true, cost=5, id=7525},
 	["C2 Escrima Sticks"] = {vp=1, isEquipment=true, cost=2, id=1087},
 	["C2 Nth Metal Mace"] = {vp=1, isEquipment=true, cost=3, id=1063},
 	["C2 Skull of Batman"] = {vp=2, isEquipment=true, cost=6, id=7925},
 	["C2 White Lantern Power Ring"] = {vp=0, isEquipment=true, isExpPowerRing=true, cost=5, id=9986},
+		["IW2 The Time Stone"] = {vp=0, isEquipment=true, isExpPowerRing=true, cost=5, id=9986},
+		["IW2 A Joia do Tempo"] = {vp=0, isEquipment=true, isExpPowerRing=true, cost=5, id=9986},
 	--Locations
 	["C2 Atlantis"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=7099},
 	["C2 Mogo"] = {vp=2, isLocation=true, isDefense=true, isOngoing=true, cost=7, id=5047},
@@ -2913,6 +2937,8 @@ masterCardTable = {
 	["C5 Alfred Box"] = {vp=2, isEquipment=true, cost=6,},
 	["C5 Chainsaw of Truth"] = {vp=2, isEquipment=true, cost=7,},
 	["C5 Black Lantern Power Ring"] = {vp=3, isEquipment=true, isPowerRing=true, cost=8,},
+		["IW5 The Infinite Gauntlet"] = {vp=3, isEquipment=true, isPowerRing=true, cost=8,},
+		["IW5 A Manopla do Infinito"] = {vp=3, isEquipment=true, isPowerRing=true, cost=8,},
 	["C5 Cloak of Erasure"] = {vp=3, isEquipment=true, isOngoing=true, isDefense=true, cost=9,},
 	--Heroes
 	["C5 Black Lantern Arsenal"] = {vp=2, isHero=true, cost=5,},
@@ -3169,8 +3195,12 @@ masterCardTable = {
 	["R2 Book of Parallax"] = {vp=2, isEquipment=true, cost=7, id=1888},
 	["R2 Green Lantern Power Battery"] = {vp=2, isEquipment=true, cost=6, id=1600},
 	["R2 Green Lantern Power Ring"] = {vp=1, isEquipment=true, isPowerRing=true, isDefense=true, cost=5, id=6406},
+		["R2 The Power Stone"] = {vp=1, isEquipment=true, isPowerRing=true, isDefense=true, cost=5, id=6406},
+		["R2 A Joia do Poder"] = {vp=1, isEquipment=true, isPowerRing=true, isDefense=true, cost=5, id=6406},
 	["R2 Interceptor"] = {vp=1, isEquipment=true, cost=5, id=8313},
 	["R2 Sinestro Corps Power Rings"] = {vp=1, isEquipment=true, isPowerRing=true, isAttack=true, cost=4, id=7365},
+		["R2 The Mind Stone"] = {vp=1, isEquipment=true, isPowerRing=true, isAttack=true, cost=4, id=7365},
+		["R2 A Joia da Mente"] = {vp=1, isEquipment=true, isPowerRing=true, isAttack=true, cost=4, id=7365},
 	["R2 Sinestro Power Battery"] = {vp=1, isEquipment=true, cost=5, id=9404},
 	--Locations
 	["R2 Mogo"] = {vp=1, isLocation=true, isOngoing=true, cost=6, id=5400},

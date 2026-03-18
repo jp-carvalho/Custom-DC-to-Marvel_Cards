@@ -641,6 +641,12 @@ export class Card {
             } else if (this.type === "Superpoder") {
                 spriteName = "Superpoder Simbionte";
             }
+        } else if (this.variant === "Infinity Stone") {
+            if (this.type === "Equipment") {
+                spriteName = "equipment Infinity Stone";
+            } else if (this.type === "Equipamento") {
+                spriteName = "equipamento Joia do Infinito";
+            }
         } else if (this.variant === "Unity") {
             if (this.type === "Hero" || this.type === "Herói" || this.type === "Heroi") {
                 spriteName = "Unity hero";
@@ -1081,9 +1087,9 @@ export class Card {
         if (this.preferredTextSize > 0) {
             style.fontSize = this.preferredTextSize;
         } else {
-            style.fontSize = 44;
+            style.fontSize = 42;
             if (this.text.length >= 130) {
-                style.fontSize = 40;
+                style.fontSize = 36;
             }
         }
 
