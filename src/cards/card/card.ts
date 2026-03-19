@@ -64,11 +64,11 @@ export class Card {
         "Defense",
         "Defesa",
         "Descarte 2 cartas diferentes",
-        "Descarte duas cartas",
+        // "Descarte duas cartas",
         "Descarte um Superpoder",
         "Discard 2 different cards",
         "Discard a Super Power",
-        "Discard two cards",
+        // "Discard two cards",
         "Eco Temporal",
         "em Área",
         "End of Your Turn",
@@ -1087,9 +1087,9 @@ export class Card {
         if (this.preferredTextSize > 0) {
             style.fontSize = this.preferredTextSize;
         } else {
-            style.fontSize = 42;
+            style.fontSize = 46;
             if (this.text.length >= 130) {
-                style.fontSize = 36;
+                style.fontSize = 38;
             }
         }
 
