@@ -1,3 +1,69 @@
+--MC
+	["CW Scarlet Witch (Level 3)"] = {vp=0, isHero=true, isCharacter=true, cost=15, id=8093},
+        ["IW1 Scarlet Witch"] = {vp=0, isCharacter=true, id=3545},
+        ["CW2 Carnage"] = {vp=0, isCharacter=true,},
+        ["CC1 Whizzer"] = {vp=0, isCharacter=true,},
+        ["IW1 Quicksilver"] = {vp=0, isCharacter=true, id=8396},
+        ["IW4 Triton"] = {vp=0, isCharacter=true, id=1991},
+        ["CW Hulk (Level 2)"] = {vp=6, isHero=true, isCharacter=true, cost=12, id=5356},
+        ["KIB Hulk"] = {vp=0, isCharacter=true, id=1825},
+        ["IW1 Hulk"] = {vp=0, isCharacter=true, id=7639},
+        ["IW4 Cyclops"] = {vp=0, isCharacter=true, id=5443},
+        ["IW2 Mar-vell (Character)"] = {vp=0, isCharacter=true, id=5572},
+        ["IW4 Storm"] = {vp=0, isCharacter=true, id=8656},
+        ["MS Juggernaut"] = {vp=0, isCharacter=true,},
+        ["CO4 Aero"] = {vp=0, isCharacter=true, id=6875},
+        ["RC Mysterio"] = {vp=0, isCharacter=true,},
+        ["CO3 Invisible Woman"] = {vp=0, isCharacter=true, id=6119},
+        ["CO2 Mockingbird"] = {vp=0, isCharacter=true, id=8386},
+        ["C1 Spider-man"] = {vp=0, isCharacter=true, id=1559},
+        ["C4 Nightcrawler"] = {vp=0, isCharacter=true, id=8130},
+        ["TV Mandarin"] = {vp=0, isCharacter=true,},
+        ["C3 Viper"] = {vp=0, isCharacter=true, id=4022},
+        ["RC Viper"] = {vp=0, isCharacter=true,},
+        ["CC1 Rogue"] = {vp=0, isCharacter=true,},
+        ["CO3 Kitty Pryde"] = {vp=0, isCharacter=true, id=3411},
+        
+
+--Transformed
+        ["MS Defend"] = {vp=1, isStarter=true, cost=0,}, -- Transformed
+        ["MS The Mighty Thor"] = {vp=1, isHero=true, cost=6,},
+        ["MS Thor, God of Thunder"] = {vp=1, isHero=true, cost=4,},
+        ["MS Morbius, the Vampire"] = {vp=2, isVillain=true, cost=6,},
+        ["MS The Mighty Thor, corrupted"] = {vp=2, isVillain=true, cost=5,},
+        ["MS Blackhearth, Prince of Hell"] = {vp=1, isVillain=true, cost=6,},
+        ["MS The Darkhold"] = {vp=2, isEquipment=true, cost=5,},
+        ["PROMO Doctor Strange, Sorcerer Supreme"] = {vp=0, isCharacter=true,},
+
+--Kicks
+        ["R5 Days of a Future Past"] = {vp=1, cost=3,},
+        ["RC The Hand"] = {vp=1, isVillain=true, cost=3,},
+        ["MS Dark Ritual"] = {vp=1, cost=3,},
+        ["CW2 Flying Kick"] = {vp=1, isAttack=true, cost=3,},
+        ["R4 Probability Alteration"] = {vp=1, isSuperPower=true, cost=3,},
+        ["CW Intensified Force"] = {vp=1, isStarter=true, cost=3},
+        ["KIB Ultimate Sacrifice"] = {vp=1, cost=3, id=9145},
+        ["R2 Psychic Arsenal"] = {vp=1, cost=3, id=0},
+        ["R3 Lightspeed"] = {vp=1, cost=3,},
+
+
+--Hostages
+        ["RC Rick Jones"] = {vp=0, isHostage=true, isOngoing=true, cost=2,},
+        ["RC Dakota North"] = {vp=0, isHostage=true, isOngoing=true, cost=2,},
+        ["RC J. Jonah Jamason"] = {vp=0, isHostage=true, isDefense=true, isOngoing=true, cost=2,},
+        ["RC Karen Page"] = {vp=0, isHostage=true, isOngoing=true, cost=2,},
+        ["RC Sharon Carter"] = {vp=0, isHostage=true, isOngoing=true, cost=2,},
+        ["RC Dr. Ashley Kafka"] = {vp=0, isHostage=true, isOngoing=true, cost=2,},
+        ["RC Foggy Nelson"] = {vp=0, isHostage=true, isOngoing=true, cost=2,},
+        ["RC Ben Urich"] = {vp=0, isHostage=true, isOngoing=true, cost=2,},
+        ["RC Dr. Elihas Starr"] = {vp=0, isHostage=true, isOngoing=true, cost=2,},
+        ["RC Aunt May"] = {vp=0, isHostage=true, isOngoing=true, cost=2,},
+        ["RC Harry Osborn"] = {vp=0, isHostage=true, isOngoing=true, cost=2,},
+        ["RC Silvio Manfredi"] = {vp=0, isHostage=true, isDefense=true, isOngoing=true, cost=2,},
+        ["RC Edwin Jarvis"] = {vp=0, isHostage=true, isDefense=true, isOngoing=true, cost=2,},
+        ["RC Senator Robert Kelly"] = {vp=0, isHostage=true, isDefense=true, isOngoing=true, cost=2,},
+
+
 --Equipment
         ["AA The Mind Stone"] = {vp=0, isEquipment=true, isExpPowerRing=true, isAttack=true, cost=5, id=7910},
         ["AA The Power Stone"] = {vp=0, isEquipment=true, isExpPowerRing=true, isDefense=true, cost=5, id=5382},
@@ -55,7 +121,6 @@
         ["TU Milano"] = {vp=2, isEquipment=true, isDefense=true, cost=7, id=8729},
         ["R1 Spider-Mobile"] = {vp=1, isEquipment=true, cost=3, id=9093},
         ["CW Loki's Scepter"] = {vp=1, isEquipment=true, isAttack=true, cost=4, id=4960},
-        
 
 
 --Superpower

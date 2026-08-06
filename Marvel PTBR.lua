@@ -1,4 +1,70 @@
---Equipamento
+--MC
+	["CW Feiticeira Escarlate (Level 3)"] = {vp=0, isHero=true, isCharacter=true, cost=15, id=8093},
+    ["IW1 Feiticeira Escarlate"] = {vp=0, isCharacter=true, id=3545},
+    ["CW2 Carnificina"] = {vp=0, isCharacter=true,},
+    ["CC1 Ciclone"] = {vp=0, isCharacter=true,},
+    ["IW1 Mercúrio"] = {vp=0, isCharacter=true, id=8396},
+    ["IW4 Tritão"] = {vp=0, isCharacter=true, id=1991},
+    ["CW Hulk (Level 2)"] = {vp=6, isHero=true, isCharacter=true, cost=12, id=5356},
+    ["KIB Hulk"] = {vp=0, isCharacter=true, id=1825},
+    ["IW1 Hulk"] = {vp=0, isCharacter=true, id=7639},
+    ["IW4 Ciclope"] = {vp=0, isCharacter=true, id=5443},
+    ["IW2 Capitão Mar-vell (Character)"] = {vp=0, isCharacter=true, id=5572},
+    ["IW4 Tempestade"] = {vp=0, isCharacter=true, id=8656},
+    ["MS Fanático"] = {vp=0, isCharacter=true,},
+    ["CO4 Aero"] = {vp=0, isCharacter=true, id=6875},
+    ["RC Mystério"] = {vp=0, isCharacter=true,},
+    ["CO3 Mulher Invisível"] = {vp=0, isCharacter=true, id=6119},
+    ["CO2 Harpia"] = {vp=0, isCharacter=true, id=8386},
+    ["C1 Homem-Aranha"] = {vp=0, isCharacter=true, id=1559},
+    ["C4 Noturno"] = {vp=0, isCharacter=true, id=8130},
+    ["TV Mandarim"] = {vp=0, isCharacter=true,},
+    ["C3 Víbora"] = {vp=0, isCharacter=true, id=4022},
+    ["RC Víbora"] = {vp=0, isCharacter=true,},
+    ["CC1 Vampira"] = {vp=0, isCharacter=true,},
+    ["CO3 Kitty Pryde"] = {vp=0, isCharacter=true, id=3411},
+    
+
+--Transformadas
+    ["MS Defender"] = {vp=1, isStarter=true, cost=0,}, -- Transformed
+    ["MS A Poderosa Thor"] = {vp=1, isHero=true, cost=6,},
+    ["MS Thor, Deus do Trovão"] = {vp=1, isHero=true, cost=4,},
+    ["MS Morbius, O Vampiro"] = {vp=2, isVillain=true, cost=6,},
+    ["MS A Poderosa Thor, corrompida"] = {vp=2, isVillain=true, cost=5,},
+    ["MS Coração Negro, O Príncipe do Inferno"] = {vp=1, isVillain=true, cost=6,},
+    ["MS Darkhold: O Tomo Negro"] = {vp=2, isEquipment=true, cost=5,},
+    ["Promo Doutor Estranho, Mago Supremo"] = {vp=0, isCharacter=true,},
+
+--Chutes
+    ["R5 Dias de um Futuro Esquecido"] = {vp=1, cost=3,},
+    ["RC O Tentáculo"] = {vp=1, isVillain=true, cost=3,},
+    ["MS Ritual Sombrio"] = {vp=1, cost=3,},
+    ["CW2 Voadora"] = {vp=1, isAttack=true, cost=3,},
+    ["R4 Alteração de Probabilidade"] = {vp=1, isSuperPower=true, cost=3,},
+    ["CW Força Intensificada"] = {vp=1, isStarter=true, cost=3},
+    ["KIB Sacrifício Final"] = {vp=1, cost=3, id=9145},
+    ["R2 Arsenal Psíquico"] = {vp=1, cost=3, id=0},
+    ["R3 Velocidade da Luz"] = {vp=1, cost=3,},
+
+
+--Refens
+    ["RC Rick Jones"] = {vp=0, isHostage=true, isOngoing=true, cost=2,},
+    ["RC Dakota North"] = {vp=0, isHostage=true, isOngoing=true, cost=2,},
+    ["RC J. Jonah Jamason"] = {vp=0, isHostage=true, isDefense=true, isOngoing=true, cost=2,},
+    ["RC Karen Page"] = {vp=0, isHostage=true, isOngoing=true, cost=2,},
+    ["RC Sharon Carter"] = {vp=0, isHostage=true, isOngoing=true, cost=2,},
+    ["RC Dr. Ashley Kafka"] = {vp=0, isHostage=true, isOngoing=true, cost=2,},
+    ["RC Foggy Nelson"] = {vp=0, isHostage=true, isOngoing=true, cost=2,},
+    ["RC Ben Urich"] = {vp=0, isHostage=true, isOngoing=true, cost=2,},
+    ["RC Dr. Elihas Starr"] = {vp=0, isHostage=true, isOngoing=true, cost=2,},
+    ["RC Tia May"] = {vp=0, isHostage=true, isOngoing=true, cost=2,},
+    ["RC Harry Osborn"] = {vp=0, isHostage=true, isOngoing=true, cost=2,},
+    ["RC Silvio Manfredi"] = {vp=0, isHostage=true, isDefense=true, isOngoing=true, cost=2,},
+    ["RC Edwin Jarvis"] = {vp=0, isHostage=true, isDefense=true, isOngoing=true, cost=2,},
+    ["RC Senador Robert Kelly"] = {vp=0, isHostage=true, isDefense=true, isOngoing=true, cost=2,},
+
+
+    --Equipamento
     ["AA Joia da Mente"] = {vp=0, isEquipment=true, isExpPowerRing=true, isAttack=true, cost=5, id=7910},
     ["AA A Joia do Poder"] = {vp=0, isEquipment=true, isExpPowerRing=true, isDefense=true, cost=5, id=5382},
     ["R2 A Joia do Poder"] = {vp=1, isEquipment=true, isPowerRing=true, isDefense=true, cost=5, id=6406},
