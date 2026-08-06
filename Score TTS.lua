@@ -119,7 +119,7 @@ function checkVPbag() -- Grab VP Score
 						vpBagToScoreList[i].abilityEA2_8 = vpBagToScoreList[i].abilityEA2_8 + 1 -- +1 vp for each treasure
 					elseif tokens.Nickname == "You're a Dingler!" then
 						vpBagToScoreList[i].dingler = vpBagToScoreList[i].dingler + 1 -- -5 vp for being a Dingler
-					elseif tokens.Nickname == "CO12 Catwoman" then
+					elseif tokens.Nickname == "CO12 Catwoman" or tokens.Nickname == "CO12 Black Cat" or tokens.Nickname == "CO12 Gata Negra" then
 						vpBagToScoreList[i].catwomanCO12 =
 							vpBagToScoreList[i].catwomanCO12 + 1
 					end
@@ -860,7 +860,7 @@ function addVPforSpecialCards()
              end
              scoreValueList[i].vp = scoreValueList[i].vp + (c * scoreValueList[i].expBribes)
        end
-		-- CO12 Catwoman = 1VP for each card with cost 7 or greater
+		-- CO12 Catwoman / CO12 Black Cat / CO12 Gata Negra = 1VP for each card with cost 7 or greater
 		if scoreValueList[i].catwomanCO12 > 0 then
 			scoreValueList[i].vp =
 				scoreValueList[i].vp +
@@ -1330,6 +1330,9 @@ masterTokenTable = {
 	["RotK The One Ring"] = {vp=5,},
 	--CO12 Hush
 	["CO12 Catwoman"] = {vp=0},
+	["CO12 Black Cat"] = {vp=0},
+	["CO12 Gata Negra"] = {vp=0},
+
 	--EA1
 	["EA1 Dead Wizard Token 1"] = {vp=-3, isDWT=true,},
 	["EA1 Dead Wizard Token 2"] = {vp=-3, isDWT=true,},
@@ -2012,6 +2015,8 @@ masterCardTable = {
 	--Oversized Character Cards
 	["DNM Aquaman (Character)"] = {vp=0, isCharacter=true, id=1386},
 	["DNM Batman"] = {vp=0, isCharacter=true, id=5148},
+		["KIB Iron Man"] = {vp=0, isCharacter=true, id=5148},
+		["KIB Homem de Ferro"] = {vp=0, isCharacter=true, id=5148},
 	["DNM Cyborg"] = {vp=0, isCharacter=true, id=9423},
 	["DNM Deathstroke (Character)"] = {vp=0, isCharacter=true, id=6437},
 	["DNM Doctor Fate (Character)"] = {vp=0, isCharacter=true, id=1485},
@@ -2198,6 +2203,8 @@ masterCardTable = {
 	["INJ Injustice Batman (Character)"] = {vp=0, isCharacter=true,},
 	["INJ Injustice Catwoman (Character)"] = {vp=0, isCharacter=true,},
 	["INJ Injustice Green Arrow"] = {vp=0, isCharacter=true,},
+		["CW2 Hawkeye"] = {vp=0, isCharacter=true,},
+		["CW2 Gavião Arqueiro"] = {vp=0, isCharacter=true,},
 	["INJ Injustice Harley Quinn"] = {vp=0, isCharacter=true,},
 	["INJ Injustice Hawkgirl"] = {vp=0, isCharacter=true,},
 	["INJ Injustice Killer Frost (Character)"] = {vp=0, isCharacter=true,},
@@ -2207,8 +2214,12 @@ masterCardTable = {
 	["INJ Injustice Shazam! (Character)"] = {vp=0, isCharacter=true,},
 	["INJ Injustice Sinestro (Character)"] = {vp=0, isCharacter=true,},
 	["INJ Injustice Superman (Character)"] = {vp=0, isCharacter=true,},
+		["CW2 Hulk World War (Character)"] = {vp=0, isCharacter=true,},
+		["CW2 Hulk Contra o Mundo (Character)"] = {vp=0, isCharacter=true,},
 	["INJ Injustice The Flash (Character)"] = {vp=0, isCharacter=true,},
 	["INJ Injustice Wonder Woman"] = {vp=0, isCharacter=true,},
+		["CW2 Captain Marvel - Earth 101"] = {vp=0, isCharacter=true,},
+		["CW2 Capitã Marvel - Earth 101"] = {vp=0, isCharacter=true,},
 	["INJ Injustice Yellow Lantern"] = {vp=0, isCharacter=true,},
 	["INJ The Batman Who Laughs"] = {vp=0, isCharacter=true,},
 	["INJ The Joker (Earth-1)"] = {vp=0, isCharacter=true,},
@@ -2406,6 +2417,8 @@ masterCardTable = {
 	["JLD Deadman (Character)"] = {vp=0, isCharacter=true,},
 	["JLD Detective Chimp (Character)"] = {vp=0, isCharacter=true,},
 	["JLD Doctor Fate"] = {vp=0, isCharacter=true,},
+		["MS Doctor Strange"] = {vp=0, isCharacter=true,},
+		["MS Doutor Estranho"] = {vp=0, isCharacter=true,},
 	["JLD John Constantine"] = {vp=0, isCharacter=true,},
 	["JLD Madame Xanadu (Character)"] = {vp=0, isCharacter=true,},
 	["JLD Man-Bat"] = {vp=0, isCharacter=true,},
@@ -2413,6 +2426,8 @@ masterCardTable = {
 	["JLD Swamp Thing"] = {vp=0, isCharacter=true,},
 	["JLD Wonder Woman (Character)"] = {vp=0, isCharacter=true,},
 	["JLD Zatanna Zatara (Character)"] = {vp=0, isCharacter=true,},
+		["MS Scarlet Witch (Character)"] = {vp=0, isCharacter=true,},
+		["MS Feiticeira Escarlate (Character)"] = {vp=0, isCharacter=true,},
 	--1)7)A) Justice League Dark Expansion
 	--Villains 
 	["JLDX Blackbriar Thorn, Druid"] = {vp=1, isVillain=true, cost=4,},
@@ -2805,6 +2820,8 @@ masterCardTable = {
 	["C1 Cyborg"] = {vp=0, isCharacter=true, id=4937},
 	["C1 Green Lantern"] = {vp=0, isCharacter=true, id=5277},
 	["C1 Martian Manhunter"] = {vp=0, isCharacter=true, id=8566},
+		["IW1 Vision"] = {vp=0, isCharacter=true, id=8566},
+		["IW1 Visão"] = {vp=0, isCharacter=true, id=8566},
 	["C1 Superman"] = {vp=0, isCharacter=true, id=7639},
 		["IW1 Hulk"] = {vp=0, isCharacter=true, id=7639},
 	["C1 The Flash"] = {vp=0, isCharacter=true, id=8396},
@@ -2813,6 +2830,7 @@ masterCardTable = {
 	["C1 Wonderwoman"] = {vp=0, isCharacter=true, id=3947},
 	["C1 Animal Man (Character)"] = {vp=0, isCharacter=true, id=7227},
 	["C1 Constantine"] = {vp=0, isCharacter=true, id=9229},
+		["IW1 Wolverine"] = {vp=0, isCharacter=true, id=9229},
 	["C1 Green Arrow"] = {vp=0, isCharacter=true, id=5057},
 	["C1 Robin"] = {vp=0, isCharacter=true, id=1559},
 		["C1 Spider-man"] = {vp=0, isCharacter=true, id=1559},
@@ -2898,12 +2916,15 @@ masterCardTable = {
 	["C2 Black Canary"] = {vp=0, isCharacter=true, id=8748},
 	["C2 Booster Gold"] = {vp=0, isCharacter=true, id=5900},
 	["C2 Hawkman"] = {vp=0, isCharacter=true, id=5115},
+		["IW2 Angel"] = {vp=0, isCharacter=true, id=5115},
+		["IW2 Anjo"] = {vp=0, isCharacter=true, id=5115},
 	["C2 Nightwing"] = {vp=0, isCharacter=true, id=9573},
 	["C2 Red Tornado"] = {vp=0, isCharacter=true, id=7162},
 	["C2 Shazam!"] = {vp=0, isCharacter=true, id=6417},
 	["C2 Starfire"] = {vp=0, isCharacter=true, id=7537},
 	["C2 Indigo-1"] = {vp=0, isCharacter=true, id=8659},
 	["C2 Kyle Rayner"] = {vp=0, isCharacter=true, id=1500},
+		["IW2 Nova Prime"] = {vp=0, isCharacter=true, id=1500},
 	["C2 Red Lantern Supergirl"] = {vp=0, isCharacter=true, id=3529},
 	["C2 Saint Walker"] = {vp=0, isCharacter=true, id=6916},
 	["C2 Star Sapphire (Character)"] = {vp=0, isCharacter=true, id=5572},
@@ -3079,6 +3100,7 @@ masterCardTable = {
 	["C4 Donna Troy (Character)"] = {vp=0, isCharacter=true, id=8599},
 	["C4 Nightwing"] = {vp=0, isCharacter=true, id=5186},
 	["C4 Omen (Character)"] = {vp=0, isCharacter=true, id=5034},
+		["IW4 Blink"] = {vp=0, isCharacter=true, id=5034},
 	["C4 Tempest"] = {vp=0, isCharacter=true, id=1991},
 		["IW4 Triton"] = {vp=0, isCharacter=true, id=1991},
 		["IW4 Tritão"] = {vp=0, isCharacter=true, id=1991},
@@ -3156,7 +3178,10 @@ masterCardTable = {
 	["C5 The Mindhunter"] = {vp=7, isVillain=true, isBoss=true, cost=11,},
 	--Oversized Character Cards
 	["C5 Aquaman"] = {vp=0, isCharacter=true,},
+		["IW5 Namor"] = {vp=0, isCharacter=true,},
 	["C5 Batman"] = {vp=0, isCharacter=true,},
+		["IW5 Iron Man"] = {vp=0, isCharacter=true,},
+		["IW5 Homem de Ferro"] = {vp=0, isCharacter=true,},
 	["C5 Cyborg"] = {vp=0, isCharacter=true,},
 	["C5 Hawkgirl"] = {vp=0, isCharacter=true,},
 	["C5 Nightwing"] = {vp=0, isCharacter=true,},
@@ -3207,6 +3232,7 @@ masterCardTable = {
 	["CC1 Crisis Doctor Fate"] = {vp=0, isCharacter=true,},
 	["CC1 Crisis Green Lantern"] = {vp=0, isCharacter=true,},
 	["CC1 Crisis Mr. Terrific"] = {vp=0, isCharacter=true,},
+		["CC1 Charles Xavier Professor X"] = {vp=0, isCharacter=true,},
 	["CC1 Crisis Power Girl"] = {vp=0, isCharacter=true,},
 		["CC1 Rogue"] = {vp=0, isCharacter=true,},
 		["CC1 Vampira"] = {vp=0, isCharacter=true,},
@@ -3593,6 +3619,8 @@ masterCardTable = {
 	["R4 Rock of Eternity"] = {vp=2, isLocation=true, isOngoing=true, cost=6},
 	--Oversized Character Cards
 	["R4 Black Adam (Level 1)"] = {vp=4, isVillain=true, isCharacter=true, cost=9,},
+		["R4 Sentry (Level 1)"] = {vp=4, isVillain=true, isCharacter=true, cost=9,},
+		["R4 O Sentinela (Level 1)"] = {vp=4, isVillain=true, isCharacter=true, cost=9,},
 	["R4 Black Adam (Level 2)"] = {vp=6, isVillain=true, isCharacter=true, cost=12,},
 	["R4 Black Adam (Level 3)"] = {vp=0, isVillain=true, isCharacter=true, cost=15,},
 	["R4 Shazam! (Level 1)"] = {vp=4, isHero=true, isCharacter=true, cost=9,},
@@ -3862,6 +3890,8 @@ masterCardTable = {
 	["RC Wonder Woman (Level 2)"] = {vp=6, isHero=true, isCharacter=true, cost=12, id=9713},
 	["RC Wonder Woman (Level 3)"] = {vp=0, isHero=true, isCharacter=true, cost=15, id=7179},
 	["RC Zatanna Zatara (Level 1)"] = {vp=4, isHero=true, isCharacter=true, cost=9, id=8752},
+		["CW Scarlet Witch (Level 1)"] = {vp=4, isHero=true, isCharacter=true, cost=9, id=8752},
+		["CW Feiticeira Escarlate (Level 1)"] = {vp=4, isHero=true, isCharacter=true, cost=9, id=8752},
 	["RC Zatanna Zatara (Level 2)"] = {vp=6, isHero=true, isCharacter=true, cost=12, id=7569},
 	["RC Zatanna Zatara (Level 3)"] = {vp=0, isHero=true, isCharacter=true, cost=15, id=8093},
 		["CW Scarlet Witch (Level 3)"] = {vp=0, isHero=true, isCharacter=true, cost=15, id=8093},
@@ -3869,12 +3899,17 @@ masterCardTable = {
 	["RC Circe (Level 1)"] = {vp=4, isVillain=true, isCharacter=true, cost=9, id=1749},
 	["RC Circe (Level 2)"] = {vp=6, isVillain=true, isCharacter=true, cost=12, id=8459},
 	["RC Circe (Level 3)"] = {vp=0, isVillain=true, isCharacter=true, cost=15, id=2129},
+		["CW Agatha Harkness (Level 3)"] = {vp=0, isVillain=true, isCharacter=true, cost=15, id=2129},
 	["RC Felix Faust (Level 1)"] = {vp=4, isVillain=true, isCharacter=true, cost=9, id=7822},
 	["RC Felix Faust (Level 2)"] = {vp=6, isVillain=true, isCharacter=true, cost=12, id=9978},
 	["RC Felix Faust (Level 3)"] = {vp=0, isVillain=true, isCharacter=true, cost=15, id=1354},
 	["RC Lex Luthor (Level 1)"] = {vp=4, isVillain=true, isCharacter=true, cost=9, id=4725},
+		["CW Doctor Doom (Level 1)"] = {vp=4, isVillain=true, isCharacter=true, cost=9, id=4725},
+		["CW Doutor Destino (Level 1)"] = {vp=4, isVillain=true, isCharacter=true, cost=9, id=4725},
 	["RC Lex Luthor (Level 2)"] = {vp=6, isVillain=true, isCharacter=true, cost=12, id=8815},
 	["RC Lex Luthor (Level 3)"] = {vp=0, isVillain=true, isCharacter=true, cost=15, id=7042},
+		["CW Doctor Doom (Level 3)"] = {vp=0, isVillain=true, isCharacter=true, cost=15, id=7042},
+		["CW Doutor Destino (Level 3)"] = {vp=0, isVillain=true, isCharacter=true, cost=15, id=7042},
 	["RC Ocean Master (Level 1)"] = {vp=4, isVillain=true, isCharacter=true, cost=9, id=5214},
 	["RC Ocean Master (Level 2)"] = {vp=6, isVillain=true, isCharacter=true, cost=12, id=8779},
 	["RC Ocean Master (Level 3)"] = {vp=0, isVillain=true, isCharacter=true, cost=15, id=9425},
@@ -3915,6 +3950,8 @@ masterCardTable = {
 	["CO1 Alan Scott"] = {vp=0, isCharacter=true, id=4559},
 	["CO1 Doctor Fate"] = {vp=0, isCharacter=true, id=4767},
 	["CO1 Jay Garrick"] = {vp=0, isCharacter=true, id=5596},
+		["CO1 Whizzer"] = {vp=0, isCharacter=true, id=5596},
+		["CO1 Ciclone"] = {vp=0, isCharacter=true, id=5596},
 	["CO1 Mister Terrific"] = {vp=0, isCharacter=true, id=1664},
 	["CO1 Power Girl"] = {vp=0, isCharacter=true, id=9021},
 	["CO1 Stargirl"] = {vp=0, isCharacter=true, id=1790},
@@ -3955,6 +3992,8 @@ masterCardTable = {
 	--Oversized Character Cards
 	["CO2 Felicity Smoak"] = {vp=0, isCharacter=true, id=6272},
 	["CO2 John Diggle"] = {vp=0, isCharacter=true, id=1315},
+		["CO2 Agent 13 Sharon Carter"] = {vp=0, isCharacter=true, id=1315},
+		["CO2 Agente 13 Sharon Carter"] = {vp=0, isCharacter=true, id=1315},
 	["CO2 Oliver Queen"] = {vp=0, isCharacter=true, id=8690},
 	["CO2 Roy Harper"] = {vp=0, isCharacter=true, id=6182},
 	["CO2 Sara Lance"] = {vp=0, isCharacter=true, id=8386},
@@ -4003,6 +4042,8 @@ masterCardTable = {
 	["CO3 Chameleon Boy"] = {vp=0, isCharacter=true, id=8002},
 	["CO3 Cosmic Boy"] = {vp=0, isCharacter=true, id=4678},
 	["CO3 Lightning Lad"] = {vp=0, isCharacter=true, id=9641},
+		["CO3 Black Bolt"] = {vp=0, isCharacter=true, id=9641},
+		["CO3 Raio Negro"] = {vp=0, isCharacter=true, id=9641},
 	["CO3 Phantom Girl"] = {vp=0, isCharacter=true, id=3411},
 		["CO3 Kitty Pryde"] = {vp=0, isCharacter=true, id=3411},
 	["CO3 Saturn Girl"] = {vp=0, isCharacter=true, id=6119},
@@ -4047,6 +4088,7 @@ masterCardTable = {
 	--Oversized Character Cards
 	["CO4 Dr. Manhattan"] = {vp=0, isCharacter=true, id=5711},
 	["CO4 Nite Owl"] = {vp=0, isCharacter=true, id=8590},
+		["CO4 Cable"] = {vp=0, isCharacter=true, id=8590},
 	["CO4 Ozymandias"] = {vp=0, isCharacter=true, id=9056},
 	["CO4 Rorschach"] = {vp=0, isCharacter=true, id=3892},
 	["CO4 Silk Spectre"] = {vp=0, isCharacter=true, id=6875},
@@ -4150,11 +4192,20 @@ masterCardTable = {
 	["CO6 The Calculator"] = {vp=5, isVillain=true, isBoss=true, cost=9, id=7466},
 	--Oversized Character Cards
 	["CO6 Batwoman"] = {vp=0, isCharacter=true, id=4274},
+		["CO6 War Machine"] = {vp=0, isCharacter=true, id=4274},
+		["CO6 Máquina de Combate"] = {vp=0, isCharacter=true, id=4274},
 	["CO6 Black Canary"] = {vp=0, isCharacter=true, id=4237},
+		["CO6 Black Widow"] = {vp=0, isCharacter=true, id=4237},
+		["CO6 Viúva Negra"] = {vp=0, isCharacter=true, id=4237},
 	["CO6 Catwoman"] = {vp=0, isCharacter=true, id=4365},
+		["CO6 Black Cat"] = {vp=0, isCharacter=true, id=4365},
+		["CO6 Gata Negra"] = {vp=0, isCharacter=true, id=4365},
 	["CO6 Huntress"] = {vp=0, isCharacter=true, id=8136},
+		["CO6 Blade"] = {vp=0, isCharacter=true, id=8136},
 	["CO6 Katana"] = {vp=0, isCharacter=true, id=9790},
+		["CO6 Psylocke"] = {vp=0, isCharacter=true, id=9790},
 	["CO6 Oracle"] = {vp=0, isCharacter=true, id=6827},
+		["CO6 Miles Morales"] = {vp=0, isCharacter=true, id=6827},
 	--4)7) Crossover 7 - New Gods
 	--Heroes
 	["CO7 Big Barda"] = {vp=1, isHero=true, cost=5, id=1995},
@@ -4309,6 +4360,8 @@ masterCardTable = {
 	["CO9 Supergirl"] = {vp=0, isCharacter=true,},
 	["CO9 Wonder Woman"] = {vp=0, isCharacter=true,},
 	["CO9 Zatana"] = {vp=0, isCharacter=true,},
+		["CO9 Scarlet Witch"] = {vp=0, isCharacter=true,},
+		["CO9 Feiticeira Escarlate"] = {vp=0, isCharacter=true,},
 	--4)10) Crossover 10 - Flashpoint
 	--Heroes
 	["CO10 Flashpoint Britannia"] = {vp=-2, isHero=true, isTimeLineUp=true, cost=5,},
@@ -4369,6 +4422,8 @@ masterCardTable = {
 	["CO10 Flashpoint Green Lantern"] = {vp=0, isCharacter=true,},
 	["CO10 Flashpoint Superman"] = {vp=0, isCharacter=true,},
 	["CO10 Flashpoint The Flash"] = {vp=0, isCharacter=true,},
+		["CO10 Earth X Quicksilver"] = {vp=0, isCharacter=true,},
+		["CO10 Mercúrio Terra X"] = {vp=0, isCharacter=true,},
 	["CO10 Queen Diana"] = {vp=0, isCharacter=true,},
 	--4)11) Crossover 11 - Dark Knights Rising
 	--Equipment
@@ -4436,7 +4491,11 @@ masterCardTable = {
 	["CO11 Wonder Woman"] = {vp=9, isHero=true, isBoss=true, cost=14,},
 	--Oversized Character Cards
 	["CO11 Batman (Earth-1)"] = {vp=0, isCharacter=true,},
+		["CO11 Iron Man Darkhold"] = {vp=0, isCharacter=true,},
+		["CO11 Homem de Ferro Darkhold"] = {vp=0, isCharacter=true,},
 	["CO11 Batman (Earth-32)"] = {vp=0, isCharacter=true,},
+		["CO11 Superior Iron Man"] = {vp=0, isCharacter=true,},
+		["CO11 Homem de Ferro Superior"] = {vp=0, isCharacter=true,},
 	["CO11 Batman (Earth-11)"] = {vp=0, isCharacter=true,},
 	["CO11 Batman (Earth-12)"] = {vp=0, isCharacter=true,},
 	["CO11 Batman (Earth-44)"] = {vp=0, isCharacter=true,},
@@ -4469,6 +4528,8 @@ masterCardTable = {
 	["CO12 Superman"] = {vp=5, isHero=true, isDefense=true, isBoss=true, cost=10,},
 	--Oversized Character Cards
 	["CO12 Catwoman"] = {vp=0, isCharacter=true,},
+		["CO12 Black Cat"] = {vp=0, isCharacter=true,},
+		["CO12 Gata Negra"] = {vp=0, isCharacter=true,},
 	["CO12 Huntress"] = {vp=0, isCharacter=true,},
 	["CO12 Nightwing"] = {vp=0, isCharacter=true,},
 	--5)1) Fellowship of the Rings
@@ -5779,6 +5840,8 @@ masterCardTable = {
 	["TTG Beast Boy"] = {vp=0, isCharacter=true, id=4758},
 	["TTG Cyborg"] = {vp=0, isCharacter=true, id=9762},
 	["TTG Kid Flash (Character)"] = {vp=0, isCharacter=true, id=1487},
+		["PROMO Speed"] = {vp=0, isCharacter=true, id=1487},
+		["PROMO Célere"] = {vp=0, isCharacter=true, id=1487},
 	["TTG Raven"] = {vp=0, isCharacter=true, id=8542},
 	["TTG Robin"] = {vp=0, isCharacter=true, id=8556},
 	["TTG Starfire"] = {vp=0, isCharacter=true, id=5964},
@@ -6074,6 +6137,7 @@ masterCardTable = {
 	["GC General Zod"] = {vp=0, isCharacter=true,},
 	["GC Brainiac"] = {vp=0, isCharacter=true,},
 	["GC Krypto"] = {vp=0, isCharacter=true,},
+		["PROMO Cosmo"] = {vp=0, isCharacter=true,},
 	["Goosey"] = {vp=0, isCharacter=true,},
 	--8)2) Multiverse
 	--Heroes
@@ -6872,6 +6936,7 @@ masterCardTable = {
 	["RB Darkseid (Impossible Mode)"] = {vp=0,},
 	--Oversized Character Cards
 	["RB Aquaman (Character)"] = {vp=0, isCharacter=true, id=6860},
+		["SW Namor (Character)"] = {vp=0, isCharacter=true, id=6860},
 	["RB Batman(Character)"] = {vp=0, isCharacter=true, id=7128},
 	["RB Cyborg (Character)"] = {vp=0, isCharacter=true, id=7597},
 	["RB Jessica Cruz (Character)"] = {vp=0, isCharacter=true, id=6079},
@@ -6896,6 +6961,8 @@ masterCardTable = {
 	--Oversized Character Cards
 	["OS3 Billy Batson/Shazam"] = {vp=0, isCharacter=true,},
 	["OS3 Zatanna"] = {vp=0, isCharacter=true,},
+		["SW3 Scarlet Witch"] = {vp=0, isCharacter=true,},
+		["SW3 Feiticeira Escarlate"] = {vp=0, isCharacter=true,},
 	--OF)Hutson)0)1) Marvel
 	--Other
 	["MA Punch"] = {vp=0, isStarter=true, cost=0, id=8867},
