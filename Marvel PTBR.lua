@@ -63,8 +63,7 @@
     ["RC Edwin Jarvis"] = {vp=0, isHostage=true, isDefense=true, isOngoing=true, cost=2,},
     ["RC Senador Robert Kelly"] = {vp=0, isHostage=true, isDefense=true, isOngoing=true, cost=2,},
 
-
-    --Equipamento
+--Equipamento
     ["AA Joia da Mente"] = {vp=0, isEquipment=true, isExpPowerRing=true, isAttack=true, cost=5, id=7910},
     ["AA A Joia do Poder"] = {vp=0, isEquipment=true, isExpPowerRing=true, isDefense=true, cost=5, id=5382},
     ["R2 A Joia do Poder"] = {vp=1, isEquipment=true, isPowerRing=true, isDefense=true, cost=5, id=6406},
