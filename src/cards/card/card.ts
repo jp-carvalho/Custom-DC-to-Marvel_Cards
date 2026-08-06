@@ -94,11 +94,11 @@ export class Card {
         "Range",
         "Recompensa",
         "Reward",
-        "Seal",
+        // "Seal",
         "Seal a Location you control",
         "Sele",
         "Sele uma Localização que você controla",
-        "Selar",
+        // "Selar",
         "Sidekicks",
         "SIMBIONTE",
         "Speedster",
@@ -151,7 +151,7 @@ export class Card {
                 "If you destroy or discard this card from your hand, deck, or discard pile, gain it and put it into your hand.",
                 "Se você destruir ou descartar esta carta de sua mão, baralho ou pilha de descarte, ganhe-a e coloque-a em sua mão.",
                 "After you discard or Seal this card from any zone, you may surge.",
-                "Depois de descartar ou Selar esta carta de qualquer zona, Surge.",
+                "Depois de descartar ou Selar esta carta de qualquer zona, faça Surge.",
                 "After this card enters your discard pile from any zone, you may put it on the bottom of your deck.",
                 "Depois que esta carta entrar em sua pilha de descarte vinda de qualquer zona, você pode colocá-la no fundo do seu baralho.",
             ],
@@ -409,11 +409,12 @@ export class Card {
         for (const config of Card.highlightConfigs) {
             for (const phrase of config.phrases) {
                 if (phrase === "After this card enters your discard pile from any zone, you may put it on the bottom of your deck." ||
-                    phrase === "Depois que esta carta entrar em sua pilha de descarte vinda de qualquer zona, você pode colocá-la no fundo do seu baralho.") {
+                    phrase === "Depois que esta carta entrar em sua pilha de descarte vinda de qualquer zona, você pode colocá-la no fundo do seu baralho." ||
+                    phrase === "After you discard or Seal this card from any zone, you may surge." ||
+                    phrase === "Depois de descartar ou Selar esta carta de qualquer zona, faça Surge.") {
                     continue;
                 }
                 const escaped = phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-                phrasesToProtect.unshift(new RegExp(escaped, 'gi'));
             }
         }
 
@@ -664,6 +665,10 @@ export class Card {
                 spriteName = "Equipment transform";
             } else if (this.type === "Starter" || this.type === "Inicial") {
                 spriteName = "Starter transform";
+            }
+        } else if (this.variant === "Transform Base") {
+            if (this.type === "Equipment" || this.type === "Equipamento") {
+                spriteName = "equipment transform base";
             }
         } else if (this.variant === "Materialization") {
             if (this.type === "Super Power") {
@@ -1074,7 +1079,7 @@ export class Card {
             maxHeight -= 10;
         }
 
-        if (this.variant === "Transform" && (this.type === "Equipment" || this.type === "Equipamento") && !this.oversized) {
+        if ((this.variant === "Transform" || this.variant === "Transform Base") && (this.type === "Equipment" || this.type === "Equipamento") && !this.oversized) {
             y += 15;
             maxHeight -= 15;
         }
@@ -1087,9 +1092,9 @@ export class Card {
         if (this.preferredTextSize > 0) {
             style.fontSize = this.preferredTextSize;
         } else {
-            style.fontSize = 46;
+            style.fontSize = 42;
             if (this.text.length >= 130) {
-                style.fontSize = 38;
+                style.fontSize = 42;
             }
         }
 
