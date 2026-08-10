@@ -250,6 +250,49 @@
     ["IW1 Ka-Zar (Character)"] = {vp=0, isCharacter=true, id=7227},
 
 -- MC Tier 4
+    ["TU Morfo"] = {vp=0, isCharacter=true, id=4758},
+    ["CW Capitã Marvel (Level 3)"] = {vp=0, isHero=true, isCharacter=true, cost=15, id=7179},
+    ["MS Agatha Harkness"] = {vp=0, isCharacter=true,},
+    ["MS Capitã Marvel (Character)"] = {vp=0, isCharacter=true,},
+    ["PROMO Falcão de Aço"] = {vp=0, isCharacter=true, id=3482},
+    ["ST Gambit (Character)"] = {vp=0, isCharacter=true,},
+    ["R3 Mercúrio (Level 2)"] = {vp=6, isHero=true, isCharacter=true, cost=12,},
+    ["PROMO Imperador Stark"] = {vp=0, isCharacter=true,},
+    ["CW Hulk (Level 3)"] = {vp=0, isHero=true, isCharacter=true, cost=15, id=6529},
+    ["DA Aniquilador"] = {vp=0, isCharacter=true, id=8933},
+    ["R4 Thor (Level 3)"] = {vp=0, isHero=true, isCharacter=true, cost=15,},
+    ["MS Cavaleiro da Lua"] = {vp=0, isCharacter=true,},
+    ["TV Miles Morales"] = {vp=0, isCharacter=true,},
+    ["CO2 Kate Bishop"] = {vp=0, isCharacter=true, id=6182},
+    ["MS Wolverine"] = {vp=0, isCharacter=true,},
+    ["CW2 Homem de Ferro 2099 (Character)"] = {vp=0, isCharacter=true,},
+    ["CO5 Vulcano"] = {vp=0, isCharacter=true, id=4170},
+    ["DA Elektra"] = {vp=0, isCharacter=true, id=6998},
+    ["MS Encantor"] = {vp=0, isCharacter=true,},
+    ["CW Mefisto (Level 1)"] = {vp=4, isVillain=true, isCharacter=true, cost=9, id=7822},
+    ["IW3 Rei das Sombras"] = {vp=0, isCharacter=true, id=1367},
+    ["CO7 Thanos (Character)"] = {vp=0, isCharacter=true, id=7493},
+    ["AA Senhor das Estrelas"] = {vp=0, isCharacter=true, id=1152},
+    ["CO9 Máquina  de Combate"] = {vp=0, isCharacter=true,},
+    ["CW Namor (Level 2)"] = {vp=6, isHero=true, isCharacter=true, cost=12, id=6360},
+    ["CW Namor (Level 1)"] = {vp=4, isHero=true, isCharacter=true, cost=9, id=8514},
+    
+-- MC Tier 5
+    ["R3 Demônio da  Velocidade (Level 2)"] = {vp=6, isVillain=true, isCharacter=true, cost=12,},
+    ["KIB Sr. Fantástico (Character)"] = {vp=0, isCharacter=true, id=9345},
+    ["KIB Charles Xavier Professor X (Character)"] = {vp=0, isCharacter=true, id=2415},
+    ["R5 Doutor Destino (Level 2)"] = {vp=6, isCharacter=true,},
+    ["PROMO Ultron"] = {vp=0, isCharacter=true,},
+    ["CO11 Homem de Ferro V15"] = {vp=0, isCharacter=true,},
+    ["CW Namor (Level 3)"] = {vp=0, isHero=true, isCharacter=true, cost=15, id=4419},
+
+-- MC Tier 6
+    ["R1 Carnificina (Level 3)"] = {vp=0, isVillain=true, isCharacter=true, cost=15, id=8846},
+    ["CW Attuma (Level 2)"] = {vp=6, isVillain=true, isCharacter=true, cost=12, id=8779},
+    ["CO5 Super-Skrull"] = {vp=0, isCharacter=true, id=7724},
+    ["IW3 O Sentinela"] = {vp=0, isCharacter=true, id=9882},
+    ["R1 Homem de Ferro (Level 3)"] = {vp=0, isHero=true, isCharacter=true, cost=15, id=8677},
+    
 --Transformadas
     ["MS Defender"] = {vp=1, isStarter=true, cost=0,}, -- Transformed
     ["MS A Poderosa Thor"] = {vp=1, isHero=true, cost=6,},

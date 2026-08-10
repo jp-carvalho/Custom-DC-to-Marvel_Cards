@@ -103,7 +103,7 @@ export class Card {
         "SIMBIONTE",
         "Speedster",
         "Stack Ongoing",
-        "Start of your turn",
+        // "Start of your turn",
         "Suborno",
         "Subornar",
         "Surge",
