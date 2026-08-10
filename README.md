@@ -42,5 +42,9 @@ online: http://192.168.11.114:8080/#live-editor
 Alternatively run `npm run build` to run webpack and save the output in the `built/` directory, and you can deploy the static assets at your will.
 
 
+## Text Shortcuts
+*name* = Small Font for subnames
+{text} = Bold text for card texts
+
 TO DO AND TEST
 - CO12 Black Cat VP test 
