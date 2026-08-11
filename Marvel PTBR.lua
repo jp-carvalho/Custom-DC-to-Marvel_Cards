@@ -805,9 +805,7 @@
     ["TU Arcade"] = {vp=4, isBoss=true, isStartBoss=true, cost=8, id=4276},
     ["CO11 Homem de Ferro"] = {vp=4, isHero=true, isStartBoss=true, isBoss=true, cost=8,},
 
---Nemesis Custo 9
-    
-
+-- Nemesis Custo 9
     ["SP Homem-Aranha"] = {vp=5, isHero=true, isBoss=true, cost=9,},
     ["SP Tigresa"] = {vp=5, isHero=true, isBoss=true, cost=9,},
     ["SP Magnum"] = {vp=5, isHero=true, isBoss=true, cost=9,},
@@ -816,4 +814,24 @@
     ["CO6 Arnim Zola"] = {vp=5, isVillain=true, isBoss=true, cost=9, id=7466},
     ["IW5 Maníaco de Ferro"] = {vp=6, isVillain=true, isBoss=true, cost=9,},
     ["RE Mysterio"] = {vp=5, isVillain=true, isBoss=true, isAttack=true, cost=9,},
+    ["RC Homem-Aranha"] = {vp=5, isHero=true, isBoss=true, cost=9,},
+    ["CC1 Aberração Happy Hogan"] = {vp=5, isVillain=true, isBoss=true, cost=9,},
+    ["CO12 Víbora"] = {vp=5, isVillain=true, isBoss=true, cost=9,},
+    ["RC X-23"] = {vp=5, isHero=true, isBoss=true, cost=9,},
+    ["TV Cobra"] = {vp=5, isVillain=true, isBoss=true, cost=9,},
+    ["TV Ossos Cruzados"] = {vp=5, isVillain=true, isBoss=true, cost=9,},
+    ["CO11 Vespa"] = {vp=6, isHero=true, isBoss=true, cost=9,},
+    ["CW2 Thor Zumbi"] = {vp=5, isVillain=true, isBoss=true, cost=9,},
+    ["RC Blade"] = {vp=5, isHero=true, isBoss=true, cost=9,},
+    ["PROMO Falcão"] = {vp=5, isHero=true, isBoss=true, cost=9,},
+    ["CO11 Nova Richard Rider"] = {vp=6, isHero=true, isBoss=true, cost=9,},
+    ["MARVEL Mercenário"] = {vp=5, isVillain=true, isBoss=true, cost=9, id=5640},
+    ["CO11 Deadpool"] = {vp=6, isHero=true, isBoss=true, cost=9,},~
+    ["CO2 Madame Gao"] = {vp=5, isVillain=true, isBoss=true, cost=9, id=6400},
+    ["IW5 Sauron"] = {vp=6, isVillain=true, isBoss=true, cost=9,},
+    ["RE Magneto"] = {vp=5, isVillain=true, isBoss=true, cost=9,},
+    ["IW5 Homem de Ferro I.M.A."] = {vp=6, isVillain=true, isBoss=true, cost=9,},
+    ["IW5 Homem de Ferro Dormammu"] = {vp=6, isVillain=true, isBoss=true, cost=9,},
+    ["CO11 Namor"] = {vp=6, isHero=true, isBoss=true, cost=9,},
 
+-- Nemesis Custo 10

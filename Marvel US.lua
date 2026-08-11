@@ -805,9 +805,6 @@
     ["CO11 Iron Man"] = {vp=4, isHero=true, isStartBoss=true, isBoss=true, cost=8,},
 
 -- Cost 9 Nemesis
-    
-
-
     ["SP Spider-Man"] = {vp=5, isHero=true, isBoss=true, cost=9,},
     ["SP Tigra"] = {vp=5, isHero=true, isBoss=true, cost=9,},
     ["SP Wonder Man"] = {vp=5, isHero=true, isBoss=true, cost=9,},
@@ -816,5 +813,24 @@
     ["CO6 Arnim Zola"] = {vp=5, isVillain=true, isBoss=true, cost=9, id=7466},
     ["IW5 Iron Manic"] = {vp=6, isVillain=true, isBoss=true, cost=9,},
     ["RE Mysterio"] = {vp=5, isVillain=true, isBoss=true, isAttack=true, cost=9,},
-    
+    ["RC Spider-Man"] = {vp=5, isHero=true, isBoss=true, cost=9,},
+    ["CC1 Freak Happy Hogan"] = {vp=5, isVillain=true, isBoss=true, cost=9,},
+    ["CO12 Viper"] = {vp=5, isVillain=true, isBoss=true, cost=9,},
+    ["RC X-23"] = {vp=5, isHero=true, isBoss=true, cost=9,},
+    ["TV Cobra"] = {vp=5, isVillain=true, isBoss=true, cost=9,},
+    ["TV Crossbones"] = {vp=5, isVillain=true, isBoss=true, cost=9,},
+    ["CO11 Wasp"] = {vp=6, isHero=true, isBoss=true, cost=9,},
+    ["CW2 Zombie Thor"] = {vp=5, isVillain=true, isBoss=true, cost=9,},
+    ["RC Blade"] = {vp=5, isHero=true, isBoss=true, cost=9,},
+    ["PROMO Falcon"] = {vp=5, isHero=true, isBoss=true, cost=9,},
+    ["CO11 Nova Richard Rider"] = {vp=6, isHero=true, isBoss=true, cost=9,},
+    ["MARVEL Bullseye"] = {vp=5, isVillain=true, isBoss=true, cost=9, id=5640},
+    ["CO11 Deadpool"] = {vp=6, isHero=true, isBoss=true, cost=9,},
+    ["CO2 Madame Gao"] = {vp=5, isVillain=true, isBoss=true, cost=9, id=6400},
+    ["IW5 Sauron"] = {vp=6, isVillain=true, isBoss=true, cost=9,},
+    ["RE Magneto"] = {vp=5, isVillain=true, isBoss=true, cost=9,},
+    ["IW5 Iron Man A.I.M."] = {vp=6, isVillain=true, isBoss=true, cost=9,},
+    ["IW5 Iron Man Dormammu"] = {vp=6, isVillain=true, isBoss=true, cost=9,},
+    ["CO11 Namor"] = {vp=6, isHero=true, isBoss=true, cost=9,},
 
+-- Cost 10 Nemesis
