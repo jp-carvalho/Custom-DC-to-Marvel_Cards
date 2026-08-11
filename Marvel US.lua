@@ -292,7 +292,7 @@
     ["CO5 Super-Skrull"] = {vp=0, isCharacter=true, id=7724},
     ["IW3 Sentry"] = {vp=0, isCharacter=true, id=9882},
     ["R1 Iron Man (Level 3)"] = {vp=0, isHero=true, isCharacter=true, cost=15, id=8677},
-    
+
 --Transformed
     ["MS Defend"] = {vp=1, isStarter=true, cost=0,}, -- Transformed
     ["MS The Mighty Thor"] = {vp=1, isHero=true, cost=6,},
@@ -785,3 +785,36 @@
     ["TU Monster Isle"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=3123},
     ["MARVEL The Blue Area of the Moon"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=9435},
     ["IW2 Atlantis"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=7099},
+
+-- Starting Nemesis
+    ["SP Hulk"] = {vp=4, isHero=true, isBoss=true, isStartBoss=true, cost=8,},
+    ["IW2 Apocalypse"] = {vp=4, isVillain=true, isBoss=true, isStartBoss=true, isOngoing=true, cost=9, id=2179},
+    ["TV Night Trasher"] = {vp=4, isHero=true, isStartBoss=true, isBoss=true, cost=8, isDefense=true,},
+    ["CO9 Scorn Carnage's Daughter"] = {vp=4, isVillain=true, isBoss=true, isStartBoss=true, isAttack=true, isOngoing=true, cost=8,},
+    ["IW4 Wade Wilson Deadpool"] = {vp=4, isVillain=true, isBoss=true, isOngoing=true, isStartBoss=true, cost=9, id=9473},
+    ["IW1 Mandarin"] = {vp=4, isVillain=true, isBoss=true, isStartBoss=true, cost=9, id=5876},
+    ["MARVEL Mandarin"] = {vp=4, isVillain=true, isBoss=true, isStartBoss=true, cost=8, id=8938},
+    ["PROMO Jean Grey"] = {vp=4, isHero=true, isBoss=true, isStartBoss=true, cost=8,},
+    ["RE Doctor Doom"] = {vp=4, isVillain=true, isBoss=true, isStartBoss=true, cost=8,},
+    ["CO12 Lizard"] = {vp=4, isVillain=true, isStartBoss=true, isBoss=true, cost=8,},
+    ["CW2 Carnage"] = {vp=4, isVillain=true, isBoss=true, isStartBoss=true, isOngoing=true, cost=8,},
+    ["CC1 Ymir"] = {vp=4, isVillain=true, isBoss=true, isStartBoss=true, cost=8,},
+    ["RC Dum Dum Dugan"] = {vp=4, isHero=true, isStartBoss=true, isBoss=true, cost=8,},
+    ["TV Shadow King"] = {vp=4, isVillain=true, isStartBoss=true, isBoss=true, isOngoing=true, cost=8,},
+    ["TU Arcade"] = {vp=4, isBoss=true, isStartBoss=true, cost=8, id=4276},
+    ["CO11 Iron Man"] = {vp=4, isHero=true, isStartBoss=true, isBoss=true, cost=8,},
+
+-- Cost 9 Nemesis
+    
+
+
+    ["SP Spider-Man"] = {vp=5, isHero=true, isBoss=true, cost=9,},
+    ["SP Tigra"] = {vp=5, isHero=true, isBoss=true, cost=9,},
+    ["SP Wonder Man"] = {vp=5, isHero=true, isBoss=true, cost=9,},
+    ["ST Gambit"] = {vp=5, isHero=true, isBoss=true, cost=9,},
+    ["TV Beast"] = {vp=5, isHero=true, isBoss=true, cost=9,},
+    ["CO6 Arnim Zola"] = {vp=5, isVillain=true, isBoss=true, cost=9, id=7466},
+    ["IW5 Iron Manic"] = {vp=6, isVillain=true, isBoss=true, cost=9,},
+    ["RE Mysterio"] = {vp=5, isVillain=true, isBoss=true, isAttack=true, cost=9,},
+    
+

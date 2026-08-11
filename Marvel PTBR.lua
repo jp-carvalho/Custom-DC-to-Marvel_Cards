@@ -292,7 +292,7 @@
     ["CO5 Super-Skrull"] = {vp=0, isCharacter=true, id=7724},
     ["IW3 O Sentinela"] = {vp=0, isCharacter=true, id=9882},
     ["R1 Homem de Ferro (Level 3)"] = {vp=0, isHero=true, isCharacter=true, cost=15, id=8677},
-    
+
 --Transformadas
     ["MS Defender"] = {vp=1, isStarter=true, cost=0,}, -- Transformed
     ["MS A Poderosa Thor"] = {vp=1, isHero=true, cost=6,},
@@ -439,7 +439,7 @@
     
 
 
---Super Poder
+--Superpoder
     ["TU90-2 Divindade Elemental"] = {vp=1, isSuperPower=true, cost=2,},
     ["RC Força Bruta"] = {vp=2, isSuperPower=true, isBribe=true, cost=6,},
     ["SW3 Supremacia Arcana"] = {vp=1, isSuperPower=true, cost=5,},
@@ -539,7 +539,7 @@
     ["CO1 Sobrecarga de Chi"] = {vp=2, isSuperPower=true, cost=6, id=6766},
     ["AA Manipulação da Realidade"] = {vp=1, isSuperPower=true, cost=7, id=5847},
 
---Villains
+--Vilões
     ["AA Attuma"] = {vp=1, isVillain=true, cost=2, id=1336},
     ["R5 Soprano"] = {vp=1, isVillain=true, cost=3,},
     ["R1 Venom"] = {vp=1, isVillain=true, cost=4, id=4124},
@@ -786,3 +786,34 @@
     ["MARVEL A Área Azul da Lua"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=9435},
     ["IW2 Atlântida"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=7099},
     
+-- Nemesis Iniciais
+    
+    ["SP Hulk"] = {vp=4, isHero=true, isBoss=true, isStartBoss=true, cost=8,},
+    ["IW2 Apocalipse"] = {vp=4, isVillain=true, isBoss=true, isStartBoss=true, isOngoing=true, cost=9, id=2179},
+    ["TV Radical"] = {vp=4, isHero=true, isStartBoss=true, isBoss=true, cost=8, isDefense=true,},
+    ["CO9 Scorn A filha do Carnificina"] = {vp=4, isVillain=true, isBoss=true, isStartBoss=true, isAttack=true, isOngoing=true, cost=8,},
+    ["IW4 Wade Wilson Deadpool"] = {vp=4, isVillain=true, isBoss=true, isOngoing=true, isStartBoss=true, cost=9, id=9473},
+    ["IW1 Mandarim"] = {vp=4, isVillain=true, isBoss=true, isStartBoss=true, cost=9, id=5876},
+    ["MARVEL Mandarim"] = {vp=4, isVillain=true, isBoss=true, isStartBoss=true, cost=8, id=8938},
+    ["PROMO Jean Grey"] = {vp=4, isHero=true, isBoss=true, isStartBoss=true, cost=8,},
+    ["RE Doutor Destino"] = {vp=4, isVillain=true, isBoss=true, isStartBoss=true, cost=8,},
+    ["CO12 Lagarto"] = {vp=4, isVillain=true, isStartBoss=true, isBoss=true, cost=8,},
+    ["CW2 Carnificina"] = {vp=4, isVillain=true, isBoss=true, isStartBoss=true, isOngoing=true, cost=8,},
+    ["CC1 Ymir"] = {vp=4, isVillain=true, isBoss=true, isStartBoss=true, cost=8,},
+    ["RC Dum Dum Dugan"] = {vp=4, isHero=true, isStartBoss=true, isBoss=true, cost=8,},
+    ["TV Rei das Sombras"] = {vp=4, isVillain=true, isStartBoss=true, isBoss=true, isOngoing=true, cost=8,},
+    ["TU Arcade"] = {vp=4, isBoss=true, isStartBoss=true, cost=8, id=4276},
+    ["CO11 Homem de Ferro"] = {vp=4, isHero=true, isStartBoss=true, isBoss=true, cost=8,},
+
+--Nemesis Custo 9
+    
+
+    ["SP Homem-Aranha"] = {vp=5, isHero=true, isBoss=true, cost=9,},
+    ["SP Tigresa"] = {vp=5, isHero=true, isBoss=true, cost=9,},
+    ["SP Magnum"] = {vp=5, isHero=true, isBoss=true, cost=9,},
+    ["ST Gambit"] = {vp=5, isHero=true, isBoss=true, cost=9,},
+    ["TV Fera"] = {vp=5, isHero=true, isBoss=true, cost=9,},
+    ["CO6 Arnim Zola"] = {vp=5, isVillain=true, isBoss=true, cost=9, id=7466},
+    ["IW5 Maníaco de Ferro"] = {vp=6, isVillain=true, isBoss=true, cost=9,},
+    ["RE Mysterio"] = {vp=5, isVillain=true, isBoss=true, isAttack=true, cost=9,},
+
