@@ -835,3 +835,21 @@
     ["CO11 Namor"] = {vp=6, isHero=true, isBoss=true, cost=9,},
 
 -- Nemesis Custo 10
+    
+
+
+    ["SP Cavaleiro Negro"] = {vp=5, isHero=true, isBoss=true, cost=10,},
+    ["SP Anjo"] = {vp=5, isHero=true, isBoss=true, cost=10,},
+    ["CO12 Hulk"] = {vp=5, isHero=true, isDefense=true, isBoss=true, cost=10,},
+    ["CC1 Fanático"] = {vp=5, isVillain=true, isBoss=true, isDefense=true, cost=10,},
+    ["RE Fanático"] = {vp=5, isVillain=true, isBoss=true, cost=10,},
+    ["PROMO Aniquilador"] = {vp=5, isVillain=true, isBoss=true, cost=10, id=1822},
+    ["TU90 Kraven"] = {vp=5, isBoss=true, cost=10, id=9584},
+    ["RC Soldado Invernal"] = {vp=5, isHero=true, isBoss=true, cost=10,},
+    ["TV Psylocke"] = {vp=5, isHero=true, isBoss=true, cost=10,},
+    ["TU Cassandra Nova"] = {vp=5, isBoss=true, cost=10, id=8497},
+    ["CO12 Elektra"] = {vp=5, isVillain=true, isBoss=true, cost=10,},
+    ["CW2 Nova Richard Rider"] = {vp=5, isHero=true, isBoss=true, cost=9,},
+    ["RE Lobisomem na Noite"] = {vp=5, isVillain=true, isBoss=true, cost=10,},
+    ["TU90 M.O.D.O.K."] = {vp=5, isBoss=true, cost=10, id=6275},
+    
