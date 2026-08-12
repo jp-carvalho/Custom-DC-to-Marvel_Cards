@@ -835,9 +835,6 @@
     ["CO11 Namor"] = {vp=6, isHero=true, isBoss=true, cost=9,},
 
 -- Nemesis Custo 10
-    
-
-
     ["SP Cavaleiro Negro"] = {vp=5, isHero=true, isBoss=true, cost=10,},
     ["SP Anjo"] = {vp=5, isHero=true, isBoss=true, cost=10,},
     ["CO12 Hulk"] = {vp=5, isHero=true, isDefense=true, isBoss=true, cost=10,},
@@ -852,4 +849,16 @@
     ["CW2 Nova Richard Rider"] = {vp=5, isHero=true, isBoss=true, cost=9,},
     ["RE Lobisomem na Noite"] = {vp=5, isVillain=true, isBoss=true, cost=10,},
     ["TU90 M.O.D.O.K."] = {vp=5, isBoss=true, cost=10, id=6275},
-    
+    ["TU902 Molde Mestre"] = {vp=5, isBoss=true, cost=10,},
+    ["DA Wolverine Arma X"] = {vp=5, isHero=true, isBoss=true, cost=10, id=9548},
+    ["TV Mística"] = {vp=5, isVillain=true, isBoss=true, isOngoing=true, cost=10,},
+    ["TU902 Demogoblin"] = {vp=5, isBoss=true, cost=10,},
+    ["RE Nevasca"] = {vp=5, isVillain=true, isBoss=true, cost=10,},
+    ["TV Duende Verde"] = {vp=5, isVillain=true, isBoss=true, cost=10,},
+    ["TV Espadachim"] = {vp=5, isVillain=true, isBoss=true, cost=10,},
+    ["PROMO Força-V"] = {vp=5, isHero=true, isBoss=true, isDefense=true, cost=10,},
+    ["TU90 Senhor Sinistro"] = {vp=5, isBoss=true, isVillain=true, cost=10},
+    ["RC Máquina de Combate"] = {vp=5, isHero=true, isBoss=true, cost=10,},
+    ["RC Aranha Escarlate"] = {vp=5, isHero=true, isBoss=true, cost=10,},
+
+-- Nemesis Custo 11

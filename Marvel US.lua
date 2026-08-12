@@ -834,10 +834,6 @@
     ["CO11 Namor"] = {vp=6, isHero=true, isBoss=true, cost=9,},
 
 -- Cost 10 Nemesis
-    
-
-
-
     ["SP Black Knight"] = {vp=5, isHero=true, isBoss=true, cost=10,},
     ["SP Angel"] = {vp=5, isHero=true, isBoss=true, cost=10,},
     ["CO12 Hulk"] = {vp=5, isHero=true, isDefense=true, isBoss=true, cost=10,},
@@ -852,4 +848,16 @@
     ["CW2 Nova Richard Rider"] = {vp=5, isHero=true, isBoss=true, cost=9,},
     ["RE Werewolf by Night"] = {vp=5, isVillain=true, isBoss=true, cost=10,},
     ["TU90 M.O.D.O.K."] = {vp=5, isBoss=true, cost=10, id=6275},
-    
+    ["TU902 Master Mold"] = {vp=5, isBoss=true, cost=10,},
+    ["DA Wolverine Weapon X"] = {vp=5, isHero=true, isBoss=true, cost=10, id=9548},
+    ["TV Mystique"] = {vp=5, isVillain=true, isBoss=true, isOngoing=true, cost=10,},
+    ["TU902 Demogoblin"] = {vp=5, isBoss=true, cost=10,},
+    ["RE Blizzard"] = {vp=5, isVillain=true, isBoss=true, cost=10,},
+    ["TV Green Goblin"] = {vp=5, isVillain=true, isBoss=true, cost=10,},
+    ["TV Swordsman"] = {vp=5, isVillain=true, isBoss=true, cost=10,},
+    ["PROMO A-Force"] = {vp=5, isHero=true, isBoss=true, isDefense=true, cost=10,},
+    ["TU90 Mister Sinister"] = {vp=5, isBoss=true, isVillain=true, cost=10},
+    ["RC War-Machine"] = {vp=5, isHero=true, isBoss=true, cost=10,},
+    ["RC Scarlet Spider"] = {vp=5, isHero=true, isBoss=true, cost=10,},
+
+-- Cost 11 Nemesis
