@@ -4858,6 +4858,8 @@ masterCardTable = {
 		["CO10 Mercúrio"] = {vp=7, isVillain=true, isBoss=true, cost=15,},
 	--Oversized Character Cards
 	["CO10 Emperor Aquaman"] = {vp=0, isCharacter=true,},
+		["CO10 Phoenix Force Namor MC"] = {vp=0, isCharacter=true,},
+		["CO10 Namor Força Fênix MC"] = {vp=0, isCharacter=true,},
 	["CO10 Flashpoint Batman"] = {vp=0, isCharacter=true,},
 		["CO10 Earth X Iron Man"] = {vp=0, isCharacter=true,},
 		["CO10 Homem de Ferro Terra X"] = {vp=0, isCharacter=true,},
@@ -4876,6 +4878,8 @@ masterCardTable = {
 		["CO10 Earth X Quicksilver"] = {vp=0, isCharacter=true,},
 		["CO10 Mercúrio Terra X"] = {vp=0, isCharacter=true,},
 	["CO10 Queen Diana"] = {vp=0, isCharacter=true,},
+		["CO10 Phoenix Force Captain Marvel MC"] = {vp=0, isCharacter=true,},
+		["CO10 Capitã Marvel Força Fênix MC"] = {vp=0, isCharacter=true,},
 	--4)11) Crossover 11 - Dark Knights Rising
 	--Equipment
 	["CO11 Corrupted Power Ring"] = {vp=1, isEquipment=true, isPowerRing=true, cost=3,},
@@ -7359,6 +7363,7 @@ masterCardTable = {
 	["RB Green Arrow"] = {vp=1, isHero=true, cost=4, id=1742},
 	["RB Jessica Cruz"] = {vp=1, isHero=true, cost=4, id=9337},
 	["RB Lois Lane"] = {vp=1, isHero=true, cost=3, id=7315},
+		["SW Betty Brant"] = {vp=1, isHero=true, cost=3, id=7315},
 	["RB Simon Baz"] = {vp=1, isHero=true, cost=4, id=1285},
 		["SW Eve Bakian nova corp"] = {vp=1, isHero=true, cost=4, id=1285},
 		["SW Eve Bakian nova corp."] = {vp=1, isHero=true, cost=4, id=1285},
@@ -7413,6 +7418,8 @@ masterCardTable = {
 	["RB Jetpack"] = {vp=1, isEquipment=true, cost=2, id=5480},
 	["RB Power Battery"] = {vp=2, isEquipment=true, cost=7, id=1910},
 	["RB Sonic Cannon"] = {vp=1, isEquipment=true, cost=3, id=6795},
+		["SW Sonic Cannon"] = {vp=1, isEquipment=true, cost=3, id=6795},
+		["SW Canhão Sônico"] = {vp=1, isEquipment=true, cost=3, id=6795},
 	["RB Super-Suit"] = {vp=1, isEquipment=true, isDefense=true, cost=5, id=5566},
 	["RB Trident of Atlantis"] = {vp=1, isEquipment=true, cost=4, id=9904},
 	["RB Wonder Woman's Shield"] = {vp=2, isEquipment=true, isOngoing=true, cost=6, id=6668},
@@ -7838,4 +7845,6 @@ masterCardTable = {
 	["FcD Punch"] = {vp=0, isStarter=true, cost=0},
 	["FcD Vulnerability"] = {vp=0, isStarter=true, cost=0},
 	["FcD Sealed Defense"] = {vp=0, isStarter=true, cost=0},
+	["MARVEL Weakness"] = {vp=-1, isWeakness=true, cost=0},
+	["MARVEL Fraqueza"] = {vp=-1, isWeakness=true, cost=0},
     }

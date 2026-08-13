@@ -1,5 +1,5 @@
-    -- OAKENRILL MARVEL BR
-    -- MC Tier 1
+-- OAKENRILL MARVEL BR
+-- MC Tier 1
 	["CW Feiticeira Escarlate (Level 3)"] = {vp=0, isHero=true, isCharacter=true, cost=15, id=8093},
     ["IW1 Feiticeira Escarlate"] = {vp=0, isCharacter=true, id=3545},
     ["CW2 Carnificina"] = {vp=0, isCharacter=true,},
@@ -165,6 +165,7 @@
     ["TV Venom MC"] = {vp=0, isCharacter=true,},
     ["IW3 Venom"] = {vp=0, isCharacter=true, id=4535},
     ["CO1 Nova Sam Alexander"] = {vp=0, isCharacter=true, id=4559},
+    ["CO10 Namor Força Fênix MC"] = {vp=0, isCharacter=true,},
 
 -- MC Tier 3
     ["CW Feiticeira Escarlate (Level 2)"] = {vp=6, isHero=true, isCharacter=true, cost=12, id=7569},
@@ -250,6 +251,7 @@
     ["KIB Namor (Character)"] = {vp=0, isCharacter=true, id=1386},
     ["MARVEL Namor"] = {vp=0, isCharacter=true, id=3422},
     ["IW1 Ka-Zar (Character)"] = {vp=0, isCharacter=true, id=7227},
+    ["CO10 Capitã Marvel Força Fênix MC"] = {vp=0, isCharacter=true,},
 
 -- MC Tier 4
     ["TU Morfo"] = {vp=0, isCharacter=true, id=4758},
@@ -315,6 +317,7 @@
     ["KIB Sacrifício Final"] = {vp=1, cost=3, id=9145},
     ["R2 Arsenal Psíquico"] = {vp=1, cost=3, id=0},
     ["R3 Velocidade da Luz"] = {vp=1, cost=3,},
+    ["SW Canhão Sônico"] = {vp=1, isEquipment=true, cost=3, id=6795},
 
 
 --Refens
