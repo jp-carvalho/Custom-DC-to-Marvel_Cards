@@ -1,4 +1,5 @@
--- MC Tier 1
+    -- OAKENRILL MARVEL US
+    -- MC Tier 1
 	["CW Scarlet Witch (Level 3)"] = {vp=0, isHero=true, isCharacter=true, cost=15, id=8093},
     ["IW1 Scarlet Witch"] = {vp=0, isCharacter=true, id=3545},
     ["CW2 Carnage"] = {vp=0, isCharacter=true,},
@@ -84,11 +85,11 @@
     ["CW Hulk (Level 1)"] = {vp=4, isHero=true, isCharacter=true, cost=9, id=7243},
     ["PROMO She-Hulk"] = {vp=0, isCharacter=true,},
     ["IW5 Cyclops"] = {vp=0, isCharacter=true,},
-    ["TU Cyclops"] = {vp=0, isCharacter=true, id=3495},`
+    ["TU Cyclops"] = {vp=0, isCharacter=true, id=3495},
     ["CO1 Rachel Summers"] = {vp=0, isCharacter=true, id=1790},
     ["CC1 Rachel Summers"] = {vp=0, isCharacter=true,},
     ["TU90 Storm"] = {vp=0, isCharacter=true, id=5964},
-    ["TU Storm"] = {vp=0, isCharacter=true, id=4924},`
+    ["TU Storm"] = {vp=0, isCharacter=true, id=4924},
     ["AA Storm"] = {vp=0, isCharacter=true, id=8856},
     ["IW2 Storm"] = {vp=0, isCharacter=true, id=7537},
     ["PROMO Juggernaut"] = {vp=0, isCharacter=true,},
@@ -99,7 +100,7 @@
     ["TU90 Spider-Man"] = {vp=0, isCharacter=true, id=8556},
     ["IW2 Human Torch"] = {vp=0, isCharacter=true, id=7162},
     ["AA Human Torch"] = {vp=0, isCharacter=true, id=9402},
-    ["TU Nightcrawler"] = {vp=0, isCharacter=true, id=8366}
+    ["TU Nightcrawler"] = {vp=0, isCharacter=true, id=8366},
     ["TU90 Jean Grey"] = {vp=0, isCharacter=true, id=8542},
     ["TU Jean Grey"] = {vp=0, isCharacter=true, id=7728},
     ["CO1 Rogue"] = {vp=0, isCharacter=true, id=9021},
@@ -297,7 +298,7 @@
     ["MS Defend"] = {vp=1, isStarter=true, cost=0,}, -- Transformed
     ["MS The Mighty Thor"] = {vp=1, isHero=true, cost=6,},
     ["MS Thor, God of Thunder"] = {vp=1, isHero=true, cost=4,},
-    ["MS Morbius, the Vampire"] = {vp=2, isVillain=true, cost=6,},
+    ["MS Morbius, the Vampire"] = {vp=1, isVillain=true, cost=6,},
     ["MS The Mighty Thor, corrupted"] = {vp=2, isVillain=true, cost=5,},
     ["MS Blackhearth, Prince of Hell"] = {vp=1, isVillain=true, cost=6,},
     ["MS The Darkhold"] = {vp=2, isEquipment=true, cost=5,},
@@ -423,7 +424,7 @@
     ["AA Hypno Lens"] = {vp=2, isEquipment=true, isAttack=true, cost=7, id=2081},
     ["RC Melee Weapons"] = {vp=1, isEquipment=true, isAttack=true, cost=4,},
     ["TU Detonator"] = {vp=1, isEquipment=true, isOngoing=true, cost=3, id=4563},
-    ["KIB Stormbreaker"] = {vp=1, isEquipment=true, isDefense=true, cost=3, id=4050}
+    ["KIB Stormbreaker"] = {vp=1, isEquipment=true, isDefense=true, cost=3, id=4050},
     ["RC Goblin Glider"] = {vp=1, isEquipment=true, isBribe=true, cost=3,},
     ["R5 M'kraan Crystal"] = {vp=1, isEquipment=true, cost=4,},
     ["IW4 A.I.M. Exo-Suit"] = {vp=1, isEquipment=true, isOngoing=true, cost=2, id=3549},
@@ -639,6 +640,7 @@
     ["MS Alioth"] = {vp=2, isVillain=true, cost=6,},
     ["MS Juggernaut"] = {vp=1, isVillain=true, isDefense=true, cost=4,},
     ["MS Mimic"] = {vp=1, isVillain=true, cost=3,},
+    ["R5 Nimrod"] = {vp=2, isVillain=true, cost=5,},
 
 
 --Heroes
@@ -658,6 +660,7 @@
     ["SW Namor"] = {vp=1, isHero=true, cost=3, id=1049},
     ["CO11 Hawkeye"] = {vp=2, isHero=true, cost=4,},
     ["IW5 Adam Warlock"] = {vp=3, isHero=true, isDefense=true, cost=8,},
+    ["AA Adam Warlock"] = {vp=2, isHero=true, cost=7, id=7644},
     ["RC Devil DInossaur"] = {vp=1, isHero=true, isDefense=true, cost=3,},
     ["TV Valkyrie"] = {vp=1, isHero=true, cost=4, isOngoing=true, isBribe=true,},
     ["CW Triton"] = {vp=1, isHero=true, cost=3, id=6213},
@@ -885,7 +888,7 @@
     ["IW4 Mystique"] = {vp=5, isVillain=true, isBoss=true, cost=11, id=4402},
     ["RE Legion"] = {vp=6, isVillain=true, isBoss=true, cost=11,},
     ["RC Black Cat"] = {vp=6, isHero=true, isBoss=true, cost=11,},
-    ["IW5 Iron Sentinel"] = {vp=7, isVillain=true, isBoss=true, cost=11,}
+    ["IW5 Iron Sentinel"] = {vp=7, isVillain=true, isBoss=true, cost=11,},
     ["PROMO Morph"] = {vp=6, isHero=true, isBoss=true, cost=11,},
     ["RC Spider-Gwen"] = {vp=6, isHero=true, isBoss=true, cost=11,},
     ["IW5 Baby Iron Man"] = {vp=7, isVillain=true, isBoss=true, cost=11,},
@@ -928,4 +931,9 @@
     ["CO1 Knull"] = {vp=7, isVillain=true, isBoss=true, cost=15, id=9811},
     ["RC Iron Man"] = {vp=7, isHero=true, isBoss=true, cost=14,},
     ["TV Venom"] = {vp=7, isVillain=true, isBoss=true, cost=14,},
-    
+
+-- Starter Deck
+    ["MARVEL Punch"] = {vp=0, isStarter=true, cost=0, id=8867},
+    ["MARVEL Vulnerability"] = {vp=0, isStarter=true, cost=0, id=4167},
+    ["MS Sealed Defense"] = {vp=0, isStarter=true, cost=0,},
+    ["MARVEL Kick"] = {vp=1, isSuperPower=true, cost=3, id=9883},

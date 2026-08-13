@@ -297,7 +297,7 @@
     ["MS Defender"] = {vp=1, isStarter=true, cost=0,}, -- Transformed
     ["MS A Poderosa Thor"] = {vp=1, isHero=true, cost=6,},
     ["MS Thor, Deus do Trovão"] = {vp=1, isHero=true, cost=4,},
-    ["MS Morbius, O Vampiro"] = {vp=2, isVillain=true, cost=6,},
+    ["MS Morbius, O Vampiro"] = {vp=1, isVillain=true, cost=6,},
     ["MS A Poderosa Thor, corrompida"] = {vp=2, isVillain=true, cost=5,},
     ["MS Coração Negro, O Príncipe do Inferno"] = {vp=1, isVillain=true, cost=6,},
     ["MS Darkhold: O Tomo Negro"] = {vp=2, isEquipment=true, cost=5,},
@@ -410,7 +410,7 @@
     ["DA Pé de Cabra do Destruidor"] = {vp=1, isEquipment=true, cost=4, id=1820},
     ["IW5 Libertadora"] = {vp=2, isEquipment=true, cost=5,},
     ["IW5 Hellnir"] = {vp=2, isEquipment=true, cost=6,},
-    ["TU90-2 FOguete Imprudente"] = {vp=1, isEquipment=true, isAttack=true, cost=5,},
+    ["TU90-2 Foguete Imprudente"] = {vp=1, isEquipment=true, isAttack=true, cost=5,},
     ["CO6 Quinjet"] = {vp=1, isEquipment=true, isDefense=true, cost=3, id=4272},
     ["R1 Dardos Crescentes"] = {vp=1, isEquipment=true, isDefense=true, cost=4, id=4406},
     ["AA Os Dez Anéis"] = {vp=1, isEquipment=true, cost=4, id=3101},
@@ -639,7 +639,7 @@
     ["MS Alioth"] = {vp=2, isVillain=true, cost=6,},
     ["MS Fanático"] = {vp=1, isVillain=true, isDefense=true, cost=4,},
     ["MS Mímico"] = {vp=1, isVillain=true, cost=3,},
-
+    ["R5 Nimrod"] = {vp=2, isVillain=true, cost=5,},
 
 --Heróis
     ["CW Cavaleiro da Lua"] = {vp=1, isHero=true, cost=3, id=7178},
@@ -658,6 +658,7 @@
     ["SW Namor"] = {vp=1, isHero=true, cost=3, id=1049},
     ["CO11 Gavião Arqueiro"] = {vp=2, isHero=true, cost=4,},
     ["IW5 Adam Warlock"] = {vp=3, isHero=true, isDefense=true, cost=8,},
+    ["AA Adam Warlock"] = {vp=2, isHero=true, cost=7, id=7644},
     ["RC Dinossauro Diabólico"] = {vp=1, isHero=true, isDefense=true, cost=3,},
     ["TV Valquíria"] = {vp=1, isHero=true, cost=4, isOngoing=true, isBribe=true,},
     ["CW Tritão"] = {vp=1, isHero=true, cost=3, id=6213},
@@ -762,7 +763,7 @@
     ["DA Edifício Baxter"] = {vp=1, isLocation=true, isOngoing=true, cost=6, id=6434},
     ["R5 Sanctum Sanctorium"] = {vp=2, isLocation=true, isOngoing=true, cost=5,},
     ["R2 Colégio Midtown"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=7408},
-    ["TU O Concaverso"] = {vp=1, isLocation=true, isAttack=true, isOngoing=true, cost=5,
+    ["TU O Concaverso"] = {vp=1, isLocation=true, isAttack=true, isOngoing=true, cost=5},
     ["TU90 Cidade de Nova York"] = {vp=1, isLocation=true, isOngoing=true, cost=3, id=6643},
     ["IW1 Dimensão de Enxofre"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=5570},
     ["RC Terra Selvagem"] = {vp=1, isLocation=true, isOngoing=true, cost=5,},
@@ -826,7 +827,7 @@
     ["PROMO Falcão"] = {vp=5, isHero=true, isBoss=true, cost=9,},
     ["CO11 Nova Richard Rider"] = {vp=6, isHero=true, isBoss=true, cost=9,},
     ["MARVEL Mercenário"] = {vp=5, isVillain=true, isBoss=true, cost=9, id=5640},
-    ["CO11 Deadpool"] = {vp=6, isHero=true, isBoss=true, cost=9,},~
+    ["CO11 Deadpool"] = {vp=6, isHero=true, isBoss=true, cost=9,},
     ["CO2 Madame Gao"] = {vp=5, isVillain=true, isBoss=true, cost=9, id=6400},
     ["IW5 Sauron"] = {vp=6, isVillain=true, isBoss=true, cost=9,},
     ["RE Magneto"] = {vp=5, isVillain=true, isBoss=true, cost=9,},
@@ -930,3 +931,7 @@
     ["RC Homem de Ferro"] = {vp=7, isHero=true, isBoss=true, cost=14,},
     ["TV Venom"] = {vp=7, isVillain=true, isBoss=true, cost=14,},
     
+-- Deck Inicial
+    ["MARVEL Soco"] = {vp=0, isStarter=true, cost=0, id=8867},
+    ["MARVEL Vulnerabilidade"] = {vp=0, isStarter=true, cost=0, id=4167},
+    ["MARVEL Chute"] = {vp=1, isSuperPower=true, cost=3, id=9883},
