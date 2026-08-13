@@ -160,6 +160,8 @@ export class Card {
             color: 0x78bf09, // Verde (#78bf09)
             phrases: [
                 "You must play this card before ending your turn.",
+                "Return this card to its stack if destroyed.",
+                "Retorne esta carta para a pilha dela se for destruída.",
                 "Você deve jogar esta carta antes de encerrar seu turno.",
                 "Você deve jogar esta carta antes do fim do turno.",
             ],
