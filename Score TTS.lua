@@ -1428,7 +1428,11 @@ masterCardTable = {
 	--1)1) Base Set
 	--Other
 	["DC Punch"] = {vp=0, isStarter=true, cost=0, id=8867},
+		["MARVEL Punch"] = {vp=0, isStarter=true, cost=0, id=8867},
+		["MARVEL Soco"] = {vp=0, isStarter=true, cost=0, id=8867},
 	["DC Vulnerability"] = {vp=0, isStarter=true, cost=0, id=4167},
+		["MARVEL Vulnerability"] = {vp=0, isStarter=true, cost=0, id=4167},
+		["MARVEL Vulnerabilidade"] = {vp=0, isStarter=true, cost=0, id=4167},
 	["DC Weakness"] = {vp=-1, isWeakness=true, cost=0, id=7071},
 	--Heroes
 	["DC Blue Beetle"] = {vp=2, isHero=true, isDefense=true, cost=6, id=7732},
@@ -2333,6 +2337,8 @@ masterCardTable = {
 	["JLD Punch"] = {vp=0, isStarter=true, cost=0,},
 	["JLD Vulnerability"] = {vp=0, isStarter=true, cost=0,},
 	["JLD Sealed Defense"] = {vp=0, isStarter=true, cost=0,},
+		["MS Sealed Defense"] = {vp=0, isStarter=true, cost=0,},
+		["MS Defesa Selada"] = {vp=0, isStarter=true, cost=0,},
 	["JLD Defend"] = {vp=1, isStarter=true, cost=0,}, -- Transformed
 		["MS Defend"] = {vp=1, isStarter=true, cost=0,}, -- Transformed
 		["MS Defender"] = {vp=1, isStarter=true, cost=0,}, -- Transformed

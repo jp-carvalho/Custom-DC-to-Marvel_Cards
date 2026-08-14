@@ -1,4 +1,4 @@
- -- OAKENRILL MARVEL US
+-- OAKENRILL MARVEL US
 -- MC Tier 1
 	["CW Scarlet Witch (Level 3)"] = {vp=0, isHero=true, isCharacter=true, cost=15, id=8093},
     ["IW1 Scarlet Witch"] = {vp=0, isCharacter=true, id=3545},
@@ -296,6 +296,11 @@
     ["CO5 Super-Skrull"] = {vp=0, isCharacter=true, id=7724},
     ["IW3 Sentry"] = {vp=0, isCharacter=true, id=9882},
     ["R1 Iron Man (Level 3)"] = {vp=0, isHero=true, isCharacter=true, cost=15, id=8677},
+
+--Starter
+    ["MARVEL Punch"] = {vp=0, isStarter=true, cost=0, id=8867},
+    ["MARVEL Vulnerability"] = {vp=0, isStarter=true, cost=0, id=4167},
+    ["MS Sealed Defense"] = {vp=0, isStarter=true, cost=0,},
 
 --Transformed
     ["MS Defend"] = {vp=1, isStarter=true, cost=0,}, -- Transformed

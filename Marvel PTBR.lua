@@ -297,6 +297,11 @@
     ["IW3 O Sentinela"] = {vp=0, isCharacter=true, id=9882},
     ["R1 Homem de Ferro (Level 3)"] = {vp=0, isHero=true, isCharacter=true, cost=15, id=8677},
 
+--Iniciais
+    ["MARVEL Soco"] = {vp=0, isStarter=true, cost=0, id=8867},
+    ["MARVEL Vulnerabilidade"] = {vp=0, isStarter=true, cost=0, id=4167},
+    ["MS Defesa Selada"] = {vp=0, isStarter=true, cost=0,},
+
 --Transformadas
     ["MS Defender"] = {vp=1, isStarter=true, cost=0,}, -- Transformed
     ["MS A Poderosa Thor"] = {vp=1, isHero=true, cost=6,},
@@ -791,8 +796,7 @@
     ["MARVEL A Área Azul da Lua"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=9435},
     ["IW2 Atlântida"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=7099},
     
--- Nemesis Iniciais
-    
+-- Nemesis Iniciais  
     ["SP Hulk"] = {vp=4, isHero=true, isBoss=true, isStartBoss=true, cost=8,},
     ["IW2 Apocalipse"] = {vp=4, isVillain=true, isBoss=true, isStartBoss=true, isOngoing=true, cost=9, id=2179},
     ["TV Radical"] = {vp=4, isHero=true, isStartBoss=true, isBoss=true, cost=8, isDefense=true,},
