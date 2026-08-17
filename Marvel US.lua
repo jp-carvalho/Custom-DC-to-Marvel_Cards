@@ -446,8 +446,8 @@
     ["MS The Book of Cagliostro"] = {vp=1, isEquipment=true, cost=2,},
     ["CO3 Timestream Armor"] = {vp=1, isEquipment=true, isDefense=true, cost=3, id=7008},
     ["IW5 The Ultimate Nullifier"] = {vp=2, isEquipment=true, cost=7,},
-    
-
+    ["R3 Velocity Suit"] = {vp=1, isEquipment=true, isDefense=true, cost=5,},
+    ["CO6 Cybernetic Whip"] = {vp=1, isEquipment=true, cost=4, id=7904},
 
 --Superpower
     ["TU90-2 Elemental Deity"] = {vp=1, isSuperPower=true, cost=2,},
@@ -548,6 +548,10 @@
     ["RC Guaranteed Luck"] = {vp=1, isSuperPower=true, cost=4,},
     ["CO1 Chi Overload"] = {vp=2, isSuperPower=true, cost=6, id=6766},
     ["AA Reality-Warping"] = {vp=1, isSuperPower=true, cost=7, id=5847},
+    ["CO10 Brutal Persuasion"] = {vp=-2, isSuperPower=true, isTimeLineUp=true, cost=5,},
+    ["R3 Time to Spare"] = {vp=1, isSuperPower=true, cost=4,},
+    ["TU Shapeshift"] = {vp=1, isSuperPower=true, isPowerRing=true, cost=2, id=6366},
+    ["KIB Cosmic Power"] = {vp=1, isSuperPower=true, isDefense=true, cost=3, id=1097},
 
 --Villains
     ["AA Attuma"] = {vp=1, isVillain=true, cost=2, id=1336},
@@ -795,6 +799,9 @@
     ["TU Monster Isle"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=3123},
     ["MARVEL The Blue Area of the Moon"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=9435},
     ["IW2 Atlantis"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=7099},
+    ["IW2 Ego, the Living Planet"] = {vp=2, isLocation=true, isDefense=true, isOngoing=true, cost=7, id=5047},
+    ["KIB World Forge"] = {vp=2, isLocation=true, isOngoing=true, cost=7, id=9075},
+    ["DA The Vault"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=4302},
 
 -- Starting Nemesis
     ["SP Hulk"] = {vp=4, isHero=true, isBoss=true, isStartBoss=true, cost=8,},

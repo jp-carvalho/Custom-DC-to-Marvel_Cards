@@ -1787,6 +1787,8 @@ masterCardTable = {
 	--Locations
 	["FE Belle Reve"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=5193},
 	["FE Blackgate Prison"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=4302},
+		["DA The Vault"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=4302},
+		["DA  O Cofre"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=4302},
 	["FE Central City"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=3055},
 	["FE Earth-3"] = {vp=1, isLocation=true, isOngoing=true, cost=6, id=6434},
 		["DA Baxter Building"] = {vp=1, isLocation=true, isOngoing=true, cost=6, id=6434},
@@ -2038,6 +2040,8 @@ masterCardTable = {
 	["DNM Power Channeling"] = {vp=3, isSuperPower=true, cost=6, id=4087},
 	["DNM Search the Depths"] = {vp=1, isSuperPower=true, cost=3, id=7084},
 	["DNM Speed Force"] = {vp=1, isSuperPower=true, isDefense=true, cost=3, id=1097},
+		["KIB Cosmic Power"] = {vp=1, isSuperPower=true, isDefense=true, cost=3, id=1097},
+		["KIB Poder Cósmico"] = {vp=1, isSuperPower=true, isDefense=true, cost=3, id=1097},
 	["DNM War Cry"] = {vp=1, isSuperPower=true, cost=4, id=7924},
 	["DNM X-Ray Vision"] = {vp=1, isSuperPower=true, cost=4, id=2703},
 		["KIB Arcane Revelation"] = {vp=1, isSuperPower=true, cost=4, id=2703},
@@ -2066,6 +2070,8 @@ masterCardTable = {
 	--Locations
 	["DNM Challenger Mountain"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=9764},
 	["DNM Forge of Worlds"] = {vp=2, isLocation=true, isOngoing=true, cost=7, id=9075},
+		["KIB World Forge"] = {vp=2, isLocation=true, isOngoing=true, cost=7, id=9075},
+		["KIB Forja dos Mundos"] = {vp=2, isLocation=true, isOngoing=true, cost=7, id=9075},
 	["DNM Oblivion Bar"] = {vp=1, isLocation=true, isDefense=true, isOngoing=true, cost=5, id=7085},
 		["KIB Bar With No Name"] = {vp=1, isLocation=true, isDefense=true, isOngoing=true, cost=5, id=7085},
 		["KIB Bar Sem Nome"] = {vp=1, isLocation=true, isDefense=true, isOngoing=true, cost=5, id=7085},
@@ -3111,6 +3117,8 @@ masterCardTable = {
 	--Locations
 	["C2 Atlantis"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=7099},
 	["C2 Mogo"] = {vp=2, isLocation=true, isDefense=true, isOngoing=true, cost=7, id=5047},
+		["IW2 Ego, the Living Planet"] = {vp=2, isLocation=true, isDefense=true, isOngoing=true, cost=7, id=5047},
+		["IW2 Ego, o Planeta Vivo"] = {vp=2, isLocation=true, isDefense=true, isOngoing=true, cost=7, id=5047},
 	--Super Villains
 	["C2 Amazo"] = {vp=5, isVillain=true, isBoss=true, cost=11, id=5807},
 		["IW2 Hyperion"] = {vp=5, isVillain=true, isBoss=true, cost=11, id=5807},
@@ -3815,6 +3823,8 @@ masterCardTable = {
 		["R3 Domínio dos Ventos"] = {vp=2, isSuperPower=true, cost=5,},
 	["R3 Disorienting Speed"] = {vp=1, isSuperPower=true, isAttack=true, cost=4,},
 	["R3 Flash Time"] = {vp=1, isSuperPower=true, cost=4,},
+		["R3 Time to Spare"] = {vp=1, isSuperPower=true, cost=4,},
+		["R3 Tempo de Sobra"] = {vp=1, isSuperPower=true, cost=4,},
 	["R3 Hard Stop"] = {vp=2, isSuperPower=true, cost=6,},
 	["R3 Infinite Mass Punch"] = {vp=3, isSuperPower=true, cost=7,},
 	["R3 Phasing"] = {vp=1, isSuperPower=true, isDefense=true, cost=3,},
@@ -3836,6 +3846,8 @@ masterCardTable = {
 		["R3 Olho de Agamotto"] = {vp=-3, isEquipment=true, cost=6,},
 	["R3 Lightning Rod"] = {vp=3, isEquipment=true, cost=7,},
 	["R3 Speedster Suit"] = {vp=1, isEquipment=true, isDefense=true, cost=5,},
+		["R3 Velocity Suit"] = {vp=1, isEquipment=true, isDefense=true, cost=5,},
+		["R3 Traje de Velocidade"] = {vp=1, isEquipment=true, isDefense=true, cost=5,},
 	["R3 The Flash Ring"] = {vp=1, isEquipment=true, cost=4,},
 	["R3 Weather Wand"] = {vp=2, isEquipment=true, cost=6,},
 	--Locations
@@ -4601,6 +4613,8 @@ masterCardTable = {
 	["CO6 Crossbow"] = {vp=1, isEquipment=true, isAttack=true, cost=3, id=4839},
 	["CO6 Soultaker Sword"] = {vp=1, isEquipment=true, isOngoing=true, cost=5, id=9688},
 	["CO6 Whip"] = {vp=1, isEquipment=true, cost=4, id=7904},
+		["CO6 Cybernetic Whip"] = {vp=1, isEquipment=true, cost=4, id=7904},
+		["CO6 Chicote Cibernético"] = {vp=1, isEquipment=true, cost=4, id=7904},
 	--Locations
 	["CO6 Clocktower"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=3943},
 	--Super-Heroes
@@ -4828,6 +4842,7 @@ masterCardTable = {
 	["CO10 The Furies"] = {vp=-2, isVillain=true, isTimeLineUp=true, cost=8,},
 	--Super Powers
 	["CO10 Brutal Persuasion"] = {vp=-2, isSuperPower=true, isTimeLineUp=true, cost=5,},
+			["CO10 Persuasão Brutal"] = {vp=-2, isSuperPower=true, isTimeLineUp=true, cost=5,},
 	["CO10 Chronokinesis"] = {vp=-2, isSuperPower=true, isTimeLineUp=true, cost=7,},
 	["CO10 Counter Attack"] = {vp=-2, isSuperPower=true, isDefense=true, isTimeLineUp=true, cost=6,},
 	["CO10 Heroic Escape"] = {vp=-2, isSuperPower=true, isTimeLineUp=true, cost=5,},
@@ -6814,6 +6829,8 @@ masterCardTable = {
 		["TU Electrokinesis"] = {vp=1, isSuperPower=true, isAttack=true, cost=4, id=7492},
 		["TU Eletrocinese"] = {vp=1, isSuperPower=true, isAttack=true, cost=4, id=7492},
 	["TT Shapeshift (DCDB)"] = {vp=1, isSuperPower=true, isPowerRing=true, cost=2, id=6366},
+		["TU Shapeshift"] = {vp=1, isSuperPower=true, isPowerRing=true, cost=2, id=6366},
+		["TU Metamorfose"] = {vp=1, isSuperPower=true, isPowerRing=true, cost=2, id=6366},
 	--Equipment
 	["R1 Grappling Hook (DCDB)"] = {vp=1, isEquipment=true, cost=3, id=8605},
 	["R1 Utility Belt (DCDB)"] = {vp=1, isEquipment=true, cost=5, id=7640},

@@ -446,8 +446,8 @@
     ["MS O Livro de Cagliostro"] = {vp=1, isEquipment=true, cost=2,},
     ["CO3 Armadura do Fluxo Temporal"] = {vp=1, isEquipment=true, isDefense=true, cost=3, id=7008},
     ["IW5 O Nulificador Total"] = {vp=2, isEquipment=true, cost=7,},
-    
-
+    ["R3 Traje de Velocidade"] = {vp=1, isEquipment=true, isDefense=true, cost=5,},
+    ["CO6 Chicote Cibernético"] = {vp=1, isEquipment=true, cost=4, id=7904}, 
 
 --Superpoder
     ["TU90-2 Divindade Elemental"] = {vp=1, isSuperPower=true, cost=2,},
@@ -548,6 +548,10 @@
     ["RC Sorte Garantida"] = {vp=1, isSuperPower=true, cost=4,},
     ["CO1 Sobrecarga de Chi"] = {vp=2, isSuperPower=true, cost=6, id=6766},
     ["AA Manipulação da Realidade"] = {vp=1, isSuperPower=true, cost=7, id=5847},
+    ["CO10 Persuasão Brutal"] = {vp=-2, isSuperPower=true, isTimeLineUp=true, cost=5,},
+    ["R3 Tempo de Sobra"] = {vp=1, isSuperPower=true, cost=4,},
+    ["TU Metamorfose"] = {vp=1, isSuperPower=true, isPowerRing=true, cost=2, id=6366},
+    ["KIB Poder Cósmico"] = {vp=1, isSuperPower=true, isDefense=true, cost=3, id=1097},
 
 --Vilões
     ["AA Attuma"] = {vp=1, isVillain=true, cost=2, id=1336},
@@ -795,6 +799,9 @@
     ["TU Ilha dos Monstros"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=3123},
     ["MARVEL A Área Azul da Lua"] = {vp=1, isLocation=true, isOngoing=true, cost=5, id=9435},
     ["IW2 Atlântida"] = {vp=2, isLocation=true, isOngoing=true, cost=6, id=7099},
+    ["IW2 Ego, o Planeta Vivo"] = {vp=2, isLocation=true, isDefense=true, isOngoing=true, cost=7, id=5047},
+    ["KIB Forja dos Mundos"] = {vp=2, isLocation=true, isOngoing=true, cost=7, id=9075},
+    ["DA  O Cofre"] = {vp=1, isLocation=true, isOngoing=true, cost=4, id=4302},
     
 -- Nemesis Iniciais  
     ["SP Hulk"] = {vp=4, isHero=true, isBoss=true, isStartBoss=true, cost=8,},

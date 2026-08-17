@@ -92,8 +92,10 @@
 						<Image image="SF" preserveAspect="false"></Image></Button></Cell>
 					<Cell columnSpan="2"><Button id="NSQuick" onClick="setupQuickGame">
 						<Image image="NS" preserveAspect="false"></Image></Button></Cell>
-					<Cell columnSpan="2"></Cell>
-					<Cell columnSpan="2"></Cell>
+					<Cell columnSpan="2"><Button id="MarvelQuick" onClick="setupDCDBCubeGame">
+						<Image image="MARVEL" preserveAspect="false" ></Image></Button></Cell>
+					<Cell columnSpan="2"><Button id="MarvelBRQuick" onClick="setupDCDBCubeGame">
+						<Image image="MARVELBR" preserveAspect="false" ></Image></Button></Cell>
 				  </Row>
 		</TableLayout>
 		</VerticalScrollView>
@@ -548,8 +550,8 @@
 					<Row preferredHeight="40">
 						<Cell columnSpan="1"><ToggleButton id="cg_b_SF"  onClick="optionCGBoss">SF</ToggleButton></Cell>
 						<Cell columnSpan="1"><ToggleButton id="cg_b_NS"  onClick="optionCGBoss">NS</ToggleButton></Cell>
-						<Cell columnSpan="1"></Cell>
-						<Cell columnSpan="1"></Cell>
+						<Cell columnSpan="1"><ToggleButton id="cg_b_NS"  onClick="optionCGBoss">NS</ToggleButton></Cell>
+						<Cell columnSpan="1"><ToggleButton id="cg_b_NS"  onClick="optionCGBoss">NS</ToggleButton></Cell>
 						<Cell columnSpan="1"></Cell>
 					</Row>
 					<Row preferredHeight="40">
